@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI & LLM Search Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://qbitsswd.com/sitemap.xml
+# LLM Knowledge Files:
+# https://qbitsswd.com/llms.txt
+# https://qbitsswd.com/llms-full.txt

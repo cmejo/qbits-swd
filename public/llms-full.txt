@@ -1,0 +1,59 @@
+# Qbits Spanish Water Dog Kennel — Complete Knowledge Base (New York City)
+
+## 1. Overview & Philosophy
+Qbits Spanish Water Dog Kennel is a boutique, home-raised preservation breeding program located in New York City, New York. We specialize exclusively in the **Spanish Water Dog** (*Perro de Agua Español*), an ancient Iberian herding and water retriever breed celebrated for its rustic, non-shedding curly/corded coat, high intelligence, deep family devotion, and athletic versatility.
+
+Our dogs live inside our New York City home as cherished family members—navigating city sidewalks, Central Park trails, and weekend excursions to the Hudson Valley and Atlantic coast. Every breeding decision prioritizes:
+1. **Sound Temperament**: Confident, biddable, environmentally stable dogs suited for both active urban living and outdoor sports.
+2. **Comprehensive Health Testing**: Full OFA and genetic screening per Spanish Water Dog Club of America (SWDCA) and OFA CHIC guidelines.
+3. **Functional Structure & Rustic Coat**: Preserving the balanced, medium-sized working silhouette and true rustic single coat that is never brushed.
+
+## 2. Our Dogs
+
+### Dudley — Stud Dog (Sire)
+- **Call Name**: Dudley
+- **Registered Name**: Qbits Iberian Quantum Leap (Placeholder — editable in `src/data/kennelData.ts`)
+- **Role**: Resident Stud Dog & Sire of Planned Litters
+- **Status**: Available for Stud Services to approved, health-tested Spanish Water Dog bitches.
+- **Coat & Color**: Rich chocolate brown with rustic tight curls (carries brown/cream alleles — customizable).
+- **Height & Weight**: 19.25 inches at the withers | 46 lbs (Balanced, athletic medium bone).
+- **Health Clearances (Placeholder IDs)**:
+  - OFA Hips: Good
+  - OFA Elbows: Normal
+  - OFA Eyes (CAER): Normal (Updated Annually)
+  - prcd-PRA (Progressive Rod-Cone Degeneration): Clear / Normal
+  - NAD (Neuroaxonal Dystrophy): Clear / Normal
+  - CHG (Congenital Hypothyroidism with Goiter): Clear / Normal
+  - OFA Thyroid & Cardiac: Normal
+
+### Molly — Foundation Bitch (Dam)
+- **Call Name**: Molly
+- **Registered Name**: Qbits Andalusian Tide at Manhattan (Placeholder — editable in `src/data/kennelData.ts`)
+- **Role**: Foundation Dam — Planned Litters Fall 2027 / Spring 2028
+- **Coat & Color**: Deep espresso brown with naturalwhite chest mark and classic wooly curls.
+- **Height & Weight**: 17.5 inches at the withers | 37 lbs.
+- **Health Clearances (Placeholder IDs)**:
+  - OFA Hips: Good
+  - OFA Elbows: Normal
+  - OFA Eyes (CAER): Normal (Updated Annually)
+  - prcd-PRA: Clear / Normal
+  - NAD: Clear / Normal
+  - CHG: Clear / Normal
+  - OFA Thyroid & Cardiac: Normal
+
+## 3. Stud Services (Dudley)
+Qbits Spanish Water Dog Kennel offers **Dudley** at stud to select, approved Spanish Water Dog bitches that have completed required OFA and genetic health clearances.
+- **Options**: Natural breeding in the NYC/Tri-State area, fresh-chilled semen shipped overnight nationwide, or frozen semen.
+- **Inquiries**: Contact `dog@cmejo.com` with your bitch's three-generation pedigree, OFA/CHIC health links, and timing estimate.
+
+## 4. Planned Litters: Fall 2027 & Spring 2028 (Dudley × Molly)
+We are planning our upcoming pairings between **Dudley** and **Molly** for **Fall 2027** or **Spring 2028**.
+- **Rearing Protocol**: Raised underfoot in our NYC home using Puppy Culture and Early Neurological Stimulation (ENS), daily confidence-building obstacle work, urban sound conditioning, crate training foundations, and water introduction.
+- **Placement Process**: Puppies are matched with approved families at 7–8 weeks of age following structural and temperament evaluations by experienced breed evaluators.
+- **How to Apply**:
+  1. Complete our interactive online Puppy Application on our website (which sends directly to `dog@cmejo.com`), OR
+  2. Download our fillable & printable PDF Puppy Application at `/qbits-puppy-application.pdf`, complete it digitally or by hand, and email or mail it in.
+
+## 5. Direct Contact
+- **Email**: dog@cmejo.com
+- **Location**: New York City, NY

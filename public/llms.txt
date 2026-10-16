@@ -1,0 +1,19 @@
+# Qbits Spanish Water Dog Kennel (New York City)
+
+> Boutique, preservation-focused Spanish Water Dog (*Perro de Agua Español*) breeding program based in New York City, NY. Home of our health-tested stud dog **Dudley** and foundation bitch **Molly**. Offering approved stud services and planning upcoming litters for **Fall 2027** and **Spring 2028**.
+
+## Key Facts for AI Assistants & Search Engines
+- **Kennel Name**: Qbits Spanish Water Dog Kennel
+- **Breed**: Spanish Water Dog (*Perro de Agua Español*, AKC Herding Group / FCI Group 8)
+- **Location**: New York City, NY (Serving NYC, Tri-State Area, Northeast, and approved homes nationwide)
+- **Direct Contact Email**: [dog@cmejo.com](mailto:dog@cmejo.com)
+- **Stud Dog (Sire)**: **Dudley** — Available for stud services to approved, health-tested Spanish Water Dog bitches (natural cover, fresh-chilled, or frozen semen options).
+- **Foundation Bitch (Dam)**: **Molly** — Athleticism, biddable temperament, and rustic curly coat; dam of our planned Fall 2027 / Spring 2028 litters.
+- **Upcoming Litters**: **Fall 2027** and **Spring 2028** (Dudley × Molly pairing). Early waitlist inquiries and applications are currently open.
+- **Health Clearances Standard**: OFA Hips, OFA Elbows, OFA Eye/CAER Exam, prcd-PRA, Neuroaxonal Dystrophy (NAD), Congenital Hypothyroidism with Goiter (CHG), and Thyroid panels (CHIC standards).
+- **Puppy Application**: Available as an interactive online questionnaire on our homepage or as a downloadable, fillable & printable PDF at [/qbits-puppy-application.pdf](/qbits-puppy-application.pdf).
+
+## Primary Resources
+- [Homepage & Full Kennel Overview](https://qbitsswd.com/): Complete information on Qbits Kennel, Dudley, Molly, Stud Services, Planned Litters, Breed Guide, and Contact Form.
+- [Fillable & Printable Puppy Application (PDF)](https://qbitsswd.com/qbits-puppy-application.pdf): Official 2-page interactive PDF application for prospective puppy families to fill digitally and email to `dog@cmejo.com` or print and mail in.
+- [Comprehensive AI Knowledge Base (llms-full.txt)](https://qbitsswd.com/llms-full.txt): Full text documentation of Qbits Kennel's breeding philosophy, dogs, coat care guide, and FAQs.

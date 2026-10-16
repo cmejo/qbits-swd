@@ -1,0 +1,17 @@
+{
+  "name": "qbits-swd-kennel",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/generate-application-pdf.mjs && astro build",
+    "preview": "astro preview",
+    "generate:pdf": "node scripts/generate-application-pdf.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.1.0",
+    "pdf-lib": "^1.17.1"
+  }
+}
