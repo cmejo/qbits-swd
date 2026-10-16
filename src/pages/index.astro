@@ -177,7 +177,7 @@ import {
         </div>
         <div class="about-content">
           <p class="lead-paragraph">
-            At <strong>Qbits Spanish Water Dog Kennel</strong>, we believe the best working and companion dogs are raised as integral members of daily family life—not in isolated kennel runs. Based in <strong>New York City</strong>, our Spanish Water Dogs (<em>Perro de Agua Español</em>) experience a rich tapestry of urban sights, Central Park trails, and weekend water work along the Northeast coast.
+            At <strong>Qbits Spanish Water Dog Kennel</strong>, we believe the best working and companion dogs are raised as integral members of daily family life—not in isolated kennel runs. Based on the Upper East Side of New York City, our Spanish Water Dogs (<em>Perro de Agua Español</em>) experience a rich tapestry of urban sights, Central Park trails, and weekend water work along the Northeast coast.
           </p>
           <p>
             Our breeding program is intentionally small and preservation-focused. By pairing our health-tested stud dog <strong>Dudley</strong> with our foundation bitch <strong>Molly</strong> for our planned <strong>Fall 2027 or Spring 2028</strong> litters, our goal is to produce sound, versatile puppies with the breed’s hallmark non-shedding rustic curls, athletic cobbiness, and deep devotion to their people.
@@ -484,7 +484,7 @@ import {
             <span class="pdf-badge">OFFICIAL 2-PAGE FILLABLE &amp; PRINTABLE PDF</span>
             <h3>Prefer to Fill Out a PDF or Print &amp; Mail Your Application?</h3>
             <p>
-              Download our interactive 2-page PDF questionnaire (<code>qbits-puppy-application.pdf</code>). You can type directly into the fillable form fields on your computer and email it to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>, <strong>or print it out</strong>, fill it in by hand, and mail or scan it back to us in New York City.
+              You can type directly into the fillable form fields on your computer and email it to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>, or print it out, fill it in by hand, and mail or scan it back to us in New York City.
             </p>
           </div>
           <div class="pdf-banner-actions">
@@ -511,7 +511,7 @@ import {
           <div class="application-card-header">
             <div>
               <h3>Interactive Online Puppy Application (Fall 2027 / Spring 2028)</h3>
-              <p>Complete the fields below to generate a pre-formatted application email directly to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong> (or copy your completed application with one click).</p>
+              <p>Complete the fields below to generate a pre-formatted application email directly to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong>.</p>
             </div>
           </div>
 
@@ -720,9 +720,6 @@ import {
               <button type="submit" class="btn btn-primary">
                 Send Puppy Application to {KENNEL_INFO.email} ✉
               </button>
-              <button type="button" id="copy-inline-app-btn" class="btn btn-outline">
-                Copy Formatted Application to Clipboard
-              </button>
               <a
                 href={KENNEL_INFO.applicationPdfUrl}
                 download="Qbits-SWD-Puppy-Application.pdf"
@@ -785,8 +782,7 @@ import {
           <div class="contact-direct-cards">
             <div class="direct-card">
               <span class="direct-label">Direct Breeder Email</span>
-              <a href={`mailto:${KENNEL_INFO.email}`} class="direct-value">{KENNEL_INFO.email}</a>
-              <div style="margin-top: 0.6rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <div style="margin-top: 0.5rem;">
                 <a href={`mailto:${KENNEL_INFO.email}`} class="btn btn-primary btn-sm">
                   Open Default Mail App ↗
                 </a>
@@ -795,7 +791,7 @@ import {
 
             <div class="direct-card">
               <span class="direct-label">Kennel Location</span>
-              <strong class="direct-value">New York City, NY</strong>
+              <strong class="direct-value">Upper East Side in New York City, NY</strong>
               <p style="margin: 0.35rem 0 0; font-size: 0.9rem; color: var(--text-muted);">
                 Serving Manhattan, the Five Boroughs, the Tri-State Area, and approved homes nationwide.
               </p>
@@ -820,7 +816,7 @@ import {
         <div class="contact-form-panel">
           <h3>Send a Direct Message to <a href={`mailto:${KENNEL_INFO.email}`} style="color: inherit; text-decoration: underline;">{KENNEL_INFO.email}</a></h3>
           <p class="form-panel-sub">
-            Select your inquiry type below. Submitting opens your email client pre-addressed to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong> or lets you copy the formatted inquiry to paste into any webmail (Gmail, Outlook, iCloud).
+            Select your inquiry type below. Submitting opens your email client pre-addressed to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong>.
           </p>
 
           <form id="contact-form" novalidate>
@@ -936,9 +932,6 @@ import {
             <div class="contact-submit-group">
               <button type="submit" class="btn btn-primary">
                 Send via Email App ({KENNEL_INFO.email}) ✉
-              </button>
-              <button type="button" id="copy-contact-msg-btn" class="btn btn-outline">
-                Copy Formatted Message &amp; Email
               </button>
             </div>
             <div id="contact-status" class="form-status-banner" role="status" aria-live="polite" hidden></div>
@@ -2464,7 +2457,7 @@ import {
         if (statusEl) {
           statusEl.hidden = false;
           statusEl.textContent =
-            '✓ Opening your email client addressed to dog@cmejo.com! If your browser does not have a default mail app configured, click "Copy Formatted Application to Clipboard" and paste it into an email to dog@cmejo.com.';
+            '✓ Opening your email client addressed to dog@cmejo.com!';
         }
       }
     });
@@ -2473,24 +2466,7 @@ import {
   attachApplicationHandler('inline-puppy-app-form', 'inline-app-status');
   attachApplicationHandler('modal-puppy-app-form');
 
-  const copyAppBtn = document.getElementById('copy-inline-app-btn');
-  if (copyAppBtn) {
-    copyAppBtn.addEventListener('click', async () => {
-      const form = document.getElementById('inline-puppy-app-form') as HTMLFormElement | null;
-      if (!form) return;
-      const { subject, body } = buildApplicationPayload(form);
-      const fullText = `To: dog@cmejo.com\nSubject: ${subject}\n\n${body}`;
-      await navigator.clipboard.writeText(fullText);
-      const statusEl = document.getElementById('inline-app-status');
-      if (statusEl) {
-        statusEl.hidden = false;
-        statusEl.textContent =
-          '✓ Copied your formatted Puppy Application to the clipboard! Simply paste it into an email to dog@cmejo.com.';
-      }
-    });
-  }
-
-  // 6. Contact & Stud Inquiry Form Handler (mailto:dog@cmejo.com + Copy fallback)
+  // 6. Contact & Stud Inquiry Form Handler (mailto:dog@cmejo.com)
   const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
   const contactStatus = document.getElementById('contact-status');
 
@@ -2530,20 +2506,7 @@ import {
       if (contactStatus) {
         contactStatus.hidden = false;
         contactStatus.textContent =
-          '✓ Opening your default mail app addressed to dog@cmejo.com! You can also click "Copy Formatted Message & Email" to paste into any webmail client.';
-      }
-    });
-  }
-
-  const copyContactBtn = document.getElementById('copy-contact-msg-btn');
-  if (copyContactBtn && contactForm) {
-    copyContactBtn.addEventListener('click', async () => {
-      const { subject, body } = buildContactPayload(contactForm);
-      await navigator.clipboard.writeText(`To: dog@cmejo.com\nSubject: ${subject}\n\n${body}`);
-      if (contactStatus) {
-        contactStatus.hidden = false;
-        contactStatus.textContent =
-          '✓ Copied your formatted message and dog@cmejo.com to clipboard!';
+          '✓ Opening your default mail app addressed to dog@cmejo.com!';
       }
     });
   }
