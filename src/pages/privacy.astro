@@ -1,0 +1,536 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { KENNEL_INFO } from '../data/kennelData';
+---
+
+<Layout
+  title={`Privacy Policy | ${KENNEL_INFO.name} (NYC)`}
+  description={`Privacy Policy for ${KENNEL_INFO.name} located in New York City. Learn how we handle your information when applying for a Spanish Water Dog puppy or inquiring about stud services.`}
+>
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Kennel Announcements">
+    <div class="container announcement-inner">
+      <p class="announcement-text">
+        <span class="badge-pill">NYC PRESERVATION BREEDER</span>
+        <strong>Dudley × Molly</strong> Planned Litters: <strong>Fall 2027 &amp; Spring 2028</strong> • Approved Stud Services Open
+      </p>
+      <div class="announcement-actions">
+        <a href={KENNEL_INFO.applicationPdfUrl} download="Qbits-SWD-Puppy-Application.pdf" class="announcement-link">
+          ↓ Fillable PDF Application
+        </a>
+        <span aria-hidden="true">•</span>
+        <a href={`mailto:${KENNEL_INFO.email}`} class="announcement-link">{KENNEL_INFO.email}</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-logo" aria-label="Qbits Spanish Water Dog Kennel Home">
+        <span class="brand-crest" aria-hidden="true">Q</span>
+        <div class="brand-text">
+          <span class="brand-title">Qbits Kennel</span>
+          <span class="brand-sub">Spanish Water Dogs • NYC</span>
+        </div>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <a href="/#our-dogs">Dudley &amp; Molly</a>
+        <a href="/#stud-services">Stud Services</a>
+        <a href="/#upcoming-litters">2027/2028 Litters</a>
+        <a href="/#breed-guide">The SWD Breed</a>
+        <a href="/#puppy-application">Puppy Application</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <a href="/" class="btn btn-outline btn-sm">
+          ← Back to Main Page
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="privacy-page">
+    <div class="container privacy-container">
+      <div class="privacy-header">
+        <span class="eyebrow">Legal &amp; Transparency</span>
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <p class="privacy-meta">
+          <strong>Qbits Spanish Water Dog Kennel</strong> • New York City, NY<br />
+          Effective Date: October 16, 2026 • Direct Contact: <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>
+        </p>
+      </div>
+
+      <article class="privacy-card">
+        <section class="policy-section">
+          <h2>1. Introduction &amp; Commitment to Your Privacy</h2>
+          <p>
+            At <strong>{KENNEL_INFO.name}</strong> ("we," "our," or "us"), based in <strong>New York City, New York</strong>, we respect your privacy and are committed to protecting the personal information you share with us. We are an ethical, preservation-focused breeding program dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>).
+          </p>
+          <p>
+            This Privacy Policy outlines how we collect, use, maintain, and protect information gathered through our website (<a href={KENNEL_INFO.siteUrl}>{KENNEL_INFO.siteUrl}</a>), our interactive online Puppy Application, our downloadable fillable PDF questionnaire, and direct email communications sent to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>2. Information We Collect</h2>
+          <p>We collect information that you voluntarily provide to us when inquiring about our dogs, applying for a planned puppy, or requesting stud services for approved bitches:</p>
+          <ul>
+            <li>
+              <strong>Contact Information:</strong> Your full name, co-applicant name, email address, mobile phone number, street address, and city/state/neighborhood (such as your NYC borough or region).
+            </li>
+            <li>
+              <strong>Living Environment &amp; Household Details:</strong> Information regarding your residence type (apartment, townhouse, single-family home), home ownership status, landlord pet permissions, yard/park access, exercise routine, and daily schedule/hours alone.
+            </li>
+            <li>
+              <strong>Canine &amp; Breed Experience:</strong> Past experience with dog ownership, training background, familiarity with Spanish Water Dog coat care (never brushed, sheared or corded), and veterinary and personal reference contact details.
+            </li>
+            <li>
+              <strong>Breeding &amp; Stud Service Inquiries:</strong> Bitch pedigree data, AKC/FCI registration numbers, and health clearance certificates (OFA hips, elbows, CAER eye exam, DNA panels) submitted when inquiring about stud services with <strong>Dudley</strong>.
+            </li>
+            <li>
+              <strong>Technical Device Data:</strong> Standard server and hosting request logs (such as IP address, browser type, and operating system) collected automatically by our hosting platform (<a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>) for site security, CDN performance, and operational integrity.
+            </li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2>3. How We Use Your Information</h2>
+          <p>We use the information we collect solely for genuine kennel operations and puppy placement, including:</p>
+          <ul>
+            <li>Evaluating prospective puppy families to ensure optimal temperament, lifestyle, and environment matching for our planned <strong>Fall 2027 and Spring 2028 litters</strong> (Dudley × Molly).</li>
+            <li>Reviewing pedigrees and health records to evaluate compatibility for <strong>Dudley's stud services</strong> with approved Spanish Water Dog bitches.</li>
+            <li>Communicating directly with you regarding your application status, litter timing, breeding confirmations, and puppy placement updates.</li>
+            <li>Preparing formal puppy adoption agreements, AKC Limited Registration documents, microchip registration transfers, and veterinary health records upon placement.</li>
+            <li>Responding directly to your messages and questions submitted to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2>4. We Never Sell or Monetize Your Personal Data</h2>
+          <p>
+            <strong>We do not sell, rent, trade, lease, or monetize your personal information to third parties, data brokers, or marketing agencies under any circumstances.</strong>
+          </p>
+          <p>
+            Information provided to Qbits Kennel is shared only in the following strictly limited situations:
+          </p>
+          <ul>
+            <li>
+              <strong>Canine Registration &amp; Identification:</strong> Submitting required puppy registration and microchip transfer paperwork to the American Kennel Club (AKC) and official microchip registries upon placement.
+            </li>
+            <li>
+              <strong>Veterinary Records:</strong> Providing relevant puppy health records and certificates issued by licensed veterinary clinics during pre-placement examinations.
+            </li>
+            <li>
+              <strong>Legal Compliance:</strong> If required by applicable federal, state, or municipal law, regulation, or legal process.
+            </li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2>5. Data Security &amp; Storage</h2>
+          <p>
+            We take reasonable and appropriate technical and physical precautions to safeguard the personal information you submit to us. Applications submitted online are formatted and transmitted directly to our secure email inbox (<a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>). Fillable PDF applications submitted digitally or by mail are stored securely and accessed exclusively by Qbits Kennel owners.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>6. Cookies &amp; Tracking Technologies</h2>
+          <p>
+            Our website is built as an ultra-fast, static modern site. We do not use third-party advertising cookies, cross-site trackers, or behavioral profiling tools. Standard browser local storage may be used solely to store non-identifying client preferences (such as form status feedback).
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>7. Data Retention &amp; Your Rights</h2>
+          <p>
+            We retain application records and correspondence for as long as necessary to maintain waitlist records, coordinate breeding plans, and fulfill lifetime breeder support commitments.
+          </p>
+          <p>
+            You have the right to request access to, correction of, or complete deletion of your application or contact information at any time. To make a request, simply email us at <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>, and we will promptly honor your request.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>8. Updates to This Policy</h2>
+          <p>
+            We may occasionally update this Privacy Policy to reflect changes in our kennel operations, breeding schedules, or applicable legal requirements. The updated policy will always be posted on this page with an updated "Effective Date."
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2>9. Contact Us</h2>
+          <p>
+            If you have any questions, comments, or concerns regarding this Privacy Policy or how your personal information is handled, please reach out to us directly:
+          </p>
+          <div class="policy-contact-box">
+            <strong>{KENNEL_INFO.name}</strong><br />
+            New York City, New York<br />
+            Email: <a href={`mailto:${KENNEL_INFO.email}`} style="color: var(--accent-forest); font-weight: 700;">{KENNEL_INFO.email}</a><br />
+            Website: <a href={KENNEL_INFO.siteUrl}>{KENNEL_INFO.siteUrl}</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="color: var(--text-on-dark); margin-bottom: 0.75rem;">
+          <span class="brand-crest" style="background: var(--accent-terracotta);">Q</span>
+          <div class="brand-text">
+            <span class="brand-title" style="color: var(--text-on-dark);">Qbits Spanish Water Dog Kennel</span>
+            <span class="brand-sub" style="color: var(--text-on-dark-muted);">New York City • Perro de Agua Español</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Preservation breeding of health-tested Spanish Water Dogs in New York City. Home of stud dog <strong>Dudley</strong> and foundation bitch <strong>Molly</strong>. Planned litters for <strong>Fall 2027 &amp; Spring 2028</strong>.
+        </p>
+        <p class="footer-email">
+          Direct Email: <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a href="/#about">About Qbits Kennel NYC</a></li>
+          <li><a href="/#our-dogs">Meet Dudley &amp; Molly</a></li>
+          <li><a href="/#stud-services">Dudley Stud Services</a></li>
+          <li><a href="/#upcoming-litters">Fall 2027 / Spring 2028 Litters</a></li>
+          <li><a href="/#breed-guide">SWD Breed &amp; Coat Guide</a></li>
+          <li><a href="/#faq">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Applications &amp; Resources</h3>
+        <ul>
+          <li><a href="/#puppy-application">Online Puppy Application</a></li>
+          <li>
+            <a href={KENNEL_INFO.applicationPdfUrl} download="Qbits-SWD-Puppy-Application.pdf">
+              Download Fillable PDF Application
+            </a>
+          </li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href={`mailto:${KENNEL_INFO.email}`}>Email {KENNEL_INFO.email}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (New York City, NY). All rights reserved. • <a href="/privacy" style="color: var(--text-on-dark-muted); text-decoration: underline;">Privacy Policy</a></p>
+      <p>Dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>).</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  /* Header & Navigation */
+  .announcement-bar {
+    background-color: var(--bg-forest);
+    color: var(--text-on-dark);
+    font-size: 0.84rem;
+    padding-block: 0.55rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .announcement-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .announcement-text {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .badge-pill {
+    background-color: var(--accent-terracotta);
+    color: #FFFFFF;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+  }
+
+  .announcement-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .announcement-link {
+    color: var(--text-on-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-stone);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 4.5rem;
+  }
+
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-espresso);
+  }
+
+  .brand-crest {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--accent-forest);
+    color: var(--text-on-dark);
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-title {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .brand-sub {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  .primary-nav {
+    display: none;
+    align-items: center;
+    gap: 1.35rem;
+  }
+
+  @media (min-width: 980px) {
+    .primary-nav {
+      display: flex;
+    }
+  }
+
+  .primary-nav a {
+    color: var(--text-slate);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 0.4rem 0.2rem;
+    transition: color 0.15s ease;
+  }
+
+  .primary-nav a:hover {
+    color: var(--accent-terracotta);
+  }
+
+  .btn-sm {
+    min-height: 40px;
+    padding: 0.5rem 1.05rem;
+    font-size: 0.86rem;
+  }
+
+  /* Privacy Content */
+  .privacy-page {
+    padding-block: clamp(3rem, 6vw, 5.5rem);
+  }
+
+  .privacy-container {
+    max-width: 860px;
+  }
+
+  .privacy-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .privacy-title {
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .privacy-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .privacy-meta a {
+    color: var(--accent-forest);
+    font-weight: 700;
+  }
+
+  .privacy-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-stone);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.75rem, 4vw, 3rem);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .policy-section {
+    margin-bottom: 2.25rem;
+  }
+
+  .policy-section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .policy-section h2 {
+    font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+    color: var(--accent-forest);
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--bg-sand);
+    padding-bottom: 0.4rem;
+  }
+
+  .policy-section p {
+    color: var(--text-slate);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .policy-section ul {
+    color: var(--text-slate);
+    font-size: 0.96rem;
+    line-height: 1.7;
+    padding-left: 1.35rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .policy-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .policy-section a {
+    color: var(--accent-forest);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .policy-contact-box {
+    background: var(--bg-sand);
+    border: 1px solid var(--border-stone);
+    border-left: 4px solid var(--accent-forest);
+    border-radius: var(--radius-sm);
+    padding: 1.15rem 1.4rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-espresso);
+  }
+
+  /* Footer */
+  .site-footer {
+    background-color: var(--bg-forest);
+    color: var(--text-on-dark);
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(250, 247, 242, 0.14);
+  }
+
+  @media (min-width: 860px) {
+    .footer-grid {
+      grid-template-columns: 1.4fr 1fr 1fr;
+    }
+  }
+
+  .footer-desc {
+    color: var(--text-on-dark-muted);
+    font-size: 0.93rem;
+    max-width: 46ch;
+  }
+
+  .footer-email a {
+    color: #E8A588;
+    font-weight: 700;
+  }
+
+  .footer-links h3 {
+    color: var(--text-on-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .footer-links a {
+    color: var(--text-on-dark-muted);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+
+  .footer-links a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    padding-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.84rem;
+    color: var(--text-on-dark-muted);
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+</style>

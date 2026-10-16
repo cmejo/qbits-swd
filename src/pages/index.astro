@@ -511,16 +511,8 @@ import {
           <div class="application-card-header">
             <div>
               <h3>Interactive Online Puppy Application (Fall 2027 / Spring 2028)</h3>
-              <p>Complete the fields below to generate a pre-formatted application email directly to <strong>{KENNEL_INFO.email}</strong> (or copy your completed application with one click).</p>
+              <p>Complete the fields below to generate a pre-formatted application email directly to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong> (or copy your completed application with one click).</p>
             </div>
-            <button
-              type="button"
-              commandfor="puppy-app-dialog"
-              command="show-modal"
-              class="btn btn-outline btn-sm"
-            >
-              Open in Distraction-Free Modal ⤢
-            </button>
           </div>
 
           <form id="inline-puppy-app-form" class="puppy-app-form" novalidate>
@@ -768,7 +760,7 @@ import {
                 <span class="faq-icon" aria-hidden="true">+</span>
               </summary>
               <div class="faq-body">
-                <p style="margin: 0;">{faq.answer}</p>
+                <p style="margin: 0;" set:html={faq.answer} />
               </div>
             </details>
           ))}
@@ -795,13 +787,6 @@ import {
               <span class="direct-label">Direct Breeder Email</span>
               <a href={`mailto:${KENNEL_INFO.email}`} class="direct-value">{KENNEL_INFO.email}</a>
               <div style="margin-top: 0.6rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button
-                  type="button"
-                  class="btn btn-outline btn-sm"
-                  data-copy-email={KENNEL_INFO.email}
-                >
-                  Copy {KENNEL_INFO.email}
-                </button>
                 <a href={`mailto:${KENNEL_INFO.email}`} class="btn btn-primary btn-sm">
                   Open Default Mail App ↗
                 </a>
@@ -819,7 +804,7 @@ import {
             <div class="direct-card">
               <span class="direct-label">Printable &amp; Mail-In Option</span>
               <p style="margin: 0.25rem 0 0.75rem; font-size: 0.92rem; color: var(--text-slate);">
-                Prefer physical mail? Download our 2-page fillable/printable PDF application and email <code>{KENNEL_INFO.email}</code> for our current NYC mailing address.
+                Prefer physical mail? Download our 2-page fillable/printable PDF application and <a href={`mailto:${KENNEL_INFO.email}?subject=Request%20NYC%20Mailing%20Address%20for%20Puppy%20Application`} style="color: var(--accent-forest); font-weight: 600; text-decoration: underline;">email us</a> for our current NYC mailing address.
               </p>
               <a
                 href={KENNEL_INFO.applicationPdfUrl}
@@ -833,9 +818,9 @@ import {
         </div>
 
         <div class="contact-form-panel">
-          <h3>Send a Direct Message to {KENNEL_INFO.email}</h3>
+          <h3>Send a Direct Message to <a href={`mailto:${KENNEL_INFO.email}`} style="color: inherit; text-decoration: underline;">{KENNEL_INFO.email}</a></h3>
           <p class="form-panel-sub">
-            Select your inquiry type below. Submitting opens your email client pre-addressed to <strong>{KENNEL_INFO.email}</strong> or lets you copy the formatted inquiry to paste into any webmail (Gmail, Outlook, iCloud).
+            Select your inquiry type below. Submitting opens your email client pre-addressed to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong> or lets you copy the formatted inquiry to paste into any webmail (Gmail, Outlook, iCloud).
           </p>
 
           <form id="contact-form" novalidate>
@@ -1156,15 +1141,14 @@ import {
               Download Fillable PDF Application
             </a>
           </li>
-          <li><a href="/llms.txt">AI / LLM Kennel Summary (llms.txt)</a></li>
-          <li><a href="/llms-full.txt">Full Kennel Knowledge Base</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href={`mailto:${KENNEL_INFO.email}`}>Email {KENNEL_INFO.email}</a></li>
         </ul>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (New York City, NY). All rights reserved.</p>
+      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (New York City, NY). All rights reserved. • <a href="/privacy" style="color: var(--text-on-dark-muted); text-decoration: underline;">Privacy Policy</a></p>
       <p>Dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>).</p>
     </div>
   </footer>

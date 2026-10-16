@@ -126,14 +126,9 @@ export const STUD_SERVICE_HIGHLIGHTS = [
       'We welcome inquiries from preservation breeders whose bitches hold AKC/FCI registration, passing OFA Hips, current CAER Eye exams, and DNA results for prcd-PRA, NAD, and CHG.',
   },
   {
-    title: 'What Dudley Stamps',
+    title: 'Conformation, Drive & Traits Dudley Imparts',
     description:
-      'Substantial bone without coarseness, dark expressive eyes, effortless ground-covering side gait, tight rustic curl formation, and an unshakeable, people-oriented working temperament.',
-  },
-  {
-    title: 'Pedigree & Complementary Consultation',
-    description:
-      'We gladly review three- and five-generation pedigrees, Coefficient of Inbreeding (COI) projections, and structural photos or videos to ensure an ideal match.',
+      'Dudley consistently passes on substantial bone without coarseness, dark expressive eyes, an effortless ground-covering side gait, tight rustic curl formation, and an unshakeable, people-oriented working temperament.',
   },
 ];
 
@@ -197,12 +192,12 @@ export const FAQS = [
   {
     question: 'Is Dudley currently available for stud services to outside bitches?',
     answer:
-      'Yes! Dudley is available at stud to approved, AKC/FCI-registered Spanish Water Dog bitches that have passed OFA hip, eye (CAER), and breed-specific genetic health clearances (prcd-PRA, NAD, CHG). We offer natural breeding in the NYC area as well as fresh-chilled overnight shipping and frozen semen. Email dog@cmejo.com with your bitch’s pedigree and OFA links.',
+      'Yes! Dudley is available at stud to approved, AKC/FCI-registered Spanish Water Dog bitches that have passed OFA hip, eye (CAER), and breed-specific genetic health clearances (prcd-PRA, NAD, CHG). We offer natural breeding in the NYC area as well as fresh-chilled overnight shipping and frozen semen. Email <a href="mailto:dog@cmejo.com">dog@cmejo.com</a> with your bitch’s pedigree and OFA links.',
   },
   {
     question: 'How do I apply for a Fall 2027 / Spring 2028 puppy?',
     answer:
-      'You can apply in two convenient ways right on this page: (1) Fill out our interactive Online Puppy Application, which formats your responses and sends them directly to dog@cmejo.com, OR (2) Download our official 2-page Fillable & Printable PDF Application (/qbits-puppy-application.pdf), fill it out on your computer or print it by hand, and email or mail it to us.',
+      'You can apply in two convenient ways right on this page: (1) Fill out our interactive Online Puppy Application, which formats your responses and sends them directly to <a href="mailto:dog@cmejo.com">dog@cmejo.com</a>, OR (2) Download our official 2-page Fillable & Printable PDF Application (<a href="/qbits-puppy-application.pdf">/qbits-puppy-application.pdf</a>), fill it out on your computer or print it by hand, and email or mail it to us.',
   },
   {
     question: 'Do Spanish Water Dogs do well in New York City apartments?',
