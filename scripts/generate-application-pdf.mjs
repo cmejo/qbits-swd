@@ -4,13 +4,16 @@ import path from 'node:path';
 
 async function generateApplicationPDF() {
   const pdfDoc = await PDFDocument.create();
-  pdfDoc.setTitle('Qbits Spanish Water Dog Kennel - Puppy Application Form (NYC)');
-  pdfDoc.setAuthor('Qbits Spanish Water Dog Kennel (dog@cmejo.com)');
-  pdfDoc.setSubject('Prospective Puppy Family Questionnaire & Waitlist Application (Fall 2027 / Spring 2028)');
+  pdfDoc.setTitle('Qbits Spanish Water Dog Kennel - Service, Therapy & Puppy Application Form (NYC)');
+  pdfDoc.setAuthor('Qbits Spanish Water Dog Kennel & Gotham Paw (dog@cmejo.com)');
+  pdfDoc.setSubject('Prospective Service Dog, Therapy Dog & Family Puppy Questionnaire (Fall 2027 / Spring 2028)');
   pdfDoc.setKeywords([
     'Spanish Water Dog',
     'Perro de Agua Espanol',
     'Qbits Kennel',
+    'Gotham Paw Service Dogs',
+    'Spinal Cord Injury Service Dog',
+    'Neuromuscular Service Dog',
     'NYC Dog Breeder',
     'Dudley',
     'Molly',
@@ -130,7 +133,7 @@ async function generateApplicationPDF() {
     color: rgb(0.98, 0.97, 0.95),
   });
 
-  page1.drawText('NEW YORK CITY  |  PERRO DE AGUA ESPANOL  |  EMAIL: DOG@CMEJO.COM', {
+  page1.drawText('UPPER EAST SIDE, NYC  |  GOTHAM PAW SERVICE DOG PARTNER  |  EMAIL: DOG@CMEJO.COM', {
     x: 56,
     y: 721,
     size: 8,
@@ -138,7 +141,7 @@ async function generateApplicationPDF() {
     color: rgb(0.85, 0.82, 0.76),
   });
 
-  page1.drawText('Prospective Puppy Family Application — Planned Pairing: Dudley (Sire) x Molly (Dam) | Fall 2027 / Spring 2028', {
+  page1.drawText('Service Animal, Therapy Dog & Family Puppy Application — Dudley (Sire) x Molly (Dam) | Fall 2027 / Spring 2028', {
     x: 56,
     y: 706,
     size: 8.5,
@@ -148,7 +151,7 @@ async function generateApplicationPDF() {
 
   // Instructions bar
   page1.drawText(
-    'INSTRUCTIONS: Fill out this interactive PDF digitally and email it to dog@cmejo.com, OR print, complete by hand, and mail/scan to us.',
+    'INSTRUCTIONS: Type directly into the fields on your computer and email to dog@cmejo.com, OR print, fill by hand, and mail/scan to us.',
     {
       x: 42,
       y: 680,
@@ -171,7 +174,7 @@ async function generateApplicationPDF() {
   });
   addTextField(page1, {
     name: 'co_applicant_name',
-    label: 'Co-Applicant / Partner Name (if applicable)',
+    label: 'Co-Applicant / Caregiver / Partner Name (if applicable)',
     x: 314,
     y: curY,
     width: 256,
@@ -212,7 +215,7 @@ async function generateApplicationPDF() {
   curY -= 42;
   addTextField(page1, {
     name: 'household_members',
-    label: 'Occupations & Ages of All Household Members (including children)',
+    label: 'Occupations & Ages of All Household Members (including children or support caregivers)',
     x: 42,
     y: curY,
     width: 528,
@@ -243,12 +246,12 @@ async function generateApplicationPDF() {
     color: espresso,
   });
   addCheckBox(page1, { name: 'own_home', label: 'Own Residence', x: 175, y: curY });
-  addCheckBox(page1, { name: 'rent_home', label: 'Rent (written landlord/board dog approval confirmed)', x: 285, y: curY });
+  addCheckBox(page1, { name: 'rent_home', label: 'Rent (Dog Approved or ADA/FHA Service Dog Exempt)', x: 285, y: curY });
 
   curY -= 44;
   addTextField(page1, {
     name: 'yard_and_outdoor_access',
-    label: 'Describe your yard/fencing OR nearby parks/green spaces for daily off-leash/structured exercise *',
+    label: 'Describe your yard/fencing OR nearby parks/green spaces for daily exercise & enrichment *',
     x: 42,
     y: curY,
     width: 528,
@@ -259,7 +262,7 @@ async function generateApplicationPDF() {
   curY -= 48;
   addTextField(page1, {
     name: 'hours_alone_and_care',
-    label: 'How many hours per day will the dog be alone? What arrangements will be made for midday puppy breaks? *',
+    label: 'How many hours per day will the dog be alone? What arrangements will be made for daily walks/care? *',
     x: 42,
     y: curY,
     width: 528,
@@ -274,7 +277,7 @@ async function generateApplicationPDF() {
   curY -= 54;
   addTextField(page1, {
     name: 'previous_dog_experience',
-    label: 'Describe your previous dog experience (breeds owned, training titles, working/herding dog familiarity) *',
+    label: 'Describe your previous dog experience (breeds owned, service/therapy dog history, working dog familiarity) *',
     x: 42,
     y: curY,
     width: 528,
@@ -311,7 +314,7 @@ async function generateApplicationPDF() {
     thickness: 0.5,
     color: borderStone,
   });
-  page1.drawText('Qbits Spanish Water Dog Kennel • New York City, NY • dog@cmejo.com • Page 1 of 2', {
+  page1.drawText('Qbits Spanish Water Dog Kennel • Upper East Side, New York City, NY • dog@cmejo.com • Page 1 of 2', {
     x: 42,
     y: 28,
     size: 8,
@@ -332,16 +335,16 @@ async function generateApplicationPDF() {
     height: 34,
     color: forest,
   });
-  page2.drawText('QBITS SPANISH WATER DOG KENNEL — PUPPY APPLICATION (PAGE 2)', {
+  page2.drawText('QBITS SPANISH WATER DOG KENNEL — SERVICE, THERAPY & PUPPY APPLICATION (PAGE 2)', {
     x: 56,
     y: 739,
-    size: 11,
+    size: 10.5,
     font: serifBold,
     color: rgb(0.98, 0.97, 0.95),
   });
 
   // SECTION 4: LITTER TIMING & PUPPY PREFERENCES
-  let p2Y = drawSectionHeader(page2, 694, '04', 'Dudley x Molly Litter Preferences & Goals (Fall 2027 / Spring 2028)');
+  let p2Y = drawSectionHeader(page2, 694, '04', 'Dudley x Molly Placement Pathway & Litter Preferences (Fall 2027 / Spring 2028)');
 
   p2Y -= 18;
   page2.drawText('Preferred Litter Window:', {
@@ -365,24 +368,24 @@ async function generateApplicationPDF() {
   });
   addCheckBox(page2, { name: 'sex_male', label: 'Male', x: 175, y: p2Y });
   addCheckBox(page2, { name: 'sex_female', label: 'Female', x: 285, y: p2Y });
-  addCheckBox(page2, { name: 'sex_open', label: 'No Preference (Best Temperament Fit)', x: 400, y: p2Y, checked: true });
+  addCheckBox(page2, { name: 'sex_open', label: 'No Preference (Best Temperament/Task Fit)', x: 400, y: p2Y, checked: true });
 
   p2Y -= 22;
-  page2.drawText('Primary Goals (check all):', {
+  page2.drawText('Primary Pathway (check all):', {
     x: 42,
     y: p2Y + 2,
     size: 8.5,
     font: sansBold,
     color: espresso,
   });
-  addCheckBox(page2, { name: 'goal_companion', label: 'Family Companion', x: 175, y: p2Y, checked: true });
-  addCheckBox(page2, { name: 'goal_performance', label: 'Agility / Scent / Water Work', x: 285, y: p2Y });
-  addCheckBox(page2, { name: 'goal_show', label: 'Conformation Show / Co-Own', x: 430, y: p2Y });
+  addCheckBox(page2, { name: 'goal_service', label: 'Service Dog (SCI / Neuromuscular via Gotham Paw)', x: 175, y: p2Y });
+  addCheckBox(page2, { name: 'goal_therapy', label: 'Therapy Dog', x: 410, y: p2Y });
+  addCheckBox(page2, { name: 'goal_companion', label: 'Companion', x: 495, y: p2Y, checked: true });
 
   p2Y -= 52;
   addTextField(page2, {
     name: 'ideal_temperament_notes',
-    label: 'Describe the energy level, personality traits, and activities you envision sharing with your Spanish Water Dog *',
+    label: 'If applying for a Service Animal, describe any specific neurological/mobility tasks needed (or describe companion/therapy goals) *',
     x: 42,
     y: p2Y,
     width: 528,
@@ -392,7 +395,7 @@ async function generateApplicationPDF() {
 
   // SECTION 5: REFERENCES
   p2Y -= 30;
-  p2Y = drawSectionHeader(page2, p2Y, '05', 'Veterinary & Personal References');
+  p2Y = drawSectionHeader(page2, p2Y, '05', 'Veterinary, Clinical or Personal References');
 
   p2Y -= 42;
   addTextField(page2, {
@@ -404,7 +407,7 @@ async function generateApplicationPDF() {
   });
   addTextField(page2, {
     name: 'personal_reference',
-    label: 'Personal or Trainer Reference (Name & Phone/Email) *',
+    label: 'Personal, Physician/OT, or Trainer Reference (Name & Phone/Email) *',
     x: 314,
     y: p2Y,
     width: 256,
@@ -417,7 +420,7 @@ async function generateApplicationPDF() {
   p2Y -= 20;
   addCheckBox(page2, {
     name: 'ack_temperament_matching',
-    label: 'I understand Qbits places puppies based on structured 7-8 week temperament & structural evaluations rather than first-come color picks.',
+    label: 'I understand Qbits places puppies based on structured 7-8 week temperament & service aptitude evaluations rather than color picks.',
     x: 42,
     y: p2Y,
   });
@@ -425,7 +428,7 @@ async function generateApplicationPDF() {
   p2Y -= 20;
   addCheckBox(page2, {
     name: 'ack_spay_neuter',
-    label: 'I agree to Qbits Kennel’s AKC Limited Registration & age-appropriate spay/neuter contract (unless placed on a co-own show agreement).',
+    label: 'I agree to Qbits Kennel’s AKC Limited Registration & age-appropriate spay/neuter contract.',
     x: 42,
     y: p2Y,
   });
@@ -441,7 +444,7 @@ async function generateApplicationPDF() {
   p2Y -= 20;
   addCheckBox(page2, {
     name: 'ack_puppy_training',
-    label: 'I commit to continuing positive socialization, crate training, and formal puppy kindergarten after bringing our puppy home.',
+    label: 'I commit to continuing positive socialization, crate training, and formal puppy/service training after bringing our puppy home.',
     x: 42,
     y: p2Y,
   });
@@ -449,7 +452,7 @@ async function generateApplicationPDF() {
   p2Y -= 54;
   addTextField(page2, {
     name: 'additional_questions_notes',
-    label: 'Any additional comments, questions for Qbits Kennel, or notes about your timeline?',
+    label: 'Any additional comments, questions for Qbits Kennel / Gotham Paw, or notes about your timeline?',
     x: 42,
     y: p2Y,
     width: 528,
@@ -515,7 +518,7 @@ async function generateApplicationPDF() {
     }
   );
   page2.drawText(
-    '   (or mail directly to: Qbits Spanish Water Dog Kennel, Attn: Puppy Applications, New York, NY — request suite/box via dog@cmejo.com).',
+    '   (Service Animal applicants: Please also visit https://gothampaw.netlify.app/services/service-animal/ and reach out to us ASAP).',
     {
       x: 54,
       y: p2Y + 4,
@@ -532,7 +535,7 @@ async function generateApplicationPDF() {
     thickness: 0.5,
     color: borderStone,
   });
-  page2.drawText('Qbits Spanish Water Dog Kennel • New York City, NY • dog@cmejo.com • Page 2 of 2', {
+  page2.drawText('Qbits Spanish Water Dog Kennel • Upper East Side, New York City, NY • dog@cmejo.com • Page 2 of 2', {
     x: 42,
     y: 28,
     size: 8,

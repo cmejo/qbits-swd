@@ -20,7 +20,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://qbitsswd.com/sitemap.xml
+Sitemap: https://qbits-swd.netlify.app/sitemap.xml
 # LLM Knowledge Files:
-# https://qbitsswd.com/llms.txt
-# https://qbitsswd.com/llms-full.txt
+# https://qbits-swd.netlify.app/llms.txt
+# https://qbits-swd.netlify.app/llms-full.txt

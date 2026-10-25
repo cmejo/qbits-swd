@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://qbitsswd.com',
+  site: 'https://qbits-swd.netlify.app',
   compressHTML: true,
   build: {
     inlineStylesheets: 'always',

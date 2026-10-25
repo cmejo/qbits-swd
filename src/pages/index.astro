@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import {
   KENNEL_INFO,
   DOGS,
+  SERVICE_DOG_HIGHLIGHTS,
+  ASSISTANCE_DOG_COMPARISON,
   STUD_SERVICE_HIGHLIGHTS,
   LITTER_ROADMAP,
   BREED_GUIDE_CARDS,
@@ -11,14 +13,46 @@ import {
 ---
 
 <Layout>
+  <!-- Senior-Friendly Accessibility & Reading Comfort Toolbar -->
+  <div class="a11y-toolbar" role="region" aria-label="Reading Comfort and Text Size Controls">
+    <div class="container a11y-toolbar-inner">
+      <span class="a11y-label">
+        <span aria-hidden="true">👁</span> Reading Comfort &amp; Text Size:
+      </span>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-set-text="normal" aria-pressed="true">
+          A Standard
+        </button>
+        <button type="button" class="a11y-btn" data-set-text="large" aria-pressed="false">
+          A+ Larger Text
+        </button>
+        <button type="button" class="a11y-btn" data-set-text="xlarge" aria-pressed="false">
+          A++ Extra Large
+        </button>
+        <button type="button" class="a11y-btn" data-toggle-contrast aria-pressed="false">
+          ◐ High Contrast
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Top Editorial Announcement Bar -->
   <div class="announcement-bar" role="region" aria-label="Kennel Announcements">
     <div class="container announcement-inner">
       <p class="announcement-text">
-        <span class="badge-pill">NYC PRESERVATION BREEDER</span>
-        <strong>Dudley × Molly</strong> Planned Litters: <strong>Fall 2027 &amp; Spring 2028</strong> • Approved Stud Services Open
+        <span class="badge-pill">SERVICE DOG &amp; PRESERVATION BREEDER</span>
+        <strong>Dudley × Molly</strong> Planned Litters: <strong>Fall 2027 &amp; Spring 2028</strong> • Service Animal Inquiries: Contact Us ASAP
       </p>
       <div class="announcement-actions">
+        <a
+          href={KENNEL_INFO.gothamPawUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="announcement-link"
+        >
+          Gotham Paw Service Dogs ↗
+        </a>
+        <span aria-hidden="true">•</span>
         <a href={KENNEL_INFO.applicationPdfUrl} download="Qbits-SWD-Puppy-Application.pdf" class="announcement-link">
           ↓ Fillable PDF Application
         </a>
@@ -28,18 +62,20 @@ import {
     </div>
   </div>
 
-  <!-- Sticky Navigation Header -->
+  <!-- Sticky Navigation Header (Always visible & wraps cleanly on mobile, tablet & zoomed screens) -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#" class="brand-logo" aria-label="Qbits Spanish Water Dog Kennel Home">
         <span class="brand-crest" aria-hidden="true">Q</span>
         <div class="brand-text">
           <span class="brand-title">Qbits Kennel</span>
-          <span class="brand-sub">Spanish Water Dogs • NYC</span>
+          <span class="brand-sub">Upper East Side • NYC</span>
         </div>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary Navigation">
+      <!-- MANDATORY per accessibility guidance: do not include the word "Navigation" in <nav aria-label> -->
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#service-animals" class="nav-highlight">Service &amp; Therapy Dogs</a>
         <a href="#our-dogs">Dudley &amp; Molly</a>
         <a href="#stud-services">Stud Services</a>
         <a href="#upcoming-litters">2027/2028 Litters</a>
@@ -56,65 +92,62 @@ import {
           command="show-modal"
           class="btn btn-primary btn-sm"
         >
-          Apply for a Puppy
+          Quick Apply
         </button>
       </div>
     </div>
   </header>
 
-  <main id="main-content">
+  <!-- MANDATORY per accessibility guidance: tabindex="-1" on <main id="main-content"> for skip-link focus -->
+  <main id="main-content" tabindex="-1">
     <!-- ====================================================================
          HERO SECTION (LCP Image optimized with fetchpriority="high")
          ==================================================================== -->
     <section class="hero-section" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">New York City • Perro de Agua Español</span>
+          <span class="eyebrow">Upper East Side, NYC • Perro de Agua Español</span>
           <h1 id="hero-heading" class="hero-title">
             Qbits Spanish Water Dog Kennel
           </h1>
           <p class="hero-lead">
-            A boutique, home-raised preservation breeding program in the heart of <strong>New York City</strong>. Dedicated to health-tested, structurally balanced, and environmentally confident Spanish Water Dogs with authentic Iberian working heritage.
+            A boutique preservation and <strong>service animal breeding program</strong> on the Upper East Side of <strong>New York City</strong>. Led by the breed’s youngest preservation breeder and professional service dog trainer, we raise health-tested Spanish Water Dogs proven in <strong>neurological &amp; mobility task work</strong>, therapy visitation, and devoted family companionship.
           </p>
 
           <div class="hero-highlights" role="list" aria-label="Kennel Highlights">
-            <div class="highlight-chip" role="listitem">
-              <span class="chip-label">Resident Sire</span>
-              <strong>Dudley — Open for Approved Stud Services</strong>
+            <div class="highlight-chip chip-service" role="listitem">
+              <span class="chip-label">Service Animal Specialization</span>
+              <strong>≥1 Puppy Per Litter Enters Our <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">Gotham Paw</a> Service Program</strong>
             </div>
             <div class="highlight-chip" role="listitem">
-              <span class="chip-label">Foundation Dam</span>
-              <strong>Molly — Planned Litters Fall 2027 / Spring 2028</strong>
+              <span class="chip-label">Resident Sire &amp; Foundation Dam</span>
+              <strong>Dudley (Open for Stud) × Molly (Fall 2027 / Spring 2028 Litters)</strong>
             </div>
           </div>
 
           <div class="hero-actions">
-            <a href="#puppy-application" class="btn btn-primary">
+            <a href="#service-animals" class="btn btn-primary">
+              Service &amp; Therapy Dog Program
+            </a>
+            <a href="#puppy-application" class="btn btn-terracotta">
               Complete Puppy Application
             </a>
             <a
               href={KENNEL_INFO.applicationPdfUrl}
               download="Qbits-SWD-Puppy-Application.pdf"
-              class="btn btn-terracotta"
+              class="btn btn-outline"
             >
-              Download Fillable PDF Form
-            </a>
-            <a href="#stud-services" class="btn btn-outline">
-              Explore Dudley’s Stud Services
+              ↓ Download Fillable PDF Form
             </a>
           </div>
 
           <p class="hero-note">
-            <span>Direct Breeder Contact:</span>
+            <span>Direct Breeder &amp; Service Dog Inquiries:</span>
             <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>
-            <button
-              type="button"
-              class="inline-copy-btn"
-              data-copy-email={KENNEL_INFO.email}
-              aria-label="Copy breeder email address dog@cmejo.com to clipboard"
-            >
-              Copy Email
-            </button>
+            <span>•</span>
+            <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">
+              Visit Gotham Paw Service Animal Training ↗
+            </a>
           </p>
         </div>
 
@@ -130,9 +163,9 @@ import {
               class="hero-img"
             />
             <div class="hero-caption-card">
-              <span class="caption-tag">EDITABLE STOCK PHOTOGRAPHY</span>
+              <span class="caption-tag">UPPER EAST SIDE, NYC • PROVEN WORKING &amp; SERVICE LINES</span>
               <p>
-                <strong>Dudley &amp; Molly • NYC</strong> — Replace photos anytime in <code>/public/images/</code> or <code>src/data/kennelData.ts</code>.
+                <strong>Dudley &amp; Molly</strong> — Raised underfoot in Manhattan with full OFA CHIC clearances and foundational training for medical assistance, therapy, and family life.
               </p>
             </div>
           </div>
@@ -146,54 +179,63 @@ import {
     <section class="ethics-strip" aria-label="Breeding Standards and Ethics">
       <div class="container ethics-grid">
         <div class="ethics-item">
+          <span class="ethics-num">Service Proven</span>
+          <p>At least 1 puppy per litter enters our <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: var(--accent-forest); font-weight: 700;">Gotham Paw</a> Service Dog Program for SCI &amp; neuromuscular conditions</p>
+        </div>
+        <div class="ethics-item">
           <span class="ethics-num">OFA + CHIC</span>
-          <p>Full hip, elbow, annual CAER eye &amp; DNA screening (prcd-PRA, NAD, CHG)</p>
+          <p>Full hip, elbow, annual CAER eye &amp; DNA screening (prcd-PRA, NAD, CHG) on both parents</p>
         </div>
         <div class="ethics-item">
           <span class="ethics-num">NYC Raised</span>
-          <p>Whelped &amp; raised underfoot in Manhattan with Puppy Culture &amp; ENS protocols</p>
-        </div>
-        <div class="ethics-item">
-          <span class="ethics-num">Stud Services</span>
-          <p>Dudley available via natural cover, fresh-chilled overnight, or frozen semen</p>
+          <p>Whelped &amp; raised on the Upper East Side with Early Neurological Stimulation (ENS) &amp; urban exposure</p>
         </div>
         <div class="ethics-item">
           <span class="ethics-num">2027 / 2028</span>
-          <p>Accepting early applications for Dudley × Molly Fall 2027 &amp; Spring 2028 litters</p>
+          <p>Accepting early applications for Dudley × Molly litters &amp; approved stud services with Dudley</p>
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         ABOUT QBITS KENNEL (NYC)
+         SECTION 01: ABOUT QBITS KENNEL (NYC) & OUR UNIQUE VALUE PROPOSITION
          ==================================================================== -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container about-layout">
         <div class="about-header">
-          <span class="eyebrow">01 • Our Philosophy in New York City</span>
+          <span class="eyebrow">01 • Our Philosophy on the Upper East Side</span>
           <h2 id="about-heading" class="section-title">
-            Rustic Andalusian Heritage Meets New York City Poise
+            Purpose-Bred for Real-World Service, Therapy &amp; Devoted Companionship
           </h2>
+          <div class="breeder-uvp-box">
+            <span class="uvp-tag">OUR UNIQUE BREEDER BACKGROUND</span>
+            <p>
+              As <strong>by far the youngest Spanish Water Dog preservation breeder</strong>, our founder pairs modern genetic health standards with years of hands-on professional experience training task-certified service dogs through <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer"><strong>Gotham Paw</strong></a>.
+            </p>
+          </div>
         </div>
         <div class="about-content">
           <p class="lead-paragraph">
-            At <strong>Qbits Spanish Water Dog Kennel</strong>, we believe the best working and companion dogs are raised as integral members of daily family life—not in isolated kennel runs. Based on the Upper East Side of New York City, our Spanish Water Dogs (<em>Perro de Agua Español</em>) experience a rich tapestry of urban sights, Central Park trails, and weekend water work along the Northeast coast.
+            At <strong>Qbits Spanish Water Dog Kennel</strong>, we believe the truest measure of a working breed is its ability to transform human lives. Based on the Upper East Side of New York City, our Spanish Water Dogs (<em>Perro de Agua Español</em>) experience a rich tapestry of urban sights, Central Park trails, NYC hospitals and transit, and weekend water work along the Northeast coast.
           </p>
           <p>
-            Our breeding program is intentionally small and preservation-focused. By pairing our health-tested stud dog <strong>Dudley</strong> with our foundation bitch <strong>Molly</strong> for our planned <strong>Fall 2027 or Spring 2028</strong> litters, our goal is to produce sound, versatile puppies with the breed’s hallmark non-shedding rustic curls, athletic cobbiness, and deep devotion to their people.
+            <strong>Why You Won’t See Us Every Weekend at AKC Conformation Shows:</strong> We are frequently asked why we do not campaign our dogs on the weekend AKC conformation show circuit. The answer goes to the heart of our mission: <strong>our dogs are proven as working service animals</strong>. At least <strong>one puppy from every Qbits litter is transferred directly into our Service Animal Program</strong>, where we specialize in task-training service dogs for individuals with <strong>spinal cord injuries (SCI)</strong> and <strong>neuromuscular disorders</strong> such as <strong>Cerebral Palsy (CP) and Multiple Sclerosis (MS)</strong>.
+          </p>
+          <p>
+            By pairing our health-tested stud dog <strong>Dudley</strong> with our foundation bitch <strong>Molly</strong> for our planned <strong>Fall 2027 and Spring 2028</strong> litters, we select first and foremost for rock-solid nerve stability, biddable work ethic, orthopedic soundness, and deep human empathy—producing extraordinary medical service prospects, certified therapy dogs, and effortless family companions.
           </p>
           <div class="about-pillars">
+            <div class="pillar-card">
+              <h3>Proven in Medical Service Work</h3>
+              <p>Rather than chasing weekend beauty ribbons, our bloodlines are tested in the real world—assisting handlers with neurological and mobility challenges across New York City.</p>
+            </div>
             <div class="pillar-card">
               <h3>Health Without Compromise</h3>
               <p>Every breeding dog completes OFA hip and elbow radiographs, annual board-certified ophthalmologist (CAER) exams, and breed-specific DNA panels before any pairing is considered.</p>
             </div>
             <div class="pillar-card">
-              <h3>Temperament First</h3>
-              <p>A true Spanish Water Dog is observant, intelligent, and loyal. We prioritize confident nerve strength and environmental resilience so our puppies thrive in busy cities and serene suburbs alike.</p>
-            </div>
-            <div class="pillar-card">
-              <h3>Lifetime Breeder Partnership</h3>
-              <p>From your first coat-shearing tutorial to lifelong training advice, Qbits Kennel stands behind every puppy we produce for the entirety of their life.</p>
+              <h3>Lifetime Breeder &amp; Trainer Support</h3>
+              <p>From rustic coat-care tutorials to professional behavioral and task-training guidance through <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: var(--accent-forest); font-weight: 700;">Gotham Paw</a>, we stand behind every puppy for life.</p>
             </div>
           </div>
         </div>
@@ -201,15 +243,111 @@ import {
     </section>
 
     <!-- ====================================================================
-         MEET OUR DOGS: DUDLEY (STUD) & MOLLY (BITCH)
+         SECTION 02: SERVICE ANIMALS, NEUROLOGICAL TASK TRAINING & THERAPY DOGS
+         ==================================================================== -->
+    <section id="service-animals" class="section section-forest" aria-labelledby="service-heading">
+      <div class="container">
+        <div class="section-header" style="max-width: 860px;">
+          <span class="eyebrow" style="color: #F3B398;">02 • Service Animal Program &amp; Gotham Paw Partnership</span>
+          <h2 id="service-heading" class="section-title">
+            Task-Trained Service Animals for Spinal Cord Injuries &amp; Neuromuscular Disorders
+          </h2>
+          <p class="section-subtitle" style="color: var(--text-on-dark-muted);">
+            At least <strong>one puppy from every Qbits litter</strong> is transferred into our specialized Service Animal Program in partnership with <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">Gotham Paw Service Animal Training</a>. Many of our other puppies also go to homes where they serve as certified <strong>Therapy Dogs</strong>.
+          </p>
+        </div>
+
+        <!-- Urgent Service Dog Callout Banner -->
+        <div class="urgent-service-banner" role="region" aria-label="Urgent Notice for Prospective Service Dog Clients">
+          <div class="urgent-service-copy">
+            <span class="urgent-pill">IMPORTANT NOTICE • REACH OUT ASAP FOR SERVICE DOG PROSPECTS</span>
+            <h3>Interested in a Task-Trained Service Animal? Please Contact Us Early</h3>
+            <p>
+              Producing, evaluating, matching, and custom task-training a medical service dog that meets our exacting neurological and public-access standards is an <strong>extraordinarily thorough, multi-stage process</strong>. If you or a loved one are living with a <strong>spinal cord injury (SCI), Cerebral Palsy, Multiple Sclerosis (MS), or another neuromuscular condition</strong> and wish to be considered for our Fall 2027 / Spring 2028 service candidates, please reach out to us <strong>as soon as possible</strong> so we can begin consultations well in advance.
+            </p>
+          </div>
+          <div class="urgent-service-actions">
+            <a
+              href={KENNEL_INFO.gothamPawUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-terracotta"
+            >
+              Explore Gotham Paw Service Dog Program ↗
+            </a>
+            <a
+              href="#contact"
+              class="btn btn-outline-light"
+              data-select-inquiry="URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)"
+            >
+              Inquire About a Service Dog ASAP
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Pillars of Our Service Dog Program -->
+        <div class="service-pillars-grid">
+          {SERVICE_DOG_HIGHLIGHTS.map((item) => (
+            <article class="service-card">
+              <span class="service-card-badge">{item.badge}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+
+        <!-- Semantic Comparison Table: Service Dog vs. Therapy Dog vs. ESA (per accessibility guidance) -->
+        <div class="comparison-wrapper">
+          <div class="comparison-intro">
+            <h3>Understanding the Difference: Task-Trained Service Dog vs. Therapy Dog vs. Emotional Support Animal (ESA)</h3>
+            <p>
+              Because confusion between assistance animal categories is common, we believe in educating every prospective client with crystal clarity. Under federal law, a <strong>task-trained service dog is legally a piece of medical equipment</strong>, whereas an <strong>Emotional Support Animal (ESA) only protects renters from being evicted or denied housing by a landlord that doesn’t allow pets</strong>.
+            </p>
+          </div>
+
+          <div class="table-scroll-container" role="region" aria-labelledby="assistance-table-caption" tabindex="0">
+            <table class="comparison-table">
+              <caption id="assistance-table-caption" class="sr-only">
+                Legal and functional comparison between a Task-Trained Service Dog, a Facility or Visitation Therapy Dog, and an Emotional Support Animal (ESA)
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Classification</th>
+                  <th scope="col">Legal Status &amp; Definition</th>
+                  <th scope="col">Required Training Standard</th>
+                  <th scope="col">Public Access &amp; Housing Rights</th>
+                  <th scope="col">How Qbits Kennel &amp; Gotham Paw Participate</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ASSISTANCE_DOG_COMPARISON.map((row) => (
+                  <tr>
+                    <th scope="row" class="row-type-cell">
+                      <strong>{row.type}</strong>
+                    </th>
+                    <td>{row.legalStatus}</td>
+                    <td>{row.requiredTraining}</td>
+                    <td>{row.publicAccessRights}</td>
+                    <td>{row.qbitsRole}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 03: MEET OUR DOGS: DUDLEY (STUD) & MOLLY (BITCH)
          ==================================================================== -->
     <section id="our-dogs" class="section section-sand" aria-labelledby="dogs-heading">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">02 • Our Foundation Pair</span>
+          <span class="eyebrow">03 • Our Foundation Pair</span>
           <h2 id="dogs-heading" class="section-title">Meet Dudley &amp; Molly</h2>
           <p class="section-subtitle">
-            Our resident sire <strong>Dudley</strong> and foundation bitch <strong>Molly</strong> represent complementary bloodlines, complete health clearances, and quintessential Spanish Water Dog type. <em>(All stats, pedigree names, and photos below are ready for you to customize.)</em>
+            Our resident sire <strong>Dudley</strong> and foundation bitch <strong>Molly</strong> represent complementary working bloodlines, complete OFA CHIC health clearances, and the calm, people-focused temperament required for service and therapy work.
           </p>
         </div>
 
@@ -305,18 +443,18 @@ import {
     </section>
 
     <!-- ====================================================================
-         STUD SERVICES SECTION (DUDLEY)
+         SECTION 04: STUD SERVICES SECTION (DUDLEY)
          ==================================================================== -->
     <section id="stud-services" class="section section-forest" aria-labelledby="stud-heading">
       <div class="container">
         <div class="stud-layout">
           <div class="stud-intro">
-            <span class="eyebrow" style="color: #E8A588;">03 • Approved Stud Services in NYC &amp; Nationwide</span>
+            <span class="eyebrow" style="color: #F3B398;">04 • Approved Stud Services in NYC &amp; Nationwide</span>
             <h2 id="stud-heading" class="section-title">
               Standing at Stud: Dudley
             </h2>
             <p class="stud-lead">
-              <strong>Dudley</strong> is available at stud to approved, health-tested Spanish Water Dog bitches held by ethical preservation breeders. Located in <strong>New York City</strong> with immediate access to premier reproductive veterinary specialists for progesterone timing, fresh-chilled collection, and overnight airport courier dispatch.
+              <strong>Dudley</strong> is available at stud to approved, health-tested Spanish Water Dog bitches held by ethical preservation and working breeders. Located on the <strong>Upper East Side of New York City</strong> with immediate access to premier reproductive veterinary specialists for progesterone timing, fresh-chilled collection, and overnight airport courier dispatch.
             </p>
 
             <div class="stud-cta-box">
@@ -356,17 +494,17 @@ import {
     </section>
 
     <!-- ====================================================================
-         PLANNED LITTERS: FALL 2027 & SPRING 2028 (DUDLEY x MOLLY)
+         SECTION 05: PLANNED LITTERS: FALL 2027 & SPRING 2028 (DUDLEY x MOLLY)
          ==================================================================== -->
     <section id="upcoming-litters" class="section" aria-labelledby="litters-heading">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">04 • Planned Breeding Schedule</span>
+          <span class="eyebrow">05 • Planned Breeding Schedule</span>
           <h2 id="litters-heading" class="section-title">
             Upcoming Puppies: Fall 2027 &amp; Spring 2028
           </h2>
           <p class="section-subtitle">
-            We are thoughtfully planning our upcoming litters between <strong>Dudley</strong> (Sire) and <strong>Molly</strong> (Dam) for <strong>Fall 2027</strong> or <strong>Spring 2028</strong>. Early applications allow us to get to know prospective families well before whelping.
+            We are thoughtfully planning our upcoming litters between <strong>Dudley</strong> (Sire) and <strong>Molly</strong> (Dam) for <strong>Fall 2027</strong> and <strong>Spring 2028</strong>. At least one puppy per litter enters our <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: var(--accent-forest); font-weight: 700;">Gotham Paw Service Animal Program</a>, with remaining puppies placed in approved therapy and family companion homes.
           </p>
         </div>
 
@@ -374,19 +512,19 @@ import {
           <div class="pairing-parent">
             <span class="pairing-role">SIRE (STUD DOG)</span>
             <h3>Dudley</h3>
-            <p>Athletic bone, tight espresso curls, rock-solid urban nerve &amp; full OFA CHIC clearances.</p>
+            <p>Athletic bone, tight espresso curls, rock-solid urban nerve, service-proven biddability &amp; full OFA CHIC clearances.</p>
           </div>
           <div class="pairing-cross" aria-hidden="true">×</div>
           <div class="pairing-parent">
             <span class="pairing-role">DAM (BITCH)</span>
             <h3>Molly</h3>
-            <p>Intuitive scent drive, classic wooly curl coat, affectionate temperament &amp; full OFA clearances.</p>
+            <p>Intuitive human attunement, classic wooly curl coat, gentle tactile sensitivity &amp; full OFA CHIC clearances.</p>
           </div>
           <div class="pairing-summary">
             <span class="pairing-window-badge">EXPECTED WINDOWS: FALL 2027 / SPRING 2028</span>
             <h4>What We Expect From This Pairing</h4>
             <p>
-              Versatile, medium-sized Spanish Water Dog puppies (expected 35–48 lbs at maturity) in rich brown and parti-factored coats with natural retrieve drive, high trainability, and affectionate family devotion.
+              Versatile, medium-sized Spanish Water Dog puppies (expected 35–48 lbs at maturity) in rich brown and parti-factored non-shedding coats—ideal for neurological task work, hospital/facility therapy work, and devoted family life.
             </p>
           </div>
         </div>
@@ -404,17 +542,17 @@ import {
     </section>
 
     <!-- ====================================================================
-         BREED GUIDE & NYC LIFESTYLE SECTION
+         SECTION 06: BREED GUIDE & NYC LIFESTYLE SECTION
          ==================================================================== -->
     <section id="breed-guide" class="section section-sand" aria-labelledby="breed-heading">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">05 • About the Perro de Agua Español</span>
+          <span class="eyebrow">06 • About the Perro de Agua Español</span>
           <h2 id="breed-heading" class="section-title">
-            The Spanish Water Dog: Rustic, Devoted &amp; Athletic
+            Why the Spanish Water Dog Excels in Service, Therapy &amp; Family Life
           </h2>
           <p class="section-subtitle">
-            Before applying for a puppy, we encourage every family to understand what makes the Spanish Water Dog unique among water and herding breeds.
+            Before applying for a puppy, we encourage every family and service dog applicant to understand what makes the Spanish Water Dog unique among working breeds.
           </p>
         </div>
 
@@ -449,14 +587,14 @@ import {
           </div>
           <div>
             <span>Weight Range</span>
-            <strong>30 – 50 lbs</strong>
+            <strong>30 – 50 lbs (Ideal Mobility Size)</strong>
           </div>
           <div>
             <span>Coat Type</span>
             <strong>Rustic Curly / Corded (Never Brushed)</strong>
           </div>
           <div>
-            <span>Shedding</span>
+            <span>Allergy &amp; Shedding</span>
             <strong>Minimal / Non-Shedding Single Coat</strong>
           </div>
         </div>
@@ -464,17 +602,17 @@ import {
     </section>
 
     <!-- ====================================================================
-         PUPPY APPLICATION SECTION (ONLINE FORM + FILLABLE/PRINTABLE PDF)
+         SECTION 07: PUPPY APPLICATION SECTION (ONLINE FORM + FILLABLE/PRINTABLE PDF)
          ==================================================================== -->
     <section id="puppy-application" class="section" aria-labelledby="application-heading">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">06 • Prospective Puppy Family Questionnaire</span>
+          <span class="eyebrow">07 • Prospective Service, Therapy &amp; Family Puppy Questionnaire</span>
           <h2 id="application-heading" class="section-title">
             Apply for a Qbits Puppy (Online or Fillable PDF)
           </h2>
           <p class="section-subtitle">
-            Whether you prefer to apply online right now or download our official <strong>fillable &amp; printable PDF application</strong> to complete at your leisure and email or mail in, we make the process clear and personal.
+            Whether you are applying for a <strong>task-trained service dog prospect</strong> (please apply as early as possible), a <strong>therapy dog candidate</strong>, or a cherished <strong>family companion</strong>, you may submit our interactive online application below or download our printable PDF.
           </p>
         </div>
 
@@ -506,16 +644,31 @@ import {
           </div>
         </div>
 
-        <!-- Interactive Online Puppy Application Form -->
+        <!-- Interactive Online Puppy Application Form (Netlify Forms + Mailto Backup) -->
         <div class="application-card">
           <div class="application-card-header">
             <div>
-              <h3>Interactive Online Puppy Application (Fall 2027 / Spring 2028)</h3>
-              <p>Complete the fields below to generate a pre-formatted application email directly to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong>.</p>
+              <h3>Interactive Online Puppy &amp; Service Prospect Application (Fall 2027 / Spring 2028)</h3>
+              <p>
+                Complete the fields below to submit your application directly online or via email to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong>.
+              </p>
             </div>
           </div>
 
-          <form id="inline-puppy-app-form" class="puppy-app-form" novalidate>
+          <form
+            id="inline-puppy-app-form"
+            name="qbits-puppy-application"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="puppy-app-form"
+            novalidate
+          >
+            <input type="hidden" name="form-name" value="qbits-puppy-application" />
+            <p hidden>
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+
             <fieldset class="form-fieldset">
               <legend>1. Applicant &amp; Household Details</legend>
               <div class="form-row-2">
@@ -538,8 +691,8 @@ import {
                 </div>
 
                 <div class="field">
-                  <label for="app-co-name">Co-Applicant / Partner Name</label>
-                  <span id="app-co-name-hint" class="hint">Optional — if applying as a couple or family</span>
+                  <label for="app-co-name">Co-Applicant / Caregiver / Partner Name</label>
+                  <span id="app-co-name-hint" class="hint">Optional — if applying with a family member or support caregiver</span>
                   <input
                     type="text"
                     id="app-co-name"
@@ -587,7 +740,7 @@ import {
 
                 <div class="field">
                   <label for="app-location">City, State &amp; Neighborhood *</label>
-                  <span id="app-location-hint" class="hint">e.g. Upper West Side, NYC or Westport, CT</span>
+                  <span id="app-location-hint" class="hint">e.g. Upper East Side, NYC or Greenwich, CT</span>
                   <input
                     type="text"
                     id="app-location"
@@ -614,6 +767,7 @@ import {
                     <option value="Apartment / Condo / Co-op">Apartment / Condo / Co-op</option>
                     <option value="Townhouse / Brownstone">Townhouse / Brownstone</option>
                     <option value="Single-Family House">Single-Family House</option>
+                    <option value="Assisted Living / Accessible Senior Residence">Assisted Living / Accessible Senior Residence</option>
                   </select>
                   <div id="app-housing-error" class="error-msg">
                     <span aria-hidden="true">⚠</span> Please select your residence type.
@@ -622,11 +776,12 @@ import {
 
                 <div class="field">
                   <label for="app-ownership">Own or Rent *</label>
-                  <span id="app-ownership-hint" class="hint">Landlord/board approval required if renting</span>
+                  <span id="app-ownership-hint" class="hint">Note: Task-trained service dogs are exempt from pet bans under ADA/FHA</span>
                   <select id="app-ownership" name="ownership" required aria-describedby="app-ownership-hint" aria-errormessage="app-ownership-error">
                     <option value="">Select status...</option>
                     <option value="Own Residence">Own Residence</option>
                     <option value="Rent (Dog Approved by Landlord)">Rent (Dog Approved by Landlord)</option>
+                    <option value="Rent (Applying for Task-Trained Service Dog)">Rent (Applying for Task-Trained Service Dog)</option>
                   </select>
                   <div id="app-ownership-error" class="error-msg">
                     <span aria-hidden="true">⚠</span> Please select ownership status.
@@ -635,7 +790,7 @@ import {
 
                 <div class="field">
                   <label for="app-hours-alone">Hours Dog Will Be Alone Daily *</label>
-                  <span id="app-hours-hint" class="hint">e.g. Work from home, 3–4 hrs with walker</span>
+                  <span id="app-hours-hint" class="hint">e.g. Retired / Home full-time, Work from home, or 3–4 hrs</span>
                   <input
                     type="text"
                     id="app-hours-alone"
@@ -652,7 +807,7 @@ import {
 
               <div class="field">
                 <label for="app-exercise">Yard / Outdoor Access &amp; Daily Exercise Plan *</label>
-                <span id="app-exercise-hint" class="hint">Describe your yard/fencing or nearby parks, trails, and mental enrichment plans</span>
+                <span id="app-exercise-hint" class="hint">Describe your yard/fencing, nearby parks, caregiver walk support, and daily routine</span>
                 <textarea
                   id="app-exercise"
                   name="exercisePlan"
@@ -667,8 +822,27 @@ import {
             </fieldset>
 
             <fieldset class="form-fieldset">
-              <legend>3. Spanish Water Dog Experience &amp; Litter Preferences (Dudley × Molly)</legend>
+              <legend>3. Service Dog, Therapy Dog or Companion Goals (Dudley × Molly)</legend>
               <div class="form-row-3">
+                <div class="field">
+                  <label for="app-goals">Primary Placement Pathway *</label>
+                  <span id="app-goals-hint" class="hint">Select Service Dog, Therapy Dog, or Companion</span>
+                  <select id="app-goals" name="primaryGoals" required aria-describedby="app-goals-hint">
+                    <option value="Task-Trained Service Dog Prospect (SCI / Neuromuscular via Gotham Paw)">
+                      Task-Trained Service Dog Prospect (SCI / Neuromuscular via Gotham Paw)
+                    </option>
+                    <option value="Certified Therapy Dog Prospect (Hospital / Rehab / School Visitation)">
+                      Certified Therapy Dog Prospect (Hospital / Rehab / School Visitation)
+                    </option>
+                    <option value="Active Family / Senior Companion">
+                      Devoted Family / Senior Companion
+                    </option>
+                    <option value="Performance / Agility / Scent / Water Work">
+                      Performance / Agility / Scent / Water Work
+                    </option>
+                  </select>
+                </div>
+
                 <div class="field">
                   <label for="app-timing">Preferred Litter Timing *</label>
                   <span id="app-timing-hint" class="hint">Planned windows for Dudley × Molly</span>
@@ -681,28 +855,18 @@ import {
 
                 <div class="field">
                   <label for="app-sex">Sex Preference *</label>
-                  <span id="app-sex-hint" class="hint">We match primarily on temperament</span>
+                  <span id="app-sex-hint" class="hint">We match primarily on temperament &amp; task aptitude</span>
                   <select id="app-sex" name="sexPreference" required aria-describedby="app-sex-hint">
-                    <option value="Open / Best Temperament Match">No Preference (Best Temperament Fit)</option>
+                    <option value="Open / Best Temperament & Task Match">No Preference (Best Temperament / Task Fit)</option>
                     <option value="Male Preferred">Male Preferred</option>
                     <option value="Female Preferred">Female Preferred</option>
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="app-goals">Primary Goals for Puppy *</label>
-                  <span id="app-goals-hint" class="hint">Companion, performance, or show</span>
-                  <select id="app-goals" name="primaryGoals" required aria-describedby="app-goals-hint">
-                    <option value="Active Family Companion">Active Family Companion</option>
-                    <option value="Performance / Agility / Scent / Water Work">Performance / Agility / Scent / Water Work</option>
-                    <option value="Conformation Show / Co-Ownership">Conformation Show / Co-Ownership Prospect</option>
                   </select>
                 </div>
               </div>
 
               <div class="field">
-                <label for="app-experience">Previous Dog Experience &amp; Why You Chose the Spanish Water Dog *</label>
-                <span id="app-experience-hint" class="hint">Tell us about past dogs, familiarity with rustic coat care (never brushed), and veterinarian/personal references</span>
+                <label for="app-experience">Service Task Needs, Therapy Goals, or Dog Experience *</label>
+                <span id="app-experience-hint" class="hint">If applying for a Service Animal, please share any neurological/mobility tasks needed (e.g., item retrieval, counterbalance, door buttons). Also share past dog experience and familiarity with rustic coat care (never brushed).</span>
                 <textarea
                   id="app-experience"
                   name="breedExperience"
@@ -711,14 +875,14 @@ import {
                   aria-errormessage="app-experience-error"
                 ></textarea>
                 <div id="app-experience-error" class="error-msg">
-                  <span aria-hidden="true">⚠</span> Please share your dog experience and interest in the breed.
+                  <span aria-hidden="true">⚠</span> Please share your goals, service needs (if applicable), and dog experience.
                 </div>
               </div>
             </fieldset>
 
             <div class="form-submit-bar">
               <button type="submit" class="btn btn-primary">
-                Send Puppy Application to {KENNEL_INFO.email} ✉
+                Submit Application to {KENNEL_INFO.email} ✉
               </button>
               <a
                 href={KENNEL_INFO.applicationPdfUrl}
@@ -735,17 +899,17 @@ import {
     </section>
 
     <!-- ====================================================================
-         FAQ SECTION (Native <details name="qbits-faq"> per search-hidden-content)
+         SECTION 08: FAQ SECTION (Native <details name="qbits-faq"> per search-hidden-content)
          ==================================================================== -->
     <section id="faq" class="section section-sand" aria-labelledby="faq-heading">
       <div class="container faq-layout">
         <div class="faq-sidebar">
-          <span class="eyebrow">07 • Frequently Asked Questions</span>
+          <span class="eyebrow">08 • Frequently Asked Questions</span>
           <h2 id="faq-heading" class="section-title">
-            Answers on Puppies, Stud Services &amp; NYC Living
+            Answers on Service Dogs, Therapy Dogs, Litters &amp; Stud Services
           </h2>
           <p class="section-subtitle">
-            Have a specific question about Dudley, Molly, or our Fall 2027 / Spring 2028 breeding plans? Reach out anytime at <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.
+            Have a specific question about our <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: var(--accent-forest); font-weight: 700;">Gotham Paw</a> service dog program, Dudley, Molly, or our Fall 2027 / Spring 2028 plans? Reach out anytime at <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.
           </p>
         </div>
 
@@ -766,17 +930,17 @@ import {
     </section>
 
     <!-- ====================================================================
-         CONTACT & QUICK INQUIRY SECTION (mailto:dog@cmejo.com + Copy trigger)
+         SECTION 09: CONTACT & QUICK INQUIRY SECTION
          ==================================================================== -->
     <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="container contact-grid">
         <div class="contact-info-panel">
-          <span class="eyebrow">08 • Get in Touch</span>
+          <span class="eyebrow">09 • Get in Touch</span>
           <h2 id="contact-heading" class="section-title">
             Contact Qbits Spanish Water Dog Kennel
           </h2>
           <p class="section-subtitle" style="margin-bottom: 1.75rem;">
-            We welcome inquiries from prospective puppy families, fellow Spanish Water Dog preservation breeders interested in <strong>Dudley</strong>, and NYC neighbors curious to meet the breed.
+            We welcome early inquiries from individuals seeking a <strong>task-trained service dog</strong> (please reach out ASAP), prospective therapy and family puppy homes, and preservation breeders interested in <strong>Dudley</strong>.
           </p>
 
           <div class="contact-direct-cards">
@@ -790,17 +954,33 @@ import {
             </div>
 
             <div class="direct-card">
+              <span class="direct-label">Service Animal Training Partner</span>
+              <strong class="direct-value" style="display: block; margin-bottom: 0.35rem;">Gotham Paw Service Dogs</strong>
+              <p style="margin: 0 0 0.75rem; font-size: 0.94rem; color: var(--text-slate);">
+                Specialized task training for spinal cord injuries (SCI), Cerebral Palsy, Multiple Sclerosis, and neuromuscular disorders.
+              </p>
+              <a
+                href={KENNEL_INFO.gothamPawUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm"
+              >
+                Visit Gotham Paw Website ↗
+              </a>
+            </div>
+
+            <div class="direct-card">
               <span class="direct-label">Kennel Location</span>
               <strong class="direct-value">Upper East Side in New York City, NY</strong>
-              <p style="margin: 0.35rem 0 0; font-size: 0.9rem; color: var(--text-muted);">
-                Serving Manhattan, the Five Boroughs, the Tri-State Area, and approved homes nationwide.
+              <p style="margin: 0.35rem 0 0; font-size: 0.94rem; color: var(--text-muted);">
+                Serving Manhattan, the Five Boroughs, the Tri-State Area, and approved service &amp; family homes nationwide.
               </p>
             </div>
 
             <div class="direct-card">
               <span class="direct-label">Printable &amp; Mail-In Option</span>
-              <p style="margin: 0.25rem 0 0.75rem; font-size: 0.92rem; color: var(--text-slate);">
-                Prefer physical mail? Download our 2-page fillable/printable PDF application and <a href={`mailto:${KENNEL_INFO.email}?subject=Request%20NYC%20Mailing%20Address%20for%20Puppy%20Application`} style="color: var(--accent-forest); font-weight: 600; text-decoration: underline;">email us</a> for our current NYC mailing address.
+              <p style="margin: 0.25rem 0 0.75rem; font-size: 0.94rem; color: var(--text-slate);">
+                Prefer physical mail? Download our 2-page fillable/printable PDF application and <a href={`mailto:${KENNEL_INFO.email}?subject=Request%20NYC%20Mailing%20Address%20for%20Puppy%20Application`} style="color: var(--accent-forest); font-weight: 700; text-decoration: underline;">email us</a> for our current NYC mailing address.
               </p>
               <a
                 href={KENNEL_INFO.applicationPdfUrl}
@@ -816,10 +996,22 @@ import {
         <div class="contact-form-panel">
           <h3>Send a Direct Message to <a href={`mailto:${KENNEL_INFO.email}`} style="color: inherit; text-decoration: underline;">{KENNEL_INFO.email}</a></h3>
           <p class="form-panel-sub">
-            Select your inquiry type below. Submitting opens your email client pre-addressed to <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong>.
+            Select your inquiry topic below. Your message is sent directly to our kennel and <strong><a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a></strong>.
           </p>
 
-          <form id="contact-form" novalidate>
+          <form
+            id="contact-form"
+            name="qbits-contact-inquiry"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <input type="hidden" name="form-name" value="qbits-contact-inquiry" />
+            <p hidden>
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+
             <div class="field">
               <label for="contact-topic">Inquiry Topic *</label>
               <span id="contact-topic-hint" class="hint">Choose the primary subject of your message</span>
@@ -829,8 +1021,14 @@ import {
                 required
                 aria-describedby="contact-topic-hint"
               >
+                <option value="URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)">
+                  URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)
+                </option>
+                <option value="Therapy Dog Prospect Inquiry (Fall 2027 / Spring 2028)">
+                  Therapy Dog Prospect Inquiry (Fall 2027 / Spring 2028)
+                </option>
                 <option value="Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)">
-                  Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)
+                  Companion Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)
                 </option>
                 <option value="Stud Service Inquiry — Dudley">
                   Stud Service Inquiry — Dudley (Approved Bitches)
@@ -883,8 +1081,8 @@ import {
 
             <div class="form-row-2">
               <div class="field">
-                <label for="contact-phone">Phone Number (Optional)</label>
-                <span id="contact-phone-hint" class="hint">Best number for a call or text</span>
+                <label for="contact-phone">Phone Number (Recommended for Service Inquiries)</label>
+                <span id="contact-phone-hint" class="hint">Best number for a phone consultation</span>
                 <input
                   type="tel"
                   id="contact-phone"
@@ -914,7 +1112,7 @@ import {
             <div class="field">
               <label for="contact-message">Your Message *</label>
               <span id="contact-message-hint" class="hint">
-                Share a bit about your home, your interest in Dudley’s stud services, or your goals for a Fall 2027 / Spring 2028 puppy
+                Share a bit about your service dog task needs, your household, or your interest in Dudley’s stud services or Molly’s 2027/2028 litters
               </span>
               <textarea
                 id="contact-message"
@@ -931,7 +1129,7 @@ import {
 
             <div class="contact-submit-group">
               <button type="submit" class="btn btn-primary">
-                Send via Email App ({KENNEL_INFO.email}) ✉
+                Send Message to {KENNEL_INFO.email} ✉
               </button>
             </div>
             <div id="contact-status" class="form-status-banner" role="status" aria-live="polite" hidden></div>
@@ -948,10 +1146,10 @@ import {
   <dialog id="puppy-app-dialog" class="app-modal" aria-labelledby="modal-app-title">
     <div class="modal-header">
       <div>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #E8A588; text-transform: uppercase; letter-spacing: 0.1em;">
-          Qbits Spanish Water Dog Kennel • NYC
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: #F3B398; text-transform: uppercase; letter-spacing: 0.1em;">
+          Qbits Spanish Water Dog Kennel • Upper East Side, NYC
         </span>
-        <h2 id="modal-app-title">Quick Puppy Application &amp; Printable PDF</h2>
+        <h2 id="modal-app-title">Quick Service, Therapy &amp; Puppy Application</h2>
       </div>
       <!-- MANDATORY per declarative-dialog-popover-control: command="close" -->
       <button
@@ -967,8 +1165,8 @@ import {
     <div class="modal-body">
       <div class="modal-pdf-callout">
         <div>
-          <strong>Want to print and mail or fill out offline?</strong>
-          <p style="margin: 0.25rem 0 0; font-size: 0.9rem;">
+          <strong>Prefer to print and mail or fill out offline?</strong>
+          <p style="margin: 0.25rem 0 0; font-size: 0.94rem;">
             Download our official 2-page interactive fillable PDF application (`qbits-puppy-application.pdf`).
           </p>
         </div>
@@ -1027,7 +1225,7 @@ import {
           </div>
           <div class="field">
             <label for="modal-app-city">City, State &amp; Housing Type *</label>
-            <span id="modal-app-city-hint" class="hint">e.g. Brooklyn, NY — Brownstone w/ yard</span>
+            <span id="modal-app-city-hint" class="hint">e.g. Upper East Side, NYC — Co-op</span>
             <input
               type="text"
               id="modal-app-city"
@@ -1051,20 +1249,21 @@ import {
             </select>
           </div>
           <div class="field">
-            <label for="modal-app-sex">Sex &amp; Goal Preference *</label>
-            <span id="modal-app-sex-hint" class="hint">Companion, agility/water, or show</span>
-            <select id="modal-app-sex" name="sexPreference" aria-describedby="modal-app-sex-hint">
-              <option value="No Sex Preference — Family Companion">No Preference — Family Companion</option>
-              <option value="Male — Companion / Performance">Male — Companion / Performance</option>
-              <option value="Female — Companion / Performance">Female — Companion / Performance</option>
-              <option value="Show / Co-Ownership Prospect">Show / Co-Ownership Prospect</option>
+            <label for="modal-app-sex">Placement Pathway *</label>
+            <span id="modal-app-sex-hint" class="hint">Service Dog, Therapy Dog, or Family Companion</span>
+            <select id="modal-app-sex" name="primaryGoals" aria-describedby="modal-app-sex-hint">
+              <option value="Task-Trained Service Dog Prospect (SCI / Neuromuscular — Gotham Paw)">
+                Task-Trained Service Dog Prospect (SCI / Neuromuscular)
+              </option>
+              <option value="Therapy Dog Prospect">Therapy Dog Prospect</option>
+              <option value="Family / Senior Companion">Family / Senior Companion</option>
             </select>
           </div>
         </div>
 
         <div class="field">
-          <label for="modal-app-notes">Daily Routine, Exercise Plan &amp; Dog Experience *</label>
-          <span id="modal-app-notes-hint" class="hint">Tell us about your household, daily hours alone, and why a Spanish Water Dog is right for you</span>
+          <label for="modal-app-notes">Service Task Needs, Daily Routine &amp; Dog Experience *</label>
+          <span id="modal-app-notes-hint" class="hint">Tell us about your household, any neurological/mobility service tasks needed, and why a Spanish Water Dog is right for you</span>
           <textarea
             id="modal-app-notes"
             name="breedExperience"
@@ -1072,12 +1271,12 @@ import {
             aria-describedby="modal-app-notes-hint"
             aria-errormessage="modal-app-notes-err"
           ></textarea>
-          <div id="modal-app-notes-err" class="error-msg">Please tell us about your home and experience.</div>
+          <div id="modal-app-notes-err" class="error-msg">Please tell us about your home and goals.</div>
         </div>
 
         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: space-between; align-items: center;">
           <button type="submit" class="btn btn-primary">
-            Submit Application via Email ({KENNEL_INFO.email}) ✉
+            Submit Application ({KENNEL_INFO.email}) ✉
           </button>
           <button
             type="button"
@@ -1088,6 +1287,7 @@ import {
             Cancel
           </button>
         </div>
+        <div id="modal-app-status" class="form-status-banner" role="status" aria-live="polite" hidden></div>
       </form>
     </div>
   </dialog>
@@ -1102,11 +1302,11 @@ import {
           <span class="brand-crest" style="background: var(--accent-terracotta);">Q</span>
           <div class="brand-text">
             <span class="brand-title" style="color: var(--text-on-dark);">Qbits Spanish Water Dog Kennel</span>
-            <span class="brand-sub" style="color: var(--text-on-dark-muted);">New York City • Perro de Agua Español</span>
+            <span class="brand-sub" style="color: var(--text-on-dark-muted);">Upper East Side, NYC • Perro de Agua Español</span>
           </div>
         </div>
         <p class="footer-desc">
-          Preservation breeding of health-tested Spanish Water Dogs in New York City. Home of stud dog <strong>Dudley</strong> and foundation bitch <strong>Molly</strong>. Planned litters for <strong>Fall 2027 &amp; Spring 2028</strong>.
+          Preservation &amp; service animal breeding of health-tested Spanish Water Dogs on the Upper East Side of New York City. Partnered with <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: #F3B398; font-weight: 700;">Gotham Paw</a> for spinal cord injury &amp; neuromuscular task-trained service dogs. Home of stud dog <strong>Dudley</strong> and foundation bitch <strong>Molly</strong>.
         </p>
         <p class="footer-email">
           Direct Email: <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>
@@ -1117,6 +1317,7 @@ import {
         <h3>Quick Navigation</h3>
         <ul>
           <li><a href="#about">About Qbits Kennel NYC</a></li>
+          <li><a href="#service-animals">Service &amp; Therapy Dogs</a></li>
           <li><a href="#our-dogs">Meet Dudley &amp; Molly</a></li>
           <li><a href="#stud-services">Dudley Stud Services</a></li>
           <li><a href="#upcoming-litters">Fall 2027 / Spring 2028 Litters</a></li>
@@ -1126,9 +1327,14 @@ import {
       </div>
 
       <div class="footer-links">
-        <h3>Applications &amp; Resources</h3>
+        <h3>Applications &amp; Partners</h3>
         <ul>
-          <li><a href="#puppy-application">Online Puppy Application</a></li>
+          <li>
+            <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">
+              Gotham Paw Service Animal Training ↗
+            </a>
+          </li>
+          <li><a href="#puppy-application">Online Puppy &amp; Service Application</a></li>
           <li>
             <a href={KENNEL_INFO.applicationPdfUrl} download="Qbits-SWD-Puppy-Application.pdf">
               Download Fillable PDF Application
@@ -1141,20 +1347,32 @@ import {
     </div>
 
     <div class="container footer-bottom">
-      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (New York City, NY). All rights reserved. • <a href="/privacy" style="color: var(--text-on-dark-muted); text-decoration: underline;">Privacy Policy</a></p>
-      <p>Dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>).</p>
+      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (Upper East Side, New York City, NY). All rights reserved. • <a href="/privacy" style="color: var(--text-on-dark-muted); text-decoration: underline;">Privacy Policy</a></p>
+      <p>Dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>) &amp; Medical Service Work.</p>
     </div>
   </footer>
 </Layout>
 
 <style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   /* Announcement Bar */
   .announcement-bar {
     background-color: var(--bg-forest);
     color: var(--text-on-dark);
-    font-size: 0.84rem;
-    padding-block: 0.55rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.9rem;
+    padding-block: 0.65rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   }
 
   .announcement-inner {
@@ -1177,42 +1395,48 @@ import {
     background-color: var(--accent-terracotta);
     color: #FFFFFF;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.15rem 0.55rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
     border-radius: 999px;
     letter-spacing: 0.06em;
   }
 
   .announcement-actions {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.65rem;
   }
 
   .announcement-link {
     color: var(--text-on-dark);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
 
-  /* Header */
+  /* Header & Responsive Senior-Accessible Navigation */
   .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgba(250, 247, 242, 0.92);
+    background-color: rgba(250, 247, 242, 0.96);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-stone);
+    border-bottom: 1.5px solid var(--border-stone);
+  }
+
+  html[data-contrast="high"] .site-header {
+    background-color: #FFFFFF;
   }
 
   .header-inner {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    min-height: 4.5rem;
+    gap: 0.75rem 1.25rem;
+    padding-block: 0.75rem;
   }
 
   .brand-logo {
@@ -1224,13 +1448,13 @@ import {
   }
 
   .brand-crest {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 10px;
     background-color: var(--accent-forest);
     color: var(--text-on-dark);
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
@@ -1244,48 +1468,66 @@ import {
 
   .brand-title {
     font-family: var(--font-serif);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.1;
   }
 
   .brand-sub {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-muted);
   }
 
+  /* Navigation always visible & wraps cleanly on mobile, tablet, and 200% zoomed screens */
   .primary-nav {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1.35rem;
+    gap: 0.35rem 1.1rem;
+    order: 3;
+    width: 100%;
+    padding-top: 0.45rem;
+    border-top: 1px solid var(--border-stone);
   }
 
-  @media (min-width: 980px) {
+  @media (min-width: 1080px) {
     .primary-nav {
-      display: flex;
+      order: 0;
+      width: auto;
+      padding-top: 0;
+      border-top: none;
     }
   }
 
   .primary-nav a {
     color: var(--text-slate);
     text-decoration: none;
-    font-size: 0.92rem;
-    font-weight: 600;
-    padding: 0.4rem 0.2rem;
-    transition: color 0.15s ease;
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 0.45rem 0.35rem;
+    border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
   }
 
   .primary-nav a:hover {
     color: var(--accent-terracotta);
+    background-color: var(--bg-sand);
+  }
+
+  .primary-nav a.nav-highlight {
+    color: var(--accent-forest);
+    background-color: var(--bg-sand);
+    padding-inline: 0.65rem;
+    border: 1px solid var(--border-strong);
   }
 
   .btn-sm {
-    min-height: 40px;
-    padding: 0.5rem 1.05rem;
-    font-size: 0.86rem;
+    min-height: 44px;
+    padding: 0.55rem 1.15rem;
+    font-size: 0.92rem;
   }
 
   /* Hero */
@@ -1309,13 +1551,13 @@ import {
 
   .hero-title {
     font-size: clamp(2.65rem, 5.2vw, 4.35rem);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1.15rem;
-    line-height: 1.06;
+    line-height: 1.08;
   }
 
   .hero-lead {
-    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    font-size: clamp(1.08rem, 1.5vw, 1.22rem);
     color: var(--text-slate);
     margin-bottom: 1.5rem;
     max-width: 62ch;
@@ -1323,30 +1565,39 @@ import {
 
   .hero-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 0.85rem;
     margin-bottom: 1.75rem;
   }
 
   .highlight-chip {
     background-color: var(--bg-sand);
-    border: 1px solid var(--border-stone);
-    border-left: 4px solid var(--accent-forest);
-    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border-stone);
+    border-left: 5px solid var(--accent-forest);
+    padding: 0.85rem 1.05rem;
     border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
-    font-size: 0.92rem;
+    gap: 0.2rem;
+    font-size: 0.96rem;
+  }
+
+  .highlight-chip.chip-service {
+    border-left-color: var(--accent-terracotta);
+  }
+
+  .highlight-chip a {
+    color: var(--accent-forest);
+    text-decoration: underline;
   }
 
   .chip-label {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--accent-terracotta);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .hero-actions {
@@ -1361,7 +1612,7 @@ import {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.6rem;
-    font-size: 0.9rem;
+    font-size: 0.96rem;
     color: var(--text-muted);
     margin: 0;
   }
@@ -1369,23 +1620,7 @@ import {
   .hero-note a {
     color: var(--accent-forest);
     font-weight: 700;
-  }
-
-  .inline-copy-btn {
-    background: var(--bg-sand);
-    border: 1px solid var(--border-strong);
-    color: var(--text-espresso);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.65rem;
-    border-radius: 6px;
-    cursor: pointer;
-    min-height: 32px;
-  }
-
-  .inline-copy-btn:hover {
-    background: var(--border-stone);
+    text-decoration: underline;
   }
 
   .hero-frame {
@@ -1393,7 +1628,7 @@ import {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-elevated);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     background-color: var(--bg-sand);
   }
 
@@ -1404,10 +1639,10 @@ import {
   }
 
   .hero-caption-card {
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.35rem;
     background: var(--bg-card);
     border-top: 1px solid var(--border-stone);
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     color: var(--text-slate);
   }
 
@@ -1417,8 +1652,8 @@ import {
 
   .caption-tag {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 700;
     color: var(--accent-terracotta);
     letter-spacing: 0.08em;
   }
@@ -1426,32 +1661,32 @@ import {
   /* Ethics Strip */
   .ethics-strip {
     background-color: var(--bg-sand);
-    border-block: 1px solid var(--border-stone);
-    padding-block: 2rem;
+    border-block: 1.5px solid var(--border-stone);
+    padding-block: 2.25rem;
   }
 
   .ethics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.5rem;
   }
 
   .ethics-item {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.3rem;
   }
 
   .ethics-num {
     font-family: var(--font-serif);
-    font-size: 1.55rem;
+    font-size: 1.65rem;
     font-weight: 700;
     color: var(--accent-forest);
   }
 
   .ethics-item p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.96rem;
     color: var(--text-slate);
   }
 
@@ -1464,13 +1699,43 @@ import {
 
   @media (min-width: 900px) {
     .about-layout {
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.92fr 1.08fr;
       gap: 3.5rem;
     }
   }
 
+  .breeder-uvp-box {
+    background: var(--bg-sand);
+    border: 1.5px solid var(--border-strong);
+    border-left: 5px solid var(--accent-terracotta);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    margin-top: 1.5rem;
+  }
+
+  .uvp-tag {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-terracotta);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+
+  .breeder-uvp-box p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-espresso);
+  }
+
+  .breeder-uvp-box a {
+    color: var(--accent-forest);
+    text-decoration: underline;
+  }
+
   .lead-paragraph {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
     color: var(--text-espresso);
     margin-top: 0;
   }
@@ -1484,22 +1749,186 @@ import {
 
   .pillar-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
-    padding: 1.25rem 1.4rem;
+    padding: 1.35rem 1.5rem;
     box-shadow: var(--shadow-soft);
   }
 
   .pillar-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     margin-bottom: 0.4rem;
     color: var(--accent-forest);
   }
 
   .pillar-card p {
     margin: 0;
-    font-size: 0.94rem;
+    font-size: 0.98rem;
     color: var(--text-slate);
+  }
+
+  /* Service Animals & Gotham Paw Section */
+  .urgent-service-banner {
+    background: linear-gradient(135deg, #1C3B2F 0%, #142B22 100%);
+    border: 2px solid #F3B398;
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 3.5vw, 2.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .urgent-service-copy {
+    max-width: 720px;
+  }
+
+  .urgent-pill {
+    display: inline-block;
+    background: var(--accent-terracotta);
+    color: #FFFFFF;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.65rem;
+  }
+
+  .urgent-service-copy h3 {
+    font-size: clamp(1.55rem, 2.8vw, 2rem);
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+  }
+
+  .urgent-service-copy p {
+    margin: 0;
+    font-size: 1.02rem;
+    color: var(--text-on-dark-muted);
+  }
+
+  .urgent-service-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+
+  .service-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.35rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-card {
+    background: var(--bg-forest-elevated);
+    border: 1.5px solid rgba(250, 247, 242, 0.22);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card-badge {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #F3B398;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    margin-bottom: 0.55rem;
+  }
+
+  .service-card p {
+    margin: 0;
+    font-size: 0.98rem;
+    color: var(--text-on-dark-muted);
+  }
+
+  /* Assistance Dog Comparison Table */
+  .comparison-wrapper {
+    background: var(--bg-card);
+    color: var(--text-espresso);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.5rem, 3.5vw, 2.5rem);
+    border: 2px solid var(--border-strong);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .comparison-intro {
+    max-width: 820px;
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-intro h3 {
+    color: var(--text-espresso);
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .comparison-intro p {
+    margin: 0;
+    color: var(--text-slate);
+    font-size: 1.02rem;
+  }
+
+  .table-scroll-container {
+    overflow-x: auto;
+    border: 1.5px solid var(--border-strong);
+    border-radius: var(--radius-md);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 760px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1.1rem 1.15rem;
+    border-bottom: 1px solid var(--border-stone);
+    vertical-align: top;
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  .comparison-table thead th {
+    background: var(--bg-sand);
+    color: var(--text-espresso);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid var(--border-strong);
+  }
+
+  .comparison-table tbody tr:last-child th,
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .comparison-table tbody tr:nth-child(even) {
+    background-color: var(--bg-alabaster);
+  }
+
+  .row-type-cell {
+    color: var(--accent-forest);
+    font-family: var(--font-sans);
+    width: 19%;
   }
 
   /* Dogs Section */
@@ -1517,7 +1946,7 @@ import {
 
   .dog-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
@@ -1542,12 +1971,12 @@ import {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    background: rgba(22, 48, 38, 0.92);
+    background: rgba(20, 43, 34, 0.94);
     color: var(--text-on-dark);
     font-family: var(--font-mono);
-    font-size: 0.74rem;
-    font-weight: 600;
-    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.4rem 0.85rem;
     border-radius: 999px;
   }
 
@@ -1567,37 +1996,38 @@ import {
 
   .dog-sex-label {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--accent-terracotta);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .dog-callname {
-    font-size: 2.35rem;
+    font-size: 2.4rem;
     margin: 0.1rem 0 0.25rem;
   }
 
   .dog-dob {
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     background: var(--bg-sand);
-    padding: 0.25rem 0.65rem;
+    padding: 0.3rem 0.7rem;
     border-radius: 6px;
     color: var(--text-slate);
+    font-weight: 600;
   }
 
   .dog-reg-name {
     font-family: var(--font-serif);
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-style: italic;
     color: var(--text-slate);
     margin: 0 0 0.25rem;
   }
 
   .dog-pedigree {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
     margin: 0 0 1rem;
   }
@@ -1611,12 +2041,12 @@ import {
 
   .title-pill {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 600;
+    font-size: 0.76rem;
+    font-weight: 700;
     background: var(--bg-alabaster);
-    border: 1px solid var(--border-stone);
+    border: 1px solid var(--border-strong);
     color: var(--accent-forest);
-    padding: 0.2rem 0.6rem;
+    padding: 0.25rem 0.65rem;
     border-radius: 999px;
   }
 
@@ -1627,36 +2057,37 @@ import {
     background: var(--bg-alabaster);
     border: 1px solid var(--border-stone);
     border-radius: var(--radius-sm);
-    padding: 0.85rem 1rem;
+    padding: 0.9rem 1rem;
     margin: 0 0 1.15rem;
   }
 
   .dog-specs dt {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     text-transform: uppercase;
     color: var(--text-muted);
+    font-weight: 600;
   }
 
   .dog-specs dd {
     margin: 0.15rem 0 0;
-    font-size: 0.88rem;
-    font-weight: 600;
+    font-size: 0.94rem;
+    font-weight: 700;
     color: var(--text-espresso);
   }
 
   .dog-summary,
   .dog-temperament {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-slate);
-    margin: 0 0 0.9rem;
+    margin: 0 0 0.95rem;
   }
 
   .clearances-box {
     background: var(--bg-alabaster);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
-    padding: 1rem 1.15rem;
+    padding: 1.05rem 1.2rem;
     margin-top: auto;
     margin-bottom: 1.4rem;
   }
@@ -1666,48 +2097,50 @@ import {
     align-items: center;
     justify-content: space-between;
     font-family: var(--font-sans);
-    font-size: 0.86rem;
+    font-size: 0.92rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
   }
 
   .chic-tag {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     color: var(--valid-green);
     background: var(--valid-bg);
-    padding: 0.15rem 0.5rem;
+    padding: 0.2rem 0.55rem;
     border-radius: 4px;
+    font-weight: 700;
   }
 
   .clearances-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.55rem;
+    gap: 0.6rem;
   }
 
   .clearance-item {
     background: #FFFFFF;
     border: 1px solid var(--border-stone);
     border-radius: 6px;
-    padding: 0.45rem 0.65rem;
+    padding: 0.5rem 0.7rem;
     display: flex;
     flex-direction: column;
   }
 
   .clearance-test {
-    font-size: 0.74rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
+    font-weight: 600;
   }
 
   .clearance-result {
-    font-size: 0.84rem;
+    font-size: 0.9rem;
     color: var(--accent-forest);
   }
 
   .clearance-code {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.74rem;
     color: var(--text-muted);
   }
 
@@ -1727,26 +2160,26 @@ import {
   }
 
   .stud-lead {
-    font-size: 1.08rem;
+    font-size: 1.1rem;
     color: var(--text-on-dark-muted);
     margin-bottom: 1.75rem;
   }
 
   .stud-cta-box {
     background: var(--bg-forest-elevated);
-    border: 1px solid rgba(250, 247, 242, 0.2);
+    border: 1.5px solid rgba(250, 247, 242, 0.24);
     border-radius: var(--radius-md);
-    padding: 1.5rem;
+    padding: 1.6rem;
   }
 
   .stud-cta-box h3 {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
 
   .stud-cta-box p {
     color: var(--text-on-dark-muted);
-    font-size: 0.94rem;
+    font-size: 0.98rem;
     margin-bottom: 1.25rem;
   }
 
@@ -1764,33 +2197,33 @@ import {
 
   .stud-feature-card {
     background: var(--bg-forest-elevated);
-    border: 1px solid rgba(250, 247, 242, 0.16);
+    border: 1.5px solid rgba(250, 247, 242, 0.18);
     border-radius: var(--radius-md);
-    padding: 1.35rem 1.5rem;
+    padding: 1.4rem 1.55rem;
   }
 
   .stud-feature-num {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: #E8A588;
-    font-weight: 600;
+    font-size: 0.78rem;
+    color: #F3B398;
+    font-weight: 700;
   }
 
   .stud-feature-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     margin: 0.25rem 0 0.4rem;
   }
 
   .stud-feature-card p {
     margin: 0;
-    font-size: 0.93rem;
+    font-size: 0.98rem;
     color: var(--text-on-dark-muted);
   }
 
   /* Litters & Pairing */
   .pairing-banner {
     background: var(--bg-sand);
-    border: 1px solid var(--border-strong);
+    border: 1.5px solid var(--border-strong);
     border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 3.5vw, 2.5rem);
     display: grid;
@@ -1808,26 +2241,26 @@ import {
 
   .pairing-parent {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
-    padding: 1.25rem;
+    padding: 1.3rem;
   }
 
   .pairing-role {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.76rem;
     color: var(--accent-terracotta);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .pairing-parent h3 {
-    font-size: 1.85rem;
+    font-size: 1.9rem;
     margin: 0.15rem 0 0.35rem;
   }
 
   .pairing-parent p {
     margin: 0;
-    font-size: 0.88rem;
+    font-size: 0.94rem;
     color: var(--text-slate);
   }
 
@@ -1844,21 +2277,21 @@ import {
     background: var(--accent-forest);
     color: var(--text-on-dark);
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
     border-radius: 999px;
     margin-bottom: 0.5rem;
   }
 
   .pairing-summary h4 {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     margin-bottom: 0.4rem;
   }
 
   .pairing-summary p {
     margin: 0;
-    font-size: 0.92rem;
+    font-size: 0.96rem;
     color: var(--text-slate);
   }
 
@@ -1870,28 +2303,28 @@ import {
 
   .roadmap-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-top: 4px solid var(--accent-forest);
     border-radius: var(--radius-md);
-    padding: 1.4rem;
+    padding: 1.45rem;
     box-shadow: var(--shadow-soft);
   }
 
   .roadmap-phase {
     font-family: var(--font-mono);
-    font-size: 0.74rem;
+    font-size: 0.78rem;
     color: var(--accent-terracotta);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .roadmap-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     margin: 0.35rem 0 0.5rem;
   }
 
   .roadmap-card p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.96rem;
     color: var(--text-slate);
   }
 
@@ -1905,7 +2338,7 @@ import {
 
   .breed-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
@@ -1918,33 +2351,33 @@ import {
   }
 
   .breed-card-body {
-    padding: 1.4rem;
+    padding: 1.45rem;
   }
 
   .breed-category {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     color: var(--accent-terracotta);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .breed-card-body h3 {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     margin: 0.25rem 0 0.5rem;
   }
 
   .breed-card-body p {
     margin: 0;
-    font-size: 0.93rem;
+    font-size: 0.98rem;
     color: var(--text-slate);
   }
 
   .breed-specs-bar {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
-    padding: 1.25rem 1.5rem;
+    padding: 1.35rem 1.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
@@ -1953,13 +2386,14 @@ import {
   .breed-specs-bar span {
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     color: var(--text-muted);
+    font-weight: 600;
   }
 
   .breed-specs-bar strong {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     color: var(--accent-forest);
   }
 
@@ -1987,21 +2421,21 @@ import {
     background: var(--accent-terracotta);
     color: #FFFFFF;
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 0.2rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
     border-radius: 4px;
     margin-bottom: 0.5rem;
   }
 
   .pdf-banner-info h3 {
-    font-size: 1.65rem;
+    font-size: 1.7rem;
     margin-bottom: 0.4rem;
   }
 
   .pdf-banner-info p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-slate);
   }
 
@@ -2013,7 +2447,7 @@ import {
 
   .application-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 4vw, 2.75rem);
     box-shadow: var(--shadow-soft);
@@ -2031,18 +2465,18 @@ import {
   }
 
   .application-card-header h3 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     margin-bottom: 0.35rem;
   }
 
   .application-card-header p {
     margin: 0;
     color: var(--text-slate);
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .form-fieldset {
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
     padding: 1.5rem;
     margin: 0 0 1.5rem;
@@ -2051,7 +2485,7 @@ import {
 
   .form-fieldset legend {
     font-family: var(--font-serif);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--accent-forest);
     padding-inline: 0.5rem;
@@ -2086,13 +2520,14 @@ import {
   }
 
   .form-status-banner {
-    margin-top: 1rem;
-    padding: 1rem 1.25rem;
+    margin-top: 1.1rem;
+    padding: 1.1rem 1.35rem;
     border-radius: var(--radius-sm);
     background: var(--valid-bg);
-    border: 1px solid var(--valid-green);
+    border: 2px solid var(--valid-green);
     color: var(--text-espresso);
-    font-size: 0.92rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   /* FAQ Layout */
@@ -2131,25 +2566,25 @@ import {
 
   .direct-card {
     background: var(--bg-sand);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-md);
-    padding: 1.25rem;
+    padding: 1.3rem;
   }
 
   .direct-label {
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--accent-terracotta);
-    font-weight: 600;
-    margin-bottom: 0.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
   }
 
   .direct-value {
     font-family: var(--font-serif);
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--accent-forest);
     text-decoration: none;
@@ -2157,19 +2592,19 @@ import {
 
   .contact-form-panel {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-lg);
     padding: clamp(1.5rem, 3.5vw, 2.5rem);
     box-shadow: var(--shadow-soft);
   }
 
   .contact-form-panel h3 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     margin-bottom: 0.35rem;
   }
 
   .form-panel-sub {
-    font-size: 0.93rem;
+    font-size: 0.98rem;
     color: var(--text-slate);
     margin-top: 0;
     margin-bottom: 1.5rem;
@@ -2183,9 +2618,9 @@ import {
 
   .modal-pdf-callout {
     background: var(--bg-sand);
-    border: 1px solid var(--border-strong);
+    border: 1.5px solid var(--border-strong);
     border-radius: var(--radius-sm);
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.3rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -2207,7 +2642,7 @@ import {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(250, 247, 242, 0.14);
+    border-bottom: 1px solid rgba(250, 247, 242, 0.16);
   }
 
   @media (min-width: 860px) {
@@ -2218,18 +2653,18 @@ import {
 
   .footer-desc {
     color: var(--text-on-dark-muted);
-    font-size: 0.93rem;
-    max-width: 46ch;
+    font-size: 0.96rem;
+    max-width: 48ch;
   }
 
   .footer-email a {
-    color: #E8A588;
+    color: #F3B398;
     font-weight: 700;
   }
 
   .footer-links h3 {
     color: var(--text-on-dark);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 0.85rem;
   }
 
@@ -2239,13 +2674,13 @@ import {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.6rem;
   }
 
   .footer-links a {
     color: var(--text-on-dark-muted);
     text-decoration: none;
-    font-size: 0.92rem;
+    font-size: 0.96rem;
   }
 
   .footer-links a:hover {
@@ -2259,7 +2694,7 @@ import {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    font-size: 0.84rem;
+    font-size: 0.9rem;
     color: var(--text-on-dark-muted);
   }
 
@@ -2269,6 +2704,59 @@ import {
 </style>
 
 <script>
+  // 0. Senior Reading Comfort Toolbar (Text Size A / A+ / A++ & High Contrast)
+  const textButtons = document.querySelectorAll<HTMLButtonElement>('[data-set-text]');
+  const contrastBtn = document.querySelector<HTMLButtonElement>('[data-toggle-contrast]');
+
+  function syncToolbarState() {
+    const currentSize = document.documentElement.getAttribute('data-text-size') || 'normal';
+    const isHighContrast = document.documentElement.getAttribute('data-contrast') === 'high';
+
+    textButtons.forEach((btn) => {
+      const btnSize = btn.getAttribute('data-set-text') || 'normal';
+      btn.setAttribute('aria-pressed', btnSize === currentSize ? 'true' : 'false');
+    });
+
+    if (contrastBtn) {
+      contrastBtn.setAttribute('aria-pressed', isHighContrast ? 'true' : 'false');
+    }
+  }
+
+  syncToolbarState();
+
+  textButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const size = btn.getAttribute('data-set-text') || 'normal';
+      if (size === 'normal') {
+        document.documentElement.removeAttribute('data-text-size');
+      } else {
+        document.documentElement.setAttribute('data-text-size', size);
+      }
+      try {
+        localStorage.setItem('qbits-text-size', size);
+      } catch {}
+      syncToolbarState();
+    });
+  });
+
+  if (contrastBtn) {
+    contrastBtn.addEventListener('click', () => {
+      const isHigh = document.documentElement.getAttribute('data-contrast') === 'high';
+      if (isHigh) {
+        document.documentElement.removeAttribute('data-contrast');
+        try {
+          localStorage.setItem('qbits-contrast', 'normal');
+        } catch {}
+      } else {
+        document.documentElement.setAttribute('data-contrast', 'high');
+        try {
+          localStorage.setItem('qbits-contrast', 'high');
+        } catch {}
+      }
+      syncToolbarState();
+    });
+  }
+
   // 1. MANDATORY per declarative-dialog-popover-control:
   // Feature detect 'commandForElement' on HTMLButtonElement.prototype and conditionally load polyfill
   if (!('commandForElement' in HTMLButtonElement.prototype)) {
@@ -2360,24 +2848,7 @@ import {
     }
   });
 
-  // 3. Copy-Email buttons
-  document.querySelectorAll('[data-copy-email]').forEach((btn) => {
-    btn.addEventListener('click', async () => {
-      const email = btn.getAttribute('data-copy-email') || 'dog@cmejo.com';
-      const originalText = btn.textContent;
-      try {
-        await navigator.clipboard.writeText(email);
-        btn.textContent = `✓ Copied ${email}`;
-        setTimeout(() => {
-          btn.textContent = originalText;
-        }, 2500);
-      } catch {
-        window.location.href = `mailto:${email}`;
-      }
-    });
-  });
-
-  // 4. Pre-select Inquiry Topic when clicking "Inquire About Dudley's Stud Service"
+  // 3. Pre-select Inquiry Topic when clicking "Inquire About Dudley's Stud Service" or "Inquire About a Service Dog ASAP"
   document.querySelectorAll('[data-select-inquiry]').forEach((link) => {
     link.addEventListener('click', () => {
       const desired = link.getAttribute('data-select-inquiry');
@@ -2388,7 +2859,7 @@ import {
     });
   });
 
-  // 5. Helper to format Puppy Application Form into mailto:dog@cmejo.com or Clipboard
+  // 4. Helper to format Puppy Application Form into mailto:dog@cmejo.com + Netlify Forms submission
   function buildApplicationPayload(form: HTMLFormElement) {
     const data = new FormData(form);
     const name = (data.get('applicantName') || '').toString().trim();
@@ -2401,16 +2872,16 @@ import {
     const hoursAlone = (data.get('hoursAlone') || 'Not specified').toString().trim();
     const exercisePlan = (data.get('exercisePlan') || 'See notes below').toString().trim();
     const litterTiming = (data.get('litterTiming') || '').toString().trim();
-    const sexPreference = (data.get('sexPreference') || '').toString().trim();
+    const sexPreference = (data.get('sexPreference') || 'Open').toString().trim();
     const primaryGoals = (data.get('primaryGoals') || 'Companion').toString().trim();
     const breedExperience = (data.get('breedExperience') || '').toString().trim();
 
-    const subject = `Qbits SWD Puppy Application (${litterTiming}) - ${name}`;
+    const subject = `Qbits SWD Application [${primaryGoals}] (${litterTiming}) - ${name}`;
     const body = [
-      'QBITS SPANISH WATER DOG KENNEL (NYC) — PUPPY APPLICATION',
-      '========================================================',
+      'QBITS SPANISH WATER DOG KENNEL (NYC) — APPLICATION',
+      '==================================================',
       `Primary Applicant: ${name}`,
-      coName ? `Co-Applicant: ${coName}` : null,
+      coName ? `Co-Applicant / Caregiver: ${coName}` : null,
       `Email: ${email}`,
       `Phone: ${phone}`,
       `Location: ${location}`,
@@ -2422,51 +2893,68 @@ import {
       `Hours Alone Daily: ${hoursAlone}`,
       `Exercise & Outdoor Plan: ${exercisePlan}`,
       '',
-      'DUDLEY x MOLLY LITTER PREFERENCES',
-      '---------------------------------',
+      'PLACEMENT PATHWAY & LITTER PREFERENCES',
+      '--------------------------------------',
+      `Primary Pathway: ${primaryGoals}`,
       `Preferred Window: ${litterTiming}`,
       `Sex Preference: ${sexPreference}`,
-      `Primary Goals: ${primaryGoals}`,
       '',
-      'EXPERIENCE & NOTES',
-      '------------------',
+      'SERVICE NEEDS, EXPERIENCE & NOTES',
+      '---------------------------------',
       breedExperience,
     ]
       .filter((line) => line !== null)
       .join('\n');
 
-    return { subject, body };
+    return { subject, body, data };
   }
 
   function attachApplicationHandler(formId: string, statusId?: string) {
     const form = document.getElementById(formId) as HTMLFormElement | null;
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      const { subject, body } = buildApplicationPayload(form);
+      const { subject, body, data } = buildApplicationPayload(form);
       const mailtoUrl = `mailto:dog@cmejo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Submit to Netlify Forms in the background so senior users on webmail don't lose their submission
+      try {
+        const urlEncoded = new URLSearchParams();
+        data.forEach((val, key) => urlEncoded.append(key, val.toString()));
+        if (!urlEncoded.has('form-name')) {
+          urlEncoded.append('form-name', 'qbits-puppy-application');
+        }
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: urlEncoded.toString(),
+        });
+      } catch {
+        // Fallback to mailto below
+      }
+
       window.location.href = mailtoUrl;
 
       if (statusId) {
         const statusEl = document.getElementById(statusId);
         if (statusEl) {
           statusEl.hidden = false;
-          statusEl.textContent =
-            '✓ Opening your email client addressed to dog@cmejo.com!';
+          statusEl.innerHTML =
+            '✓ Thank you! Your application has been recorded and your email client is opening addressed to <a href="mailto:dog@cmejo.com" style="color: var(--accent-forest); font-weight: 700;">dog@cmejo.com</a>.';
         }
       }
     });
   }
 
   attachApplicationHandler('inline-puppy-app-form', 'inline-app-status');
-  attachApplicationHandler('modal-puppy-app-form');
+  attachApplicationHandler('modal-puppy-app-form', 'modal-app-status');
 
-  // 6. Contact & Stud Inquiry Form Handler (mailto:dog@cmejo.com)
+  // 5. Contact & Service/Stud Inquiry Form Handler
   const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
   const contactStatus = document.getElementById('contact-status');
 
@@ -2491,22 +2979,38 @@ import {
       message,
     ].join('\n');
 
-    return { subject, body };
+    return { subject, body, data };
   }
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
         return;
       }
-      const { subject, body } = buildContactPayload(contactForm);
+      const { subject, body, data } = buildContactPayload(contactForm);
+
+      try {
+        const urlEncoded = new URLSearchParams();
+        data.forEach((val, key) => urlEncoded.append(key, val.toString()));
+        if (!urlEncoded.has('form-name')) {
+          urlEncoded.append('form-name', 'qbits-contact-inquiry');
+        }
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: urlEncoded.toString(),
+        });
+      } catch {
+        // Fallback to mailto below
+      }
+
       window.location.href = `mailto:dog@cmejo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       if (contactStatus) {
         contactStatus.hidden = false;
-        contactStatus.textContent =
-          '✓ Opening your default mail app addressed to dog@cmejo.com!';
+        contactStatus.innerHTML =
+          '✓ Thank you! Your inquiry has been recorded and your default mail app is opening addressed to <a href="mailto:dog@cmejo.com" style="color: var(--accent-forest); font-weight: 700;">dog@cmejo.com</a>.';
       }
     });
   }

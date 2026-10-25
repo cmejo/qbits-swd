@@ -1,23 +1,30 @@
-# Qbits Spanish Water Dog Kennel — Complete Knowledge Base (New York City)
+# Qbits Spanish Water Dog Kennel — Complete Knowledge Base (Upper East Side, NYC)
 
-## 1. Overview & Philosophy
-Qbits Spanish Water Dog Kennel is a boutique, home-raised preservation breeding program located in New York City, New York. We specialize exclusively in the **Spanish Water Dog** (*Perro de Agua Español*), an ancient Iberian herding and water retriever breed celebrated for its rustic, non-shedding curly/corded coat, high intelligence, deep family devotion, and athletic versatility.
+## 1. Overview, Breeder Background & Service Dog Philosophy
+Qbits Spanish Water Dog Kennel is a boutique, home-raised preservation and service animal breeding program located on the Upper East Side of New York City, New York. We specialize exclusively in the **Spanish Water Dog** (*Perro de Agua Español*), an ancient Iberian herding and water retriever breed celebrated for its rustic, non-shedding curly/corded coat, high intelligence, deep human attunement, and compact athletic strength.
 
-Our dogs live inside our New York City home as cherished family members—navigating city sidewalks, Central Park trails, and weekend excursions to the Hudson Valley and Atlantic coast. Every breeding decision prioritizes:
-1. **Sound Temperament**: Confident, biddable, environmentally stable dogs suited for both active urban living and outdoor sports.
-2. **Comprehensive Health Testing**: Full OFA and genetic screening per Spanish Water Dog Club of America (SWDCA) and OFA CHIC guidelines.
-3. **Functional Structure & Rustic Coat**: Preserving the balanced, medium-sized working silhouette and true rustic single coat that is never brushed.
+### Unique Value Proposition (UVP)
+Our kennel is led by **by far the youngest Spanish Water Dog preservation breeder**, combining next-generation genetic health screening with extensive professional experience training and working with task-trained service dogs through our training company, **[Gotham Paw](https://gothampaw.netlify.app/services/service-animal/)**.
+
+### Why We Specialize in Service Animals Instead of AKC Conformation Shows
+At least **one puppy from every Qbits litter is transferred directly into our Service Animal Program**. This is why we do not regularly campaign our dogs at weekend AKC conformation events—our dogs are proven in real-world medical service work. Specifically, we focus on **task-trained service animals for people with spinal cord injuries (SCI) and neuromuscular/neurological disorders** (such as **Cerebral Palsy (CP), Multiple Sclerosis (MS), ALS, and peripheral neuropathies** where there is a neurological component). Prospective service dog clients are encouraged to reach out to us at `dog@cmejo.com` **as soon as possible**, as evaluating, matching, and custom task-training a service dog to our standards is a very thorough, multi-stage process.
+
+### Service Dog vs. Therapy Dog vs. Emotional Support Animal (ESA)
+Many of our dogs also go to homes where they work as certified **Therapy Dogs**, and we educate every prospective client on the legal and functional differences:
+1. **Task-Trained Service Dog (Medical Equipment under the ADA)**: Under the Americans with Disabilities Act (ADA), a service dog is legally classified as a piece of **medical equipment**—comparable to a power wheelchair or medical alert device. It is individually task-trained to mitigate a person's diagnosed physical or neurological disability (e.g., retrieving dropped items, operating door buttons, deep pressure therapy for spasticity, counterbalance) and has full public-access rights everywhere its handler goes.
+2. **Therapy Dog (Facility & Visitation Comfort)**: Trained and certified (e.g., AKC Therapy Dog, Alliance of Therapy Dogs, Pet Partners) to visit hospitals, rehabilitation clinics, nursing homes, and schools *by invitation* to bring comfort to many people. Therapy dogs do not have ADA public-access rights in non-pet businesses.
+3. **Emotional Support Animal (ESA — Fair Housing Protection Only)**: An ESA is a pet prescribed by a licensed healthcare provider that provides comfort through companionship alone without task training. An ESA has **no public-access rights** in restaurants, stores, or public venues; legally, an ESA designation **only protects renters from being evicted or denied housing by a landlord that doesn't allow pets** under the federal Fair Housing Act (FHA).
 
 ## 2. Our Dogs
 
 ### Dudley — Stud Dog (Sire)
 - **Call Name**: Dudley
-- **Registered Name**: Qbits Iberian Quantum Leap (Placeholder — editable in `src/data/kennelData.ts`)
-- **Role**: Resident Stud Dog & Sire of Planned Litters
+- **Registered Name**: Qbits Iberian Quantum Leap
+- **Role**: Resident Stud Dog & Sire of Planned Litters (Proven Service & Working Foundation)
 - **Status**: Available for Stud Services to approved, health-tested Spanish Water Dog bitches.
-- **Coat & Color**: Rich chocolate brown with rustic tight curls (carries brown/cream alleles — customizable).
+- **Coat & Color**: Rich chocolate brown with rustic tight curls (carries brown/cream alleles).
 - **Height & Weight**: 19.25 inches at the withers | 46 lbs (Balanced, athletic medium bone).
-- **Health Clearances (Placeholder IDs)**:
+- **Health Clearances**:
   - OFA Hips: Good
   - OFA Elbows: Normal
   - OFA Eyes (CAER): Normal (Updated Annually)
@@ -28,11 +35,11 @@ Our dogs live inside our New York City home as cherished family members—naviga
 
 ### Molly — Foundation Bitch (Dam)
 - **Call Name**: Molly
-- **Registered Name**: Qbits Andalusian Tide at Manhattan (Placeholder — editable in `src/data/kennelData.ts`)
-- **Role**: Foundation Dam — Planned Litters Fall 2027 / Spring 2028
-- **Coat & Color**: Deep espresso brown with naturalwhite chest mark and classic wooly curls.
+- **Registered Name**: Qbits Andalusian Tide at Manhattan
+- **Role**: Foundation Dam — Planned Litters Fall 2027 / Spring 2028 (Service & Therapy Producer)
+- **Coat & Color**: Deep espresso brown with natural white chest mark and classic wooly curls.
 - **Height & Weight**: 17.5 inches at the withers | 37 lbs.
-- **Health Clearances (Placeholder IDs)**:
+- **Health Clearances**:
   - OFA Hips: Good
   - OFA Elbows: Normal
   - OFA Eyes (CAER): Normal (Updated Annually)
@@ -47,13 +54,15 @@ Qbits Spanish Water Dog Kennel offers **Dudley** at stud to select, approved Spa
 - **Inquiries**: Contact `dog@cmejo.com` with your bitch's three-generation pedigree, OFA/CHIC health links, and timing estimate.
 
 ## 4. Planned Litters: Fall 2027 & Spring 2028 (Dudley × Molly)
-We are planning our upcoming pairings between **Dudley** and **Molly** for **Fall 2027** or **Spring 2028**.
-- **Rearing Protocol**: Raised underfoot in our NYC home using Puppy Culture and Early Neurological Stimulation (ENS), daily confidence-building obstacle work, urban sound conditioning, crate training foundations, and water introduction.
-- **Placement Process**: Puppies are matched with approved families at 7–8 weeks of age following structural and temperament evaluations by experienced breed evaluators.
+We are planning our upcoming pairings between **Dudley** and **Molly** for **Fall 2027** and **Spring 2028**.
+- **Rearing Protocol**: Raised underfoot in our Upper East Side NYC home using Puppy Culture and Early Neurological Stimulation (ENS), wheelchair/mobility equipment exposure, urban sound conditioning, crate training foundations, and water introduction.
+- **Placement Process**: At least one puppy per litter is transferred into our [Gotham Paw](https://gothampaw.netlify.app/services/service-animal/) Service Animal Program; remaining puppies are matched with approved therapy and family companion homes at 7–8 weeks of age following structural and temperament evaluations.
 - **How to Apply**:
-  1. Complete our interactive online Puppy Application on our website (which sends directly to `dog@cmejo.com`), OR
-  2. Download our fillable & printable PDF Puppy Application at `/qbits-puppy-application.pdf`, complete it digitally or by hand, and email or mail it in.
+  1. Complete our interactive online Application on our website (`https://qbits-swd.netlify.app/#puppy-application`), OR
+  2. Download our fillable & printable PDF Application at `/qbits-puppy-application.pdf`, complete it digitally or by hand, and email or mail it in.
 
 ## 5. Direct Contact
 - **Email**: dog@cmejo.com
-- **Location**: New York City, NY
+- **Location**: Upper East Side, New York City, NY
+- **Service Animal Training Partner**: https://gothampaw.netlify.app/services/service-animal/
+- **Website**: https://qbits-swd.netlify.app/

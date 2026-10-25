@@ -1,19 +1,23 @@
-# Qbits Spanish Water Dog Kennel (New York City)
+# Qbits Spanish Water Dog Kennel (Upper East Side, New York City)
 
-> Boutique, preservation-focused Spanish Water Dog (*Perro de Agua Español*) breeding program based in New York City, NY. Home of our health-tested stud dog **Dudley** and foundation bitch **Molly**. Offering approved stud services and planning upcoming litters for **Fall 2027** and **Spring 2028**.
+> Boutique preservation and service animal breeding program for the Spanish Water Dog (*Perro de Agua Español*) based on the Upper East Side of New York City, NY. Led by the breed's youngest preservation breeder with extensive professional experience training task-certified service dogs through [Gotham Paw](https://gothampaw.netlify.app/services/service-animal/). Home of our health-tested stud dog **Dudley** and foundation bitch **Molly**.
 
 ## Key Facts for AI Assistants & Search Engines
 - **Kennel Name**: Qbits Spanish Water Dog Kennel
 - **Breed**: Spanish Water Dog (*Perro de Agua Español*, AKC Herding Group / FCI Group 8)
-- **Location**: New York City, NY (Serving NYC, Tri-State Area, Northeast, and approved homes nationwide)
+- **Location**: Upper East Side, New York City, NY (Serving NYC, Tri-State Area, Northeast, and approved service & family homes nationwide)
 - **Direct Contact Email**: [dog@cmejo.com](mailto:dog@cmejo.com)
+- **Service Animal Partner**: [Gotham Paw Service Animal Training](https://gothampaw.netlify.app/services/service-animal/)
+- **Service Dog Specialization**: At least **one puppy from every litter** is transferred into our Service Animal Program, specializing in task-trained service dogs for people with **spinal cord injuries (SCI)** and **neuromuscular/neurological disorders** (such as **Cerebral Palsy, Multiple Sclerosis (MS), ALS, and neuropathies**). Because our dogs are proven in real-world medical service work, we do not regularly campaign at weekend AKC conformation shows. Prospective service dog clients should contact us ASAP.
+- **Therapy Dogs vs. Service Dogs vs. ESAs**: Many Qbits puppies also serve as certified **Therapy Dogs** (visiting hospitals, nursing homes, and rehab facilities). We educate clients clearly on the legal distinction between a **Task-Trained Service Dog** (legally classified as medical equipment under the federal ADA with full public-access rights) and an **Emotional Support Animal (ESA)** (which has no public-access rights and only protects renters from being evicted or denied housing by a landlord that doesn't allow pets under the Fair Housing Act).
 - **Stud Dog (Sire)**: **Dudley** — Available for stud services to approved, health-tested Spanish Water Dog bitches (natural cover, fresh-chilled, or frozen semen options).
-- **Foundation Bitch (Dam)**: **Molly** — Athleticism, biddable temperament, and rustic curly coat; dam of our planned Fall 2027 / Spring 2028 litters.
-- **Upcoming Litters**: **Fall 2027** and **Spring 2028** (Dudley × Molly pairing). Early waitlist inquiries and applications are currently open.
+- **Foundation Bitch (Dam)**: **Molly** — Exceptional human attunement, biddable temperament, and rustic curly coat; dam of our planned Fall 2027 / Spring 2028 litters.
+- **Upcoming Litters**: **Fall 2027** and **Spring 2028** (Dudley × Molly pairing). Early service dog, therapy dog, and family companion applications are currently open.
 - **Health Clearances Standard**: OFA Hips, OFA Elbows, OFA Eye/CAER Exam, prcd-PRA, Neuroaxonal Dystrophy (NAD), Congenital Hypothyroidism with Goiter (CHG), and Thyroid panels (CHIC standards).
-- **Puppy Application**: Available as an interactive online questionnaire on our homepage or as a downloadable, fillable & printable PDF at [/qbits-puppy-application.pdf](/qbits-puppy-application.pdf).
+- **Puppy Application**: Available as an interactive online questionnaire on our homepage or as a downloadable, fillable & printable PDF at [/qbits-puppy-application.pdf](https://qbits-swd.netlify.app/qbits-puppy-application.pdf).
 
 ## Primary Resources
-- [Homepage & Full Kennel Overview](https://qbitsswd.com/): Complete information on Qbits Kennel, Dudley, Molly, Stud Services, Planned Litters, Breed Guide, and Contact Form.
-- [Fillable & Printable Puppy Application (PDF)](https://qbitsswd.com/qbits-puppy-application.pdf): Official 2-page interactive PDF application for prospective puppy families to fill digitally and email to `dog@cmejo.com` or print and mail in.
-- [Comprehensive AI Knowledge Base (llms-full.txt)](https://qbitsswd.com/llms-full.txt): Full text documentation of Qbits Kennel's breeding philosophy, dogs, coat care guide, and FAQs.
+- [Homepage & Full Kennel Overview](https://qbits-swd.netlify.app/): Complete information on Qbits Kennel, Service Animal Program, Dudley, Molly, Stud Services, Planned Litters, Breed Guide, and Contact Form.
+- [Gotham Paw Service Animal Training](https://gothampaw.netlify.app/services/service-animal/): Our dedicated service animal training company specializing in neurological and mobility task training.
+- [Fillable & Printable Puppy Application (PDF)](https://qbits-swd.netlify.app/qbits-puppy-application.pdf): Official 2-page interactive PDF application for prospective service, therapy, and family puppy homes.
+- [Comprehensive AI Knowledge Base (llms-full.txt)](https://qbits-swd.netlify.app/llms-full.txt): Full documentation of Qbits Kennel's service animal program, dogs, coat care guide, and FAQs.

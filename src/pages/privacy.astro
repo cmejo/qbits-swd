@@ -5,16 +5,48 @@ import { KENNEL_INFO } from '../data/kennelData';
 
 <Layout
   title={`Privacy Policy | ${KENNEL_INFO.name} (NYC)`}
-  description={`Privacy Policy for ${KENNEL_INFO.name} located in New York City. Learn how we handle your information when applying for a Spanish Water Dog puppy or inquiring about stud services.`}
+  description={`Privacy Policy for ${KENNEL_INFO.name} located on the Upper East Side of New York City. Learn how we handle your information when applying for a service dog prospect, therapy dog, family puppy, or stud service.`}
 >
+  <!-- Senior-Friendly Accessibility & Reading Comfort Toolbar -->
+  <div class="a11y-toolbar" role="region" aria-label="Reading Comfort and Text Size Controls">
+    <div class="container a11y-toolbar-inner">
+      <span class="a11y-label">
+        <span aria-hidden="true">👁</span> Reading Comfort &amp; Text Size:
+      </span>
+      <div class="a11y-controls">
+        <button type="button" class="a11y-btn" data-set-text="normal" aria-pressed="true">
+          A Standard
+        </button>
+        <button type="button" class="a11y-btn" data-set-text="large" aria-pressed="false">
+          A+ Larger Text
+        </button>
+        <button type="button" class="a11y-btn" data-set-text="xlarge" aria-pressed="false">
+          A++ Extra Large
+        </button>
+        <button type="button" class="a11y-btn" data-toggle-contrast aria-pressed="false">
+          ◐ High Contrast
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Top Announcement Bar -->
   <div class="announcement-bar" role="region" aria-label="Kennel Announcements">
     <div class="container announcement-inner">
       <p class="announcement-text">
-        <span class="badge-pill">NYC PRESERVATION BREEDER</span>
-        <strong>Dudley × Molly</strong> Planned Litters: <strong>Fall 2027 &amp; Spring 2028</strong> • Approved Stud Services Open
+        <span class="badge-pill">SERVICE DOG &amp; PRESERVATION BREEDER</span>
+        <strong>Dudley × Molly</strong> Planned Litters: <strong>Fall 2027 &amp; Spring 2028</strong> • Service Animal Inquiries: Contact Us ASAP
       </p>
       <div class="announcement-actions">
+        <a
+          href={KENNEL_INFO.gothamPawUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="announcement-link"
+        >
+          Gotham Paw Service Dogs ↗
+        </a>
+        <span aria-hidden="true">•</span>
         <a href={KENNEL_INFO.applicationPdfUrl} download="Qbits-SWD-Puppy-Application.pdf" class="announcement-link">
           ↓ Fillable PDF Application
         </a>
@@ -31,11 +63,13 @@ import { KENNEL_INFO } from '../data/kennelData';
         <span class="brand-crest" aria-hidden="true">Q</span>
         <div class="brand-text">
           <span class="brand-title">Qbits Kennel</span>
-          <span class="brand-sub">Spanish Water Dogs • NYC</span>
+          <span class="brand-sub">Upper East Side • NYC</span>
         </div>
       </a>
 
-      <nav class="primary-nav" aria-label="Primary Navigation">
+      <!-- MANDATORY per accessibility guidance: do not include the word "Navigation" in <nav aria-label> -->
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/#service-animals" class="nav-highlight">Service &amp; Therapy Dogs</a>
         <a href="/#our-dogs">Dudley &amp; Molly</a>
         <a href="/#stud-services">Stud Services</a>
         <a href="/#upcoming-litters">2027/2028 Litters</a>
@@ -53,13 +87,13 @@ import { KENNEL_INFO } from '../data/kennelData';
     </div>
   </header>
 
-  <main id="main-content" class="privacy-page">
+  <main id="main-content" tabindex="-1" class="privacy-page">
     <div class="container privacy-container">
       <div class="privacy-header">
         <span class="eyebrow">Legal &amp; Transparency</span>
         <h1 class="privacy-title">Privacy Policy</h1>
         <p class="privacy-meta">
-          <strong>Qbits Spanish Water Dog Kennel</strong> • New York City, NY<br />
+          <strong>Qbits Spanish Water Dog Kennel</strong> • Upper East Side, New York City, NY<br />
           Effective Date: October 16, 2026 • Direct Contact: <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>
         </p>
       </div>
@@ -68,43 +102,46 @@ import { KENNEL_INFO } from '../data/kennelData';
         <section class="policy-section">
           <h2>1. Introduction &amp; Commitment to Your Privacy</h2>
           <p>
-            At <strong>{KENNEL_INFO.name}</strong> ("we," "our," or "us"), based in <strong>New York City, New York</strong>, we respect your privacy and are committed to protecting the personal information you share with us. We are an ethical, preservation-focused breeding program dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>).
+            At <strong>{KENNEL_INFO.name}</strong> ("we," "our," or "us"), based on the <strong>Upper East Side of New York City, New York</strong>, we respect your privacy and are committed to protecting the personal information you share with us. We are an ethical preservation and service animal breeding program dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>), operating in partnership with our service animal training division, <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer"><strong>Gotham Paw</strong></a>.
           </p>
           <p>
-            This Privacy Policy outlines how we collect, use, maintain, and protect information gathered through our website (<a href={KENNEL_INFO.siteUrl}>{KENNEL_INFO.siteUrl}</a>), our interactive online Puppy Application, our downloadable fillable PDF questionnaire, and direct email communications sent to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.
+            This Privacy Policy outlines how we collect, use, maintain, and protect information gathered through our website (<a href={KENNEL_INFO.siteUrl}>{KENNEL_INFO.siteUrl}</a>), our interactive online Puppy &amp; Service Dog Application, our downloadable fillable PDF questionnaire, and direct email communications sent to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.
           </p>
         </section>
 
         <section class="policy-section">
           <h2>2. Information We Collect</h2>
-          <p>We collect information that you voluntarily provide to us when inquiring about our dogs, applying for a planned puppy, or requesting stud services for approved bitches:</p>
+          <p>We collect information that you voluntarily provide to us when inquiring about our dogs, applying for a service dog prospect, therapy dog, or family puppy, or requesting stud services for approved bitches:</p>
           <ul>
             <li>
-              <strong>Contact Information:</strong> Your full name, co-applicant name, email address, mobile phone number, street address, and city/state/neighborhood (such as your NYC borough or region).
+              <strong>Contact Information:</strong> Your full name, co-applicant or caregiver name, email address, phone number, and city/state/neighborhood.
             </li>
             <li>
-              <strong>Living Environment &amp; Household Details:</strong> Information regarding your residence type (apartment, townhouse, single-family home), home ownership status, landlord pet permissions, yard/park access, exercise routine, and daily schedule/hours alone.
+              <strong>Service Animal &amp; Task-Training Needs (Voluntary):</strong> If you inquire about a task-trained service animal for a spinal cord injury (SCI), Cerebral Palsy, Multiple Sclerosis (MS), or another neuromuscular disorder, we collect only the functional task requirements and daily routine details you voluntarily share so we and <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">Gotham Paw</a> can evaluate candidate suitability.
             </li>
             <li>
-              <strong>Canine &amp; Breed Experience:</strong> Past experience with dog ownership, training background, familiarity with Spanish Water Dog coat care (never brushed, sheared or corded), and veterinary and personal reference contact details.
+              <strong>Living Environment &amp; Household Details:</strong> Information regarding your residence type (apartment, townhouse, single-family home, accessible senior residence), home ownership status, yard/park access, exercise routine, and daily schedule.
+            </li>
+            <li>
+              <strong>Canine &amp; Breed Experience:</strong> Past experience with dog ownership, training background, familiarity with Spanish Water Dog coat care (never brushed, sheared or corded), and veterinary/personal references.
             </li>
             <li>
               <strong>Breeding &amp; Stud Service Inquiries:</strong> Bitch pedigree data, AKC/FCI registration numbers, and health clearance certificates (OFA hips, elbows, CAER eye exam, DNA panels) submitted when inquiring about stud services with <strong>Dudley</strong>.
             </li>
             <li>
-              <strong>Technical Device Data:</strong> Standard server and hosting request logs (such as IP address, browser type, and operating system) collected automatically by our hosting platform (<a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>) for site security, CDN performance, and operational integrity.
+              <strong>Technical Device Data:</strong> Standard server and hosting request logs (such as IP address, browser type, and operating system) collected automatically by our hosting platform (<a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>) for site security, form processing, and operational integrity.
             </li>
           </ul>
         </section>
 
         <section class="policy-section">
           <h2>3. How We Use Your Information</h2>
-          <p>We use the information we collect solely for genuine kennel operations and puppy placement, including:</p>
+          <p>We use the information we collect solely for genuine kennel operations, service dog evaluations, and puppy placement, including:</p>
           <ul>
-            <li>Evaluating prospective puppy families to ensure optimal temperament, lifestyle, and environment matching for our planned <strong>Fall 2027 and Spring 2028 litters</strong> (Dudley × Molly).</li>
+            <li>Evaluating prospective service dog handlers, therapy dog teams, and companion families to ensure optimal temperament, task aptitude, and environment matching for our planned <strong>Fall 2027 and Spring 2028 litters</strong> (Dudley × Molly).</li>
+            <li>Coordinating service animal candidate assessments and task-training consultations with our training company, <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer"><strong>Gotham Paw</strong></a>, when you apply for a Service Animal prospect.</li>
             <li>Reviewing pedigrees and health records to evaluate compatibility for <strong>Dudley's stud services</strong> with approved Spanish Water Dog bitches.</li>
             <li>Communicating directly with you regarding your application status, litter timing, breeding confirmations, and puppy placement updates.</li>
-            <li>Preparing formal puppy adoption agreements, AKC Limited Registration documents, microchip registration transfers, and veterinary health records upon placement.</li>
             <li>Responding directly to your messages and questions submitted to <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>.</li>
           </ul>
         </section>
@@ -112,12 +149,15 @@ import { KENNEL_INFO } from '../data/kennelData';
         <section class="policy-section">
           <h2>4. We Never Sell or Monetize Your Personal Data</h2>
           <p>
-            <strong>We do not sell, rent, trade, lease, or monetize your personal information to third parties, data brokers, or marketing agencies under any circumstances.</strong>
+            <strong>We do not sell, rent, trade, lease, or monetize your personal or medical/task-need information to third parties, data brokers, or marketing agencies under any circumstances.</strong>
           </p>
           <p>
             Information provided to Qbits Kennel is shared only in the following strictly limited situations:
           </p>
           <ul>
+            <li>
+              <strong>Gotham Paw Service Animal Program:</strong> If you explicitly inquire about or apply for a task-trained service dog, your inquiry is shared internally with our service animal training company, <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">Gotham Paw</a>, to coordinate your consultation.
+            </li>
             <li>
               <strong>Canine Registration &amp; Identification:</strong> Submitting required puppy registration and microchip transfer paperwork to the American Kennel Club (AKC) and official microchip registries upon placement.
             </li>
@@ -133,21 +173,21 @@ import { KENNEL_INFO } from '../data/kennelData';
         <section class="policy-section">
           <h2>5. Data Security &amp; Storage</h2>
           <p>
-            We take reasonable and appropriate technical and physical precautions to safeguard the personal information you submit to us. Applications submitted online are formatted and transmitted directly to our secure email inbox (<a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>). Fillable PDF applications submitted digitally or by mail are stored securely and accessed exclusively by Qbits Kennel owners.
+            We take reasonable and appropriate technical and physical precautions to safeguard the personal information you submit to us. Applications submitted online or by email are transmitted over encrypted HTTPS connections and accessed exclusively by Qbits Kennel &amp; Gotham Paw leadership (<a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>).
           </p>
         </section>
 
         <section class="policy-section">
-          <h2>6. Cookies &amp; Tracking Technologies</h2>
+          <h2>6. Cookies &amp; Accessibility Preferences</h2>
           <p>
-            Our website is built as an ultra-fast, static modern site. We do not use third-party advertising cookies, cross-site trackers, or behavioral profiling tools. Standard browser local storage may be used solely to store non-identifying client preferences (such as form status feedback).
+            Our website is built as an ultra-fast, static modern site. We do not use third-party advertising cookies, cross-site trackers, or behavioral profiling tools. Standard browser local storage (`localStorage`) is used solely to remember your on-page accessibility preferences (such as Larger Text Size `A+`/`A++` and High Contrast mode).
           </p>
         </section>
 
         <section class="policy-section">
           <h2>7. Data Retention &amp; Your Rights</h2>
           <p>
-            We retain application records and correspondence for as long as necessary to maintain waitlist records, coordinate breeding plans, and fulfill lifetime breeder support commitments.
+            We retain application records and correspondence for as long as necessary to maintain waitlist records, coordinate service dog training and breeding plans, and fulfill lifetime breeder support commitments.
           </p>
           <p>
             You have the right to request access to, correction of, or complete deletion of your application or contact information at any time. To make a request, simply email us at <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>, and we will promptly honor your request.
@@ -157,7 +197,7 @@ import { KENNEL_INFO } from '../data/kennelData';
         <section class="policy-section">
           <h2>8. Updates to This Policy</h2>
           <p>
-            We may occasionally update this Privacy Policy to reflect changes in our kennel operations, breeding schedules, or applicable legal requirements. The updated policy will always be posted on this page with an updated "Effective Date."
+            We may occasionally update this Privacy Policy to reflect changes in our kennel operations, service animal programs, breeding schedules, or applicable legal requirements. The updated policy will always be posted on this page with an updated "Effective Date."
           </p>
         </section>
 
@@ -168,8 +208,9 @@ import { KENNEL_INFO } from '../data/kennelData';
           </p>
           <div class="policy-contact-box">
             <strong>{KENNEL_INFO.name}</strong><br />
-            New York City, New York<br />
+            Upper East Side, New York City, New York<br />
             Email: <a href={`mailto:${KENNEL_INFO.email}`} style="color: var(--accent-forest); font-weight: 700;">{KENNEL_INFO.email}</a><br />
+            Service Animal Partner: <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">Gotham Paw Service Animal Training</a><br />
             Website: <a href={KENNEL_INFO.siteUrl}>{KENNEL_INFO.siteUrl}</a>
           </div>
         </section>
@@ -185,11 +226,11 @@ import { KENNEL_INFO } from '../data/kennelData';
           <span class="brand-crest" style="background: var(--accent-terracotta);">Q</span>
           <div class="brand-text">
             <span class="brand-title" style="color: var(--text-on-dark);">Qbits Spanish Water Dog Kennel</span>
-            <span class="brand-sub" style="color: var(--text-on-dark-muted);">New York City • Perro de Agua Español</span>
+            <span class="brand-sub" style="color: var(--text-on-dark-muted);">Upper East Side, NYC • Perro de Agua Español</span>
           </div>
         </div>
         <p class="footer-desc">
-          Preservation breeding of health-tested Spanish Water Dogs in New York City. Home of stud dog <strong>Dudley</strong> and foundation bitch <strong>Molly</strong>. Planned litters for <strong>Fall 2027 &amp; Spring 2028</strong>.
+          Preservation &amp; service animal breeding of health-tested Spanish Water Dogs on the Upper East Side of New York City. Partnered with <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer" style="color: #F3B398; font-weight: 700;">Gotham Paw</a>. Home of stud dog <strong>Dudley</strong> and foundation bitch <strong>Molly</strong>.
         </p>
         <p class="footer-email">
           Direct Email: <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>
@@ -200,6 +241,7 @@ import { KENNEL_INFO } from '../data/kennelData';
         <h3>Quick Navigation</h3>
         <ul>
           <li><a href="/#about">About Qbits Kennel NYC</a></li>
+          <li><a href="/#service-animals">Service &amp; Therapy Dogs</a></li>
           <li><a href="/#our-dogs">Meet Dudley &amp; Molly</a></li>
           <li><a href="/#stud-services">Dudley Stud Services</a></li>
           <li><a href="/#upcoming-litters">Fall 2027 / Spring 2028 Litters</a></li>
@@ -209,9 +251,14 @@ import { KENNEL_INFO } from '../data/kennelData';
       </div>
 
       <div class="footer-links">
-        <h3>Applications &amp; Resources</h3>
+        <h3>Applications &amp; Partners</h3>
         <ul>
-          <li><a href="/#puppy-application">Online Puppy Application</a></li>
+          <li>
+            <a href={KENNEL_INFO.gothamPawUrl} target="_blank" rel="noopener noreferrer">
+              Gotham Paw Service Animal Training ↗
+            </a>
+          </li>
+          <li><a href="/#puppy-application">Online Puppy &amp; Service Application</a></li>
           <li>
             <a href={KENNEL_INFO.applicationPdfUrl} download="Qbits-SWD-Puppy-Application.pdf">
               Download Fillable PDF Application
@@ -224,8 +271,8 @@ import { KENNEL_INFO } from '../data/kennelData';
     </div>
 
     <div class="container footer-bottom">
-      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (New York City, NY). All rights reserved. • <a href="/privacy" style="color: var(--text-on-dark-muted); text-decoration: underline;">Privacy Policy</a></p>
-      <p>Dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>).</p>
+      <p>© {new Date().getFullYear()} {KENNEL_INFO.name} (Upper East Side, New York City, NY). All rights reserved. • <a href="/privacy" style="color: var(--text-on-dark-muted); text-decoration: underline;">Privacy Policy</a></p>
+      <p>Dedicated to the Spanish Water Dog (<em>Perro de Agua Español</em>) &amp; Medical Service Work.</p>
     </div>
   </footer>
 </Layout>
@@ -235,9 +282,9 @@ import { KENNEL_INFO } from '../data/kennelData';
   .announcement-bar {
     background-color: var(--bg-forest);
     color: var(--text-on-dark);
-    font-size: 0.84rem;
-    padding-block: 0.55rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.9rem;
+    padding-block: 0.65rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   }
 
   .announcement-inner {
@@ -260,22 +307,23 @@ import { KENNEL_INFO } from '../data/kennelData';
     background-color: var(--accent-terracotta);
     color: #FFFFFF;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.15rem 0.55rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
     border-radius: 999px;
     letter-spacing: 0.06em;
   }
 
   .announcement-actions {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.65rem;
   }
 
   .announcement-link {
     color: var(--text-on-dark);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
@@ -284,17 +332,22 @@ import { KENNEL_INFO } from '../data/kennelData';
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: rgba(250, 247, 242, 0.92);
+    background-color: rgba(250, 247, 242, 0.96);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-stone);
+    border-bottom: 1.5px solid var(--border-stone);
+  }
+
+  html[data-contrast="high"] .site-header {
+    background-color: #FFFFFF;
   }
 
   .header-inner {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    min-height: 4.5rem;
+    gap: 0.75rem 1.25rem;
+    padding-block: 0.75rem;
   }
 
   .brand-logo {
@@ -306,13 +359,13 @@ import { KENNEL_INFO } from '../data/kennelData';
   }
 
   .brand-crest {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 10px;
     background-color: var(--accent-forest);
     color: var(--text-on-dark);
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
@@ -326,48 +379,65 @@ import { KENNEL_INFO } from '../data/kennelData';
 
   .brand-title {
     font-family: var(--font-serif);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.1;
   }
 
   .brand-sub {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-muted);
   }
 
   .primary-nav {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1.35rem;
+    gap: 0.35rem 1.1rem;
+    order: 3;
+    width: 100%;
+    padding-top: 0.45rem;
+    border-top: 1px solid var(--border-stone);
   }
 
-  @media (min-width: 980px) {
+  @media (min-width: 1080px) {
     .primary-nav {
-      display: flex;
+      order: 0;
+      width: auto;
+      padding-top: 0;
+      border-top: none;
     }
   }
 
   .primary-nav a {
     color: var(--text-slate);
     text-decoration: none;
-    font-size: 0.92rem;
-    font-weight: 600;
-    padding: 0.4rem 0.2rem;
-    transition: color 0.15s ease;
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 0.45rem 0.35rem;
+    border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
   }
 
   .primary-nav a:hover {
     color: var(--accent-terracotta);
+    background-color: var(--bg-sand);
+  }
+
+  .primary-nav a.nav-highlight {
+    color: var(--accent-forest);
+    background-color: var(--bg-sand);
+    padding-inline: 0.65rem;
+    border: 1px solid var(--border-strong);
   }
 
   .btn-sm {
-    min-height: 40px;
-    padding: 0.5rem 1.05rem;
-    font-size: 0.86rem;
+    min-height: 44px;
+    padding: 0.55rem 1.15rem;
+    font-size: 0.92rem;
   }
 
   /* Privacy Content */
@@ -389,9 +459,9 @@ import { KENNEL_INFO } from '../data/kennelData';
   }
 
   .privacy-meta {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   .privacy-meta a {
@@ -401,7 +471,7 @@ import { KENNEL_INFO } from '../data/kennelData';
 
   .privacy-card {
     background: var(--bg-card);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-radius: var(--radius-lg);
     padding: clamp(1.75rem, 4vw, 3rem);
     box-shadow: var(--shadow-soft);
@@ -416,7 +486,7 @@ import { KENNEL_INFO } from '../data/kennelData';
   }
 
   .policy-section h2 {
-    font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.75rem);
     color: var(--accent-forest);
     margin-bottom: 0.75rem;
     border-bottom: 1px solid var(--bg-sand);
@@ -425,7 +495,7 @@ import { KENNEL_INFO } from '../data/kennelData';
 
   .policy-section p {
     color: var(--text-slate);
-    font-size: 0.98rem;
+    font-size: 1.02rem;
     line-height: 1.7;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -433,7 +503,7 @@ import { KENNEL_INFO } from '../data/kennelData';
 
   .policy-section ul {
     color: var(--text-slate);
-    font-size: 0.96rem;
+    font-size: 1rem;
     line-height: 1.7;
     padding-left: 1.35rem;
     margin-top: 0;
@@ -441,23 +511,24 @@ import { KENNEL_INFO } from '../data/kennelData';
   }
 
   .policy-section li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.55rem;
   }
 
   .policy-section a {
     color: var(--accent-forest);
+    font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
 
   .policy-contact-box {
     background: var(--bg-sand);
-    border: 1px solid var(--border-stone);
+    border: 1.5px solid var(--border-stone);
     border-left: 4px solid var(--accent-forest);
     border-radius: var(--radius-sm);
-    padding: 1.15rem 1.4rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    padding: 1.2rem 1.45rem;
+    font-size: 1rem;
+    line-height: 1.65;
     color: var(--text-espresso);
   }
 
@@ -474,7 +545,7 @@ import { KENNEL_INFO } from '../data/kennelData';
     grid-template-columns: 1fr;
     gap: 2.5rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(250, 247, 242, 0.14);
+    border-bottom: 1px solid rgba(250, 247, 242, 0.16);
   }
 
   @media (min-width: 860px) {
@@ -485,18 +556,18 @@ import { KENNEL_INFO } from '../data/kennelData';
 
   .footer-desc {
     color: var(--text-on-dark-muted);
-    font-size: 0.93rem;
-    max-width: 46ch;
+    font-size: 0.96rem;
+    max-width: 48ch;
   }
 
   .footer-email a {
-    color: #E8A588;
+    color: #F3B398;
     font-weight: 700;
   }
 
   .footer-links h3 {
     color: var(--text-on-dark);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 0.85rem;
   }
 
@@ -506,13 +577,13 @@ import { KENNEL_INFO } from '../data/kennelData';
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.6rem;
   }
 
   .footer-links a {
     color: var(--text-on-dark-muted);
     text-decoration: none;
-    font-size: 0.92rem;
+    font-size: 0.96rem;
   }
 
   .footer-links a:hover {
@@ -526,7 +597,7 @@ import { KENNEL_INFO } from '../data/kennelData';
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    font-size: 0.84rem;
+    font-size: 0.9rem;
     color: var(--text-on-dark-muted);
   }
 
@@ -534,3 +605,57 @@ import { KENNEL_INFO } from '../data/kennelData';
     margin: 0;
   }
 </style>
+
+<script>
+  const textButtons = document.querySelectorAll<HTMLButtonElement>('[data-set-text]');
+  const contrastBtn = document.querySelector<HTMLButtonElement>('[data-toggle-contrast]');
+
+  function syncToolbarState() {
+    const currentSize = document.documentElement.getAttribute('data-text-size') || 'normal';
+    const isHighContrast = document.documentElement.getAttribute('data-contrast') === 'high';
+
+    textButtons.forEach((btn) => {
+      const btnSize = btn.getAttribute('data-set-text') || 'normal';
+      btn.setAttribute('aria-pressed', btnSize === currentSize ? 'true' : 'false');
+    });
+
+    if (contrastBtn) {
+      contrastBtn.setAttribute('aria-pressed', isHighContrast ? 'true' : 'false');
+    }
+  }
+
+  syncToolbarState();
+
+  textButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const size = btn.getAttribute('data-set-text') || 'normal';
+      if (size === 'normal') {
+        document.documentElement.removeAttribute('data-text-size');
+      } else {
+        document.documentElement.setAttribute('data-text-size', size);
+      }
+      try {
+        localStorage.setItem('qbits-text-size', size);
+      } catch {}
+      syncToolbarState();
+    });
+  });
+
+  if (contrastBtn) {
+    contrastBtn.addEventListener('click', () => {
+      const isHigh = document.documentElement.getAttribute('data-contrast') === 'high';
+      if (isHigh) {
+        document.documentElement.removeAttribute('data-contrast');
+        try {
+          localStorage.setItem('qbits-contrast', 'normal');
+        } catch {}
+      } else {
+        document.documentElement.setAttribute('data-contrast', 'high');
+        try {
+          localStorage.setItem('qbits-contrast', 'high');
+        } catch {}
+      }
+      syncToolbarState();
+    });
+  }
+</script>
