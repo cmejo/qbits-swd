@@ -178,20 +178,53 @@ import { KENNEL_INFO } from '../data/kennelData';
         </section>
 
         <section class="policy-section">
-          <h2>6. Cookies &amp; Accessibility Preferences</h2>
+          <h2>6. Cookies, Analytics (Google Analytics 4, Piwik PRO &amp; Clarity) &amp; GDPR Consent</h2>
           <p>
-            Our website is built as an ultra-fast, static modern site. We do not use third-party advertising cookies, cross-site trackers, or behavioral profiling tools. Standard browser local storage (`localStorage`) is used solely to remember your on-page accessibility preferences (such as Larger Text Size `A+`/`A++` and High Contrast mode).
+            To understand how visitors and senior citizens navigate our website and to improve our accessibility, we use a privacy-first analytics stack governed by <strong>Google Consent Mode v2</strong> and the <strong>General Data Protection Regulation (GDPR)</strong>:
           </p>
+          <ul>
+            <li>
+              <strong>Strictly Necessary &amp; Accessibility Storage (Always Active):</strong> Standard browser local storage (<code>localStorage</code>) is used solely to remember your on-page Reading Comfort settings (Larger Text Size <code>A+</code>/<code>A++</code> and High Contrast mode) and your GDPR consent preferences.
+            </li>
+            <li>
+              <strong>Google Analytics 4 (GA4 with Consent Mode v2):</strong> Defaults to <code>analytics_storage: 'denied'</code> and <code>ad_storage: 'denied'</code> until you explicitly click "Accept Analytics" on our GDPR banner. When enabled, IP addresses are anonymized and no advertising profiling is used.
+            </li>
+            <li>
+              <strong>Piwik PRO / Matomo Privacy-First Analytics:</strong> Configured with <code>requireConsent</code> so full session analytics are only recorded if you grant analytics consent.
+            </li>
+            <li>
+              <strong>Microsoft Clarity (Senior UX &amp; Accessibility Diagnostics):</strong> Loaded only with your UX consent to identify where senior citizens or assistive-device users encounter layout or form friction. All form input fields are strictly masked.
+            </li>
+          </ul>
+          <p>
+            <strong>Manage or Withdraw Your Consent Anytime (GDPR Art. 7(3)):</strong> You may inspect, customize, or withdraw your analytics consent at any time with a single click:
+          </p>
+          <div style="margin-top: 0.75rem;">
+            <button
+              type="button"
+              commandfor="gdpr-consent-dialog"
+              command="show-modal"
+              class="btn btn-primary btn-sm"
+            >
+              ⚙ Open GDPR &amp; Cookie Preferences
+            </button>
+          </div>
         </section>
 
         <section class="policy-section">
-          <h2>7. Data Retention &amp; Your Rights</h2>
+          <h2>7. GDPR Legal Bases &amp; Your Data Subject Rights (GDPR, UK GDPR &amp; CCPA/CPRA)</h2>
           <p>
-            We retain application records and correspondence for as long as necessary to maintain waitlist records, coordinate service dog training and breeding plans, and fulfill lifetime breeder support commitments.
+            Under the General Data Protection Regulation (GDPR) and applicable U.S. state privacy laws, we process personal data under the following legal bases: (a) <strong>Explicit Consent</strong> (Art. 6(1)(a) &amp; Art. 9(2)(a)) for optional analytics and any voluntary service-dog task information you share; (b) <strong>Pre-Contractual Steps</strong> (Art. 6(1)(b)) to evaluate your puppy, service dog, or stud service inquiry; and (c) <strong>Legitimate Interests</strong> (Art. 6(1)(f)) for website security.
           </p>
           <p>
-            You have the right to request access to, correction of, or complete deletion of your application or contact information at any time. To make a request, simply email us at <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>, and we will promptly honor your request.
+            Regardless of where you reside, we extend full GDPR and CCPA/CPRA rights to all visitors and applicants:
           </p>
+          <ul>
+            <li><strong>Right of Access &amp; Data Portability (Art. 15 &amp; 20):</strong> Request a copy of all application or inquiry data we hold about you.</li>
+            <li><strong>Right to Rectification (Art. 16):</strong> Request correction of any inaccurate or outdated contact or household details.</li>
+            <li><strong>Right to Erasure / "Right to Be Forgotten" (Art. 17):</strong> Request permanent deletion of your application, inquiry, or email records at any time.</li>
+            <li><strong>Right to Restrict or Object to Processing (Art. 18 &amp; 21) &amp; Withdraw Consent:</strong> Withdraw consent for analytics via the button above or withdraw your application by emailing <a href={`mailto:${KENNEL_INFO.email}`}>{KENNEL_INFO.email}</a>. We respond to all privacy requests within 15 business days (well within the 30-day GDPR statutory window).</li>
+          </ul>
         </section>
 
         <section class="policy-section">
@@ -264,7 +297,17 @@ import { KENNEL_INFO } from '../data/kennelData';
               Download Fillable PDF Application
             </a>
           </li>
-          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/privacy">GDPR &amp; Privacy Policy</a></li>
+          <li>
+            <button
+              type="button"
+              commandfor="gdpr-consent-dialog"
+              command="show-modal"
+              style="background: none; border: none; padding: 0; color: var(--text-on-dark-muted); font: inherit; font-size: 0.96rem; text-decoration: underline; cursor: pointer;"
+            >
+              ⚙ Manage GDPR &amp; Cookie Preferences
+            </button>
+          </li>
           <li><a href={`mailto:${KENNEL_INFO.email}`}>Email {KENNEL_INFO.email}</a></li>
         </ul>
       </div>

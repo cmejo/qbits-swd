@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = 'Qbits Spanish Water Dog Kennel | NYC Service Dog Breeder, Stud Services & 2027/2028 Litters',
-  description = 'Qbits Spanish Water Dog Kennel on the Upper East Side of NYC. Specializing in task-trained service dogs for spinal cord injuries & neuromuscular disorders (partnered with Gotham Paw), therapy dogs, approved stud services with Dudley, and planned litters with Molly (Fall 2027 / Spring 2028).',
+  title = 'Qbits Spanish Water Dog Kennel | 1 of 5 US Breeders, NYC Service Dogs (Gotham Paw) & Stud Services',
+  description = 'Qbits Spanish Water Dog Kennel on the Upper East Side of NYC—one of only 5 Spanish Water Dog breeders in America, mentored by breed pioneer Lisa Harper. Specializing in task-trained service dogs for spinal cord injuries & neuromuscular disorders (Gotham Paw), approved stud services with Dudley, and Fall 2027 / Spring 2028 litters with Molly.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, KENNEL_INFO.siteUrl);
@@ -34,6 +34,12 @@ const structuredData = {
       image: `${KENNEL_INFO.siteUrl}${KENNEL_INFO.heroImage.src}`,
       description,
       email: KENNEL_INFO.email,
+      founder: {
+        '@type': 'Person',
+        jobTitle: 'Preservation Spanish Water Dog Breeder & Service Dog Trainer',
+        description:
+          'Youngest Spanish Water Dog breeder in America by 30 years (one of only 5 breeders nationwide), mentored by breed pioneer and lifelong board member Lisa Harper. Former national breed club board member who modernized the club’s website for the 21st century.',
+      },
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Upper East Side',
@@ -133,7 +139,7 @@ const structuredData = {
     <!-- Primary SEO & Geo Meta Tags for Upper East Side, New York City -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="author" content={KENNEL_INFO.name} />
-    <meta name="keywords" content="Spanish Water Dog breeder NYC, Spanish Water Dog service dog, spinal cord injury service dog, Multiple Sclerosis service dog, Cerebral Palsy service dog, Gotham Paw service animal, Therapy dog Spanish Water Dog, Perro de Agua Español breeder, Qbits Spanish Water Dog Kennel, Spanish Water Dog stud service, Dudley Spanish Water Dog, Molly Spanish Water Dog, Fall 2027 Spring 2028 puppies" />
+    <meta name="keywords" content="Spanish Water Dog breeders in America, Spanish Water Dog breeder NYC, Lisa Harper Spanish Water Dog mentor, Spanish Water Dog service dog, spinal cord injury service dog, Multiple Sclerosis service dog, Cerebral Palsy service dog, Gotham Paw service animal, Therapy dog Spanish Water Dog, Perro de Agua Español breeder, Qbits Spanish Water Dog Kennel, Spanish Water Dog stud service, Dudley Spanish Water Dog, Molly Spanish Water Dog, Fall 2027 Spring 2028 puppies" />
     <meta name="geo.region" content="US-NY" />
     <meta name="geo.placename" content="Upper East Side, New York City" />
     <meta name="geo.position" content="40.7736;-73.9566" />
@@ -171,8 +177,16 @@ const structuredData = {
       rel="stylesheet"
     />
 
-    <!-- Restore Senior Accessibility Reading Preferences before first paint -->
-    <script is:inline>
+    <!-- Restore Senior Accessibility Reading Preferences + GDPR Consent Mode v2 before first paint -->
+    <script
+      is:inline
+      define:vars={{
+        gaId: KENNEL_INFO.analytics.gaMeasurementId,
+        piwikUrl: KENNEL_INFO.analytics.piwikUrl,
+        piwikSiteId: KENNEL_INFO.analytics.piwikSiteId,
+        clarityId: KENNEL_INFO.analytics.clarityProjectId,
+      }}
+    >
       try {
         const savedSize = localStorage.getItem('qbits-text-size');
         const savedContrast = localStorage.getItem('qbits-contrast');
@@ -183,6 +197,49 @@ const structuredData = {
           document.documentElement.setAttribute('data-contrast', 'high');
         }
       } catch {}
+
+      // Google Consent Mode v2 + Piwik PRO + Microsoft Clarity Privacy-First Initialization
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+
+      // Default to denied per GDPR / Google Consent Mode v2 until user grants consent
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      });
+
+      // Piwik PRO / Matomo queue initialization (cookieless privacy mode until consent granted)
+      window._paq = window._paq || [];
+      window._paq.push(['requireConsent']);
+      window._paq.push(['trackPageView']);
+      window._paq.push(['enableLinkTracking']);
+
+      window.qbitsAnalyticsConfig = { gaId, piwikUrl, piwikSiteId, clarityId };
+
+      // Helper to fire unified events across GA4, Piwik PRO, and dataLayer
+      window.qbitsTrackEvent = function (eventName, params) {
+        const payload = Object.assign({ event: eventName, timestamp: new Date().toISOString() }, params || {});
+        window.dataLayer.push(payload);
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', eventName, params || {});
+        }
+        if (Array.isArray(window._paq)) {
+          window._paq.push([
+            'trackEvent',
+            params && params.category ? params.category : 'Kennel Funnel',
+            eventName,
+            params && params.label ? params.label : window.location.pathname,
+          ]);
+        }
+      };
     </script>
 
     <!-- JSON-LD Structured Data -->
@@ -191,5 +248,255 @@ const structuredData = {
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <slot />
+
+    <!-- ==================================================================
+         GDPR / CCPA PRIVACY & ANALYTICS CONSENT BANNER (Senior Accessible)
+         ================================================================== -->
+    <div
+      id="gdpr-banner"
+      class="gdpr-banner"
+      role="region"
+      aria-label="Privacy and Cookie Consent Banner"
+      hidden
+    >
+      <div class="gdpr-banner-inner">
+        <div class="gdpr-banner-copy">
+          <strong>Your Privacy &amp; GDPR Choices at Qbits Kennel</strong>
+          <p>
+            We use privacy-respecting analytics (Google Analytics 4 with Consent Mode v2, Piwik PRO, and UX heatmaps) to understand how visitors and seniors use our website and improve our accessibility. We never sell your data. Read our <a href="/privacy">GDPR &amp; Privacy Policy</a>.
+          </p>
+        </div>
+        <div class="gdpr-banner-actions">
+          <button type="button" id="gdpr-accept-all" class="btn btn-primary btn-sm">
+            ✓ Accept Analytics
+          </button>
+          <button type="button" id="gdpr-reject-optional" class="btn btn-outline btn-sm">
+            Essential Only
+          </button>
+          <button
+            type="button"
+            commandfor="gdpr-consent-dialog"
+            command="show-modal"
+            class="btn btn-outline btn-sm"
+          >
+            ⚙ Customize GDPR Settings
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================================================================
+         DECLARATIVE GDPR COOKIE & ANALYTICS PREFERENCES DIALOG
+         ================================================================== -->
+    <dialog id="gdpr-consent-dialog" class="app-modal" aria-labelledby="gdpr-modal-title">
+      <div class="modal-header">
+        <div>
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: #F3B398; text-transform: uppercase; letter-spacing: 0.1em;">
+            GDPR, UK GDPR &amp; CCPA Compliance
+          </span>
+          <h2 id="gdpr-modal-title">Privacy, Cookie &amp; Analytics Preferences</h2>
+        </div>
+        <button
+          type="button"
+          commandfor="gdpr-consent-dialog"
+          command="close"
+          class="btn btn-outline-light btn-sm"
+          aria-label="Close privacy preferences dialog"
+        >
+          ✕ Close
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-top: 0; color: var(--text-slate);">
+          Under the General Data Protection Regulation (GDPR) and state privacy laws, you have full control over how your visit is measured. You can change or withdraw your consent at any time.
+        </p>
+
+        <form id="gdpr-preferences-form">
+          <div class="gdpr-option-row">
+            <div>
+              <label for="gdpr-essential" style="font-weight: 700; font-size: 1.05rem; display: block;">
+                1. Strictly Necessary &amp; Accessibility Preferences (Always Active)
+              </label>
+              <span style="font-size: 0.92rem; color: var(--text-slate);">
+                Stores your on-page Reading Comfort settings (Larger Text <code>A+</code>/<code>A++</code>, High Contrast mode) and your GDPR consent choice in local browser storage. No personal data is shared.
+              </span>
+            </div>
+            <input type="checkbox" id="gdpr-essential" checked disabled aria-label="Strictly necessary cookies always active" />
+          </div>
+
+          <div class="gdpr-option-row">
+            <div>
+              <label for="gdpr-analytics" style="font-weight: 700; font-size: 1.05rem; display: block; cursor: pointer;">
+                2. Google Analytics 4 &amp; Piwik PRO Performance Analytics
+              </label>
+              <span style="font-size: 0.92rem; color: var(--text-slate);">
+                Helps us measure which pages, service dog guides, and puppy application funnels are most helpful to visitors (IP-anonymized).
+              </span>
+            </div>
+            <input type="checkbox" id="gdpr-analytics" name="analytics" checked />
+          </div>
+
+          <div class="gdpr-option-row">
+            <div>
+              <label for="gdpr-ux" style="font-weight: 700; font-size: 1.05rem; display: block; cursor: pointer;">
+                3. Accessibility &amp; Senior UX Diagnostics (Clarity Heatmaps)
+              </label>
+              <span style="font-size: 0.92rem; color: var(--text-slate);">
+                Helps us see if buttons, navigation, or forms are difficult for senior citizens or assistive-device users to navigate (all form inputs are strictly masked).
+              </span>
+            </div>
+            <input type="checkbox" id="gdpr-ux" name="ux" checked />
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.65rem;">
+              <button type="submit" class="btn btn-primary btn-sm">
+                Save My Preferences
+              </button>
+              <button type="button" id="gdpr-modal-accept-all" class="btn btn-terracotta btn-sm">
+                Accept All
+              </button>
+            </div>
+            <button type="button" id="gdpr-modal-reject-all" class="btn btn-outline btn-sm">
+              Reject All Non-Essential
+            </button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <script>
+      // GDPR Consent Manager + Dynamic Loader for GA4, Piwik PRO & Clarity + Custom Funnel Event Tracking
+      const CONSENT_KEY = 'qbits-gdpr-consent-v1';
+      const banner = document.getElementById('gdpr-banner');
+      const dialog = document.getElementById('gdpr-consent-dialog') as HTMLDialogElement | null;
+      const analyticsCheckbox = document.getElementById('gdpr-analytics') as HTMLInputElement | null;
+      const uxCheckbox = document.getElementById('gdpr-ux') as HTMLInputElement | null;
+
+      let scriptsLoaded = { ga: false, piwik: false, clarity: false };
+
+      function applyConsent(prefs: { analytics: boolean; ux: boolean }) {
+        const w = window as any;
+        const cfg = w.qbitsAnalyticsConfig || {};
+
+        if (typeof w.gtag === 'function') {
+          w.gtag('consent', 'update', {
+            analytics_storage: prefs.analytics ? 'granted' : 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+          });
+        }
+
+        if (prefs.analytics) {
+          if (Array.isArray(w._paq)) {
+            w._paq.push(['setConsentGiven']);
+          }
+          // Load GA4 script once if configured
+          if (!scriptsLoaded.ga && cfg.gaId && cfg.gaId !== 'G-QBITSSWDNY') {
+            scriptsLoaded.ga = true;
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cfg.gaId)}`;
+            document.head.appendChild(s);
+            w.gtag('js', new Date());
+            w.gtag('config', cfg.gaId, { anonymize_ip: true });
+          }
+        } else {
+          if (Array.isArray(w._paq)) {
+            w._paq.push(['forgetConsentGiven']);
+          }
+        }
+
+        if (prefs.ux && !scriptsLoaded.clarity && cfg.clarityId && cfg.clarityId !== 'qbitsswdclarity') {
+          scriptsLoaded.clarity = true;
+          (function (c: any, l: Document, a: string, r: string, i: string) {
+            c[a] =
+              c[a] ||
+              function () {
+                (c[a].q = c[a].q || []).push(arguments);
+              };
+            const t = l.createElement(r) as HTMLScriptElement;
+            t.async = true;
+            t.src = 'https://www.clarity.ms/tag/' + i;
+            const y = l.getElementsByTagName(r)[0];
+            y?.parentNode?.insertBefore(t, y);
+          })(window, document, 'clarity', 'script', cfg.clarityId);
+        }
+      }
+
+      function saveConsent(prefs: { analytics: boolean; ux: boolean }) {
+        const record = {
+          analytics: prefs.analytics,
+          ux: prefs.ux,
+          updatedAt: new Date().toISOString(),
+        };
+        try {
+          localStorage.setItem(CONSENT_KEY, JSON.stringify(record));
+        } catch {}
+        if (banner) banner.hidden = true;
+        if (dialog && dialog.open) dialog.close();
+        if (analyticsCheckbox) analyticsCheckbox.checked = prefs.analytics;
+        if (uxCheckbox) uxCheckbox.checked = prefs.ux;
+        applyConsent(prefs);
+      }
+
+      // Check existing consent on load
+      try {
+        const raw = localStorage.getItem(CONSENT_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (analyticsCheckbox) analyticsCheckbox.checked = Boolean(parsed.analytics);
+          if (uxCheckbox) uxCheckbox.checked = Boolean(parsed.ux);
+          applyConsent({ analytics: Boolean(parsed.analytics), ux: Boolean(parsed.ux) });
+        } else if (banner) {
+          banner.hidden = false;
+        }
+      } catch {
+        if (banner) banner.hidden = false;
+      }
+
+      document.getElementById('gdpr-accept-all')?.addEventListener('click', () => {
+        saveConsent({ analytics: true, ux: true });
+      });
+
+      document.getElementById('gdpr-reject-optional')?.addEventListener('click', () => {
+        saveConsent({ analytics: false, ux: false });
+      });
+
+      document.getElementById('gdpr-modal-accept-all')?.addEventListener('click', () => {
+        saveConsent({ analytics: true, ux: true });
+      });
+
+      document.getElementById('gdpr-modal-reject-all')?.addEventListener('click', () => {
+        saveConsent({ analytics: false, ux: false });
+      });
+
+      document.getElementById('gdpr-preferences-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        saveConsent({
+          analytics: Boolean(analyticsCheckbox?.checked),
+          ux: Boolean(uxCheckbox?.checked),
+        });
+      });
+
+      // Track key funnel micro-conversions automatically
+      document.addEventListener('click', (e) => {
+        const target = e.target as Element | null;
+        const link = target?.closest('a') as HTMLAnchorElement | null;
+        if (!link) return;
+        const href = link.getAttribute('href') || '';
+        const track = (window as any).qbitsTrackEvent;
+        if (typeof track !== 'function') return;
+
+        if (href.includes('qbits-puppy-application.pdf')) {
+          track('download_fillable_pdf', { category: 'Application Funnel', label: href });
+        } else if (href.includes('gothampaw.netlify.app')) {
+          track('outbound_gotham_paw_click', { category: 'Service Dog Funnel', label: href });
+        } else if (href.startsWith('mailto:')) {
+          track('direct_email_click', { category: 'Contact Funnel', label: href });
+        }
+      });
+    </script>
   </body>
 </html>
