@@ -161,9 +161,11 @@ const structuredData = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${KENNEL_INFO.siteUrl}${KENNEL_INFO.heroImage.src}`} />
 
-    <!-- AI / LLM Discovery Links (llmstxt.org standard) -->
+    <!-- AI / LLM / Autonomous Agent Discovery Links (llmstxt.org + Agent Context JSON) -->
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="Qbits Kennel LLM Summary" />
     <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Qbits Kennel Full LLM Knowledge Base" />
+    <link rel="alternate" type="application/json" href="/api/agent-context.json" title="Qbits Kennel Autonomous AI Agent Context" />
+    <link rel="alternate" type="application/json" href="/.well-known/ai-agent.json" title="AI Agent Discovery Manifest" />
 
     <!-- Favicon & Theme -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -491,6 +493,8 @@ const structuredData = {
 
         if (href.includes('qbits-puppy-application.pdf')) {
           track('download_fillable_pdf', { category: 'Application Funnel', label: href });
+        } else if (href.includes('qbits-clinical-service-dog-brochure.pdf')) {
+          track('download_clinical_brochure_pdf', { category: 'Service Dog Funnel', label: href });
         } else if (href.includes('gothampaw.netlify.app')) {
           track('outbound_gotham_paw_click', { category: 'Service Dog Funnel', label: href });
         } else if (href.startsWith('mailto:')) {

@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/generate-application-pdf.mjs && astro build",
+    "build": "node scripts/generate-application-pdf.mjs && node scripts/generate-clinical-brochure-pdf.mjs && astro build",
     "preview": "astro preview",
-    "generate:pdf": "node scripts/generate-application-pdf.mjs"
+    "generate:pdf": "node scripts/generate-application-pdf.mjs && node scripts/generate-clinical-brochure-pdf.mjs"
   },
   "dependencies": {
     "astro": "^5.1.0",

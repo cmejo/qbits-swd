@@ -1,5 +1,5 @@
 /**
- * CENTRALIZED CONTENT, BREEDER AUTHORITY, SEO LANDING PAGES & ANALYTICS CONFIGURATION
+ * CENTRALIZED CONTENT, BREEDER AUTHORITY, SEO LANDING PAGES, GALLERY & ANALYTICS CONFIGURATION
  * Edit any copy, dog stats, health clearances, analytics IDs, or image paths below.
  */
 
@@ -18,7 +18,9 @@ export const KENNEL_INFO = {
   gothamPawName: 'Gotham Paw Service Animal Training',
   plannedLitterWindows: 'Fall 2027 & Spring 2028',
   applicationPdfUrl: '/qbits-puppy-application.pdf',
+  clinicalBrochurePdfUrl: '/qbits-clinical-service-dog-brochure.pdf',
   mentorName: 'Lisa Harper',
+  agentContextJsonUrl: '/api/agent-context.json',
   heroImage: {
     src: '/images/hero-swd.jpg',
     alt: 'Curly-coated Spanish Water Dog portrait in warm natural light representing Qbits Kennel on the Upper East Side of New York City',
@@ -58,6 +60,120 @@ export const BREEDER_HERITAGE_HIGHLIGHTS = [
     title: 'Proven in Neurological & Mobility Medical Service Work',
     description:
       'Combining preservation breeding with years of professional service dog training through Gotham Paw, at least one puppy from every Qbits litter is transferred into our Service Animal Program for individuals with spinal cord injuries, Cerebral Palsy, and Multiple Sclerosis.',
+  },
+];
+
+export const BREEDER_BIO_NARRATION =
+  'Welcome to Qbits Spanish Water Dog Kennel on the Upper East Side of New York City. There are only five active preservation Spanish Water Dog breeders in America, including Qbits Kennel. Although I am the youngest breeder in America by 30 years, I am every bit as serious and rigorous about health and preservation standards as our senior breeders. I am privileged to be mentored by Lisa Harper, a lifelong board member who was instrumental in legitimizing the Spanish Water Dog in the United States. In the past, I also served on the national breed club board of directors and modernized the club website to bring it into the 21st century. Through our service dog company, Gotham Paw, at least one puppy from every litter is transferred into our Service Animal Program to assist people with spinal cord injuries, Cerebral Palsy, Multiple Sclerosis, and other neuromuscular conditions. Because our dogs are proven in real-world medical service work and therapy visitation, we do not regularly campaign at weekend AKC conformation shows. If you are interested in a service animal, therapy dog, family companion, or stud service with Dudley, please reach out to us early at dog@cmejo.com.';
+
+export interface GalleryPhoto {
+  id: string;
+  category: string;
+  title: string;
+  caption: string;
+  src: string;
+  alt: string;
+  dateLabel: string;
+}
+
+export const GALLERY_PHOTOS: GalleryPhoto[] = [
+  {
+    id: 'gallery-1',
+    category: 'Service Dog Task Work • Gotham Paw',
+    title: 'Precision Object Retrieval & Mobility Support',
+    caption:
+      'Dudley demonstrating calm dropped-item retrieval and handler focus—foundational tasks for spinal cord injury (SCI) and Multiple Sclerosis (MS) assistance.',
+    src: '/images/water-work-swd.jpg',
+    alt: 'Spanish Water Dog retrieving an object with calm focus for service dog training at Qbits Kennel NYC',
+    dateLabel: 'Upper East Side, NYC',
+  },
+  {
+    id: 'gallery-2',
+    category: 'Resident Sire • Stud Services',
+    title: 'Dudley — Athletic Bone & Espresso Rustic Curls',
+    caption:
+      'Dudley (19.25", 46 lbs) showcasing his balanced Iberian cobbiness, dark expressive eyes, and OFA CHIC health-tested structure.',
+    src: '/images/dudley-stud.jpg',
+    alt: 'Dudley, resident male Spanish Water Dog stud dog standing in natural light in New York City',
+    dateLabel: 'Standing at Stud • NYC',
+  },
+  {
+    id: 'gallery-3',
+    category: 'Foundation Dam • 2027/2028 Litters',
+    title: 'Molly — Gentle Tactile Sensitivity & Attunement',
+    caption:
+      'Molly (17.5", 37 lbs) possesses the intuitive human empathy and calm indoor composure essential for producing medical service and therapy prospects.',
+    src: '/images/molly-bitch.jpg',
+    alt: 'Molly, foundation female Spanish Water Dog bitch at Qbits Kennel on the Upper East Side',
+    dateLabel: 'Foundation Dam • NYC',
+  },
+  {
+    id: 'gallery-4',
+    category: 'Manhattan Public Access & Parks',
+    title: 'Confident Nerve on the Upper East Side & Central Park',
+    caption:
+      'Daily conditioning around NYC elevators, crosswalks, wheelchairs, and Central Park trails builds unshakeable environmental stability.',
+    src: '/images/nyc-park-swd.jpg',
+    alt: 'Spanish Water Dog walking confidently in a New York City park',
+    dateLabel: 'Central Park & UES',
+  },
+  {
+    id: 'gallery-5',
+    category: 'Non-Shedding Rustic Coat',
+    title: 'Natural Curls & Utility Clip (Never Brushed)',
+    caption:
+      'Our dogs’ single, non-shedding wooly coats are allergy-friendly and hospital-ready—maintained in a clean utility clip without ever brushing.',
+    src: '/images/puppies-litter.jpg',
+    alt: 'Close-up of curly non-shedding Spanish Water Dog coat texture',
+    dateLabel: 'Coat Care Guide',
+  },
+  {
+    id: 'gallery-6',
+    category: 'Lisa Harper Mentorship & Preservation',
+    title: 'Dudley × Molly — Planned Fall 2027 & Spring 2028 Pairing',
+    caption:
+      'Bred under the mentorship standards of breed pioneer Lisa Harper, combining historic Iberian preservation lines with modern service dog excellence.',
+    src: '/images/hero-swd.jpg',
+    alt: 'Portrait of Spanish Water Dog representing the planned Dudley and Molly pairing at Qbits Kennel',
+    dateLabel: 'Fall 2027 / Spring 2028',
+  },
+];
+
+export interface MemberUpdateItem {
+  date: string;
+  badge: string;
+  title: string;
+  summary: string;
+}
+
+export const MEMBER_UPDATES_LOG: MemberUpdateItem[] = [
+  {
+    date: 'Current Quarter • Autumn 2026',
+    badge: 'Service Program Intake Open',
+    title: 'Early Consultations Underway for Fall 2027 / Spring 2028 Service & Companion Litters',
+    summary:
+      'We are currently conducting 1-on-1 phone consultations with prospective Gotham Paw service dog handlers (SCI, Cerebral Palsy, MS) and reviewing early waitlist applications for therapy and family companion homes.',
+  },
+  {
+    date: 'Health & Registry Protocol',
+    badge: 'OFA CHIC Verified',
+    title: 'Annual Board-Certified Ophthalmologist (CAER) & Orthopedic Clearances Current',
+    summary:
+      'Both Dudley and Molly maintain current OFA CAER eye clearances alongside passing OFA Hip (Good), Elbow (Normal), and Clear DNA panels for prcd-PRA, NAD, and CHG.',
+  },
+  {
+    date: 'Manhattan Training Milestone',
+    badge: 'Gotham Paw Public Access',
+    title: 'Upper East Side Medical Corridor & Transit Conditioning',
+    summary:
+      'Dudley and Molly continue weekly task-demonstration and public-access sessions across the Upper East Side—practicing dropped-item recovery, wheelchair heeling, and calm settling in clinical environments.',
+  },
+  {
+    date: 'Upcoming Milestone • Summer 2027',
+    badge: 'Pre-Breeding Confirmation',
+    title: 'Waitlist Roster Confirmation & Progesterone Timing Prep',
+    summary:
+      'Approved waitlist members and Gotham Paw service dog candidates will receive priority notification 60 days prior to Molly’s anticipated season for our Fall 2027 / Spring 2028 pairing.',
   },
 ];
 
@@ -547,6 +663,299 @@ export const SEO_LANDING_PAGES: SeoLandingPage[] = [
         body: [
           'While show dogs are sometimes grown out into full cords, nearly all working service dogs, therapy dogs, and Manhattan family companions wear a neat, athletic "utility clip": the coat is sheared evenly to one uniform length (typically 1/2 inch to 1 inch all over, with no Poodle topknot or sculpted tail) two to four times per year.',
           'Between shearings, simply bathe with a gentle, residue-free shampoo, blot excess water with a towel (do not rub vigorously), and let your dog air-dry naturally.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'service-dog-tasks-for-multiple-sclerosis-spasticity-fatigue',
+    category: 'Neurological Service Dog Series',
+    title: 'Task-Trained Service Dogs for Multiple Sclerosis (MS): Spasticity, Drop Foot & Energy Conservation',
+    metaTitle: 'Service Dogs for Multiple Sclerosis (MS) Tasks & Mobility | Qbits Kennel & Gotham Paw NYC',
+    metaDescription: 'How our non-shedding Spanish Water Dog service animals assist handlers living with Multiple Sclerosis (MS)—from dropped item retrieval and heat/fatigue conservation to spasticity interruption.',
+    targetKeywords: [
+      'service dog for Multiple Sclerosis',
+      'MS service dog tasks spasticity fatigue',
+      'hypoallergenic service dog for MS NYC',
+      'Gotham Paw Multiple Sclerosis service dog',
+    ],
+    heroLead:
+      'For individuals living with Relapsing-Remitting or Progressive Multiple Sclerosis (MS), conserving daily physical energy and preventing falls during flare-ups are paramount. Here is how Qbits Kennel and Gotham Paw train Spanish Water Dogs for MS assistance.',
+    ctaText: 'Inquire About an MS Service Dog Prospect ASAP',
+    ctaHref: '/#contact',
+    inquiryTopic: 'URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)',
+    sections: [
+      {
+        heading: 'Mitigating MS Fatigue, Drop Foot & Heat Sensitivity Through Precision Tasks',
+        body: [
+          'In Multiple Sclerosis, bending over repeatedly to pick up dropped keys, phones, eyeglasses, or canes drains precious neuromuscular reserves and increases fall risk when balance or proprioception is impaired.',
+          'Through our Gotham Paw Service Animal Program, we train our Spanish Water Dogs to execute precision object retrieval—picking up everything from metallic credit cards to prescription bottles and delivering them directly into your hand at waist or wheelchair height. They also tug open heavy interior doors, close drawers, carry light medical pouches, and assist with removing socks or light jackets.',
+        ],
+      },
+      {
+        heading: 'Tactile Deep Pressure Therapy (DPT) for Muscle Spasticity & Tremors',
+        body: [
+          'At 35 to 48 lbs, a Spanish Water Dog provides targeted, warming tactile weight across the legs or lap to help calm lower-extremity muscle spasticity, clonus, and neuropathic discomfort without overwhelming a handler’s frame.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'service-dog-tasks-for-spinal-cord-injury-wheelchair-retrieval',
+    category: 'Spinal Cord Injury Assistance',
+    title: 'Service Dogs for Spinal Cord Injuries (SCI): Wheelchair Heeling, Retrieval & Door Plates',
+    metaTitle: 'Spinal Cord Injury (SCI) Wheelchair Service Dogs | Qbits Kennel & Gotham Paw NYC',
+    metaDescription: 'Task-trained Spanish Water Dog service animals for paraplegia, tetraplegia, and incomplete spinal cord injuries (SCI) on the Upper East Side of NYC in partnership with Gotham Paw.',
+    targetKeywords: [
+      'spinal cord injury service dog',
+      'wheelchair service dog tasks retrieval',
+      'service dog for paraplegia tetraplegia NYC',
+      'non shedding wheelchair service dog',
+    ],
+    heroLead:
+      'At least one puppy from every Qbits Spanish Water Dog litter enters our Gotham Paw Service Animal Program, where a primary focus is training wheelchair-compatible medical service dogs for handlers with complete or incomplete spinal cord injuries (SCI).',
+    ctaText: 'Contact Us Early for an SCI Service Prospect',
+    ctaHref: '/#contact',
+    inquiryTopic: 'URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)',
+    sections: [
+      {
+        heading: 'Engineered by Nature for Manual & Power Wheelchair Partnership',
+        body: [
+          'A wheelchair service dog must navigate narrow Manhattan doorways, hospital elevators, and crowded sidewalks in tight alignment with footplates and caster wheels. Because the Spanish Water Dog is a compact, agile herding and water-retrieving breed (15.75"–19.75" at the shoulder), they pivot effortlessly beside power and manual chairs where 85-lb retrievers struggle to turn.',
+          'Even more importantly for SCI handlers managing clean intermittent catheterization or skin-integrity protocols, the Spanish Water Dog’s single wooly coat is virtually non-shedding—keeping wheelchair cushions, transfer boards, and bedding free of loose dander and hair.',
+        ],
+      },
+      {
+        heading: 'Core Spinal Cord Injury Tasks We Train at Gotham Paw',
+        body: [
+          'Core tasks include dropped-object retrieval from floor to lap, activating elevated ADA push-plate door buttons, tugging open refrigerator and cabinet doors via rope pulls, barking or alerting a caregiver on cue, and positioning for emergency phone access.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'service-dog-tasks-for-cerebral-palsy-balance-counterbalance',
+    category: 'Neuromuscular Service Dog Series',
+    title: 'Task-Trained Service Dogs for Cerebral Palsy (CP) & Neuromuscular Movement Disorders',
+    metaTitle: 'Service Dogs for Cerebral Palsy (CP) & Neuromuscular Disorders | Qbits Kennel NYC',
+    metaDescription: 'Discover how Qbits Spanish Water Dog Kennel and Gotham Paw train service dogs for adults and families living with Cerebral Palsy (CP) and neuromuscular conditions.',
+    targetKeywords: [
+      'service dog for Cerebral Palsy',
+      'neuromuscular disorder service dog NYC',
+      'task trained dog for CP spasticity retrieval',
+      'Gotham Paw Cerebral Palsy service animal',
+    ],
+    heroLead:
+      'Living with Cerebral Palsy (CP) or a related neuromuscular disorder requires a service dog that is patient with variable speech or motor commands, gentle around orthotics and walkers, and rock-solid in public.',
+    ctaText: 'Inquire About a Neuromuscular Service Dog',
+    ctaHref: '/#contact',
+    inquiryTopic: 'URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)',
+    sections: [
+      {
+        heading: 'Customizing Cues for Variable Motor & Speech Patterns',
+        body: [
+          'Many handlers with Cerebral Palsy use a combination of verbal cues, hand signals, laser pointers, or assistive communication devices. Spanish Water Dogs are extraordinarily observant herding dogs that excel at reading subtle body language, gaze direction, and customized non-verbal cues.',
+          'Through Gotham Paw, we tailor every dog’s task repertoire—including picking up dropped mobility aids, operating switches, interrupting hypertonia/spasticity episodes with calming tactile pressure, and walking at a matched, steady pace beside walkers, Forearm crutches, or wheelchairs.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'spanish-water-dog-vs-portuguese-water-dog-vs-lagotto-romagnolo',
+    category: 'Rare Water Breed Comparison',
+    title: 'Spanish Water Dog vs. Portuguese Water Dog vs. Lagotto Romagnolo: Which Breed Fits You?',
+    metaTitle: 'Spanish Water Dog vs Portuguese Water Dog vs Lagotto Romagnolo | Breeder Comparison',
+    metaDescription: 'Compare the Spanish Water Dog (Perro de Agua Español), Portuguese Water Dog, and Lagotto Romagnolo across size, herding instinct, coat care, and service/therapy dog aptitude.',
+    targetKeywords: [
+      'Spanish Water Dog vs Portuguese Water Dog',
+      'Spanish Water Dog vs Lagotto Romagnolo',
+      'best medium hypoallergenic water dog',
+      'Perro de Agua Español temperament comparison',
+    ],
+    heroLead:
+      'Prospective families and seniors researching non-shedding European water dogs often compare the Spanish Water Dog, the Portuguese Water Dog, and the Lagotto Romagnolo. As one of only 5 Spanish Water Dog breeders in America, here is our honest breakdown.',
+    ctaText: 'Take Our 60-Second Pathway Quiz',
+    ctaHref: '/#pathway-quiz',
+    inquiryTopic: 'Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)',
+    sections: [
+      {
+        heading: '1. The Herding Brain: Why the Spanish Water Dog Is More Handler-Focused',
+        body: [
+          'Unlike the Portuguese Water Dog (which is purely a water/fisherman’s dog in the AKC Working Group) and the Lagotto Romagnolo (specialized for truffle hunting in the Sporting Group), the Spanish Water Dog is a true dual-purpose pasture herder and water retriever placed in the AKC Herding Group.',
+          'That herding heritage gives the Spanish Water Dog a noticeably deeper one-on-one bond with its handler, superior off-leash attentiveness, and the problem-solving intelligence required for complex medical service tasks.',
+        ],
+      },
+      {
+        heading: '2. Size & Grooming Differences',
+        body: [
+          'At 30–50 lbs, the Spanish Water Dog is more compact and manageable for seniors and apartment elevators than many male Portuguese Water Dogs (which can reach 60 lbs), while possessing stronger bone and retrieve power than the smaller Lagotto. Furthermore, the Spanish Water Dog coat is never brushed—making it simpler to maintain in a clean utility clip than a brushed Portuguese Water Dog coat.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'best-dog-breed-for-active-seniors-upper-east-side-nyc',
+    category: 'Senior Citizen Companion Guide',
+    title: 'Why the Spanish Water Dog From Service-Proven Lines Is Ideal for Active Seniors',
+    metaTitle: 'Best Non-Shedding Medium Dog for Active Seniors in NYC | Qbits Kennel Upper East Side',
+    metaDescription: 'Why active seniors on the Upper East Side of NYC and across the Northeast choose Qbits Spanish Water Dogs—bred from service-proven lines with a non-shedding coat and lifetime support.',
+    targetKeywords: [
+      'best dog breed for active seniors NYC',
+      'non shedding medium dog for retirees',
+      'Spanish Water Dog for seniors',
+      'Upper East Side dog breeder for seniors',
+    ],
+    heroLead:
+      'Many of our favorite puppy families are active retirees and senior citizens who want an intelligent, loyal, non-shedding companion without the chaos of a hyperactive giant breed or a fragile toy dog.',
+    ctaText: 'Apply or Request a Phone Call Back',
+    ctaHref: '/#contact',
+    inquiryTopic: 'Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)',
+    sections: [
+      {
+        heading: 'The Advantage of Buying a Companion Puppy From a Service Dog Breeder',
+        body: [
+          'When you adopt a companion puppy from Qbits Kennel, you benefit directly from our selective breeding for the Gotham Paw Service Animal Program. We breed specifically against hyperactivity, leash reactivity, and sound nervousness—prioritizing dogs that walk politely, settle calmly indoors, and stay attuned to their person’s pace.',
+        ],
+      },
+      {
+        heading: 'Decades of Guaranteed Lifetime Breeder Support',
+        body: [
+          'Because our founder is the youngest Spanish Water Dog breeder in America by 30 years—mentored by breed pioneer Lisa Harper—senior owners have complete peace of mind knowing their breeder will be active, reachable, and standing behind their dog for the entirety of the dog’s 12–15+ year lifespan.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'how-to-certify-a-therapy-dog-in-nyc-hospitals-nursing-homes',
+    category: 'Therapy Dog Pathway Guide',
+    title: 'How to Train & Certify Your Spanish Water Dog as a Hospital or Nursing Home Therapy Dog',
+    metaTitle: 'How to Certify a Hospital Therapy Dog in NYC | Qbits Spanish Water Dog Kennel',
+    metaDescription: 'Step-by-step guide to raising and certifying a Qbits Spanish Water Dog for hospital, rehabilitation clinic, school, and nursing home therapy visitation.',
+    targetKeywords: [
+      'how to certify a therapy dog NYC',
+      'Spanish Water Dog therapy dog',
+      'hypoallergenic hospital therapy dog breed',
+      'therapy dog vs service dog training',
+    ],
+    heroLead:
+      'Many Qbits puppies go to homes where their owners volunteer in hospitals, pediatric wards, physical rehab clinics, and senior living communities as certified Therapy Dogs.',
+    ctaText: 'Apply for a Therapy Dog Prospect (2027/2028)',
+    ctaHref: '/#puppy-application',
+    inquiryTopic: 'Therapy Dog Prospect Inquiry (Fall 2027 / Spring 2028)',
+    sections: [
+      {
+        heading: 'Why Hospitals & Rehab Centers Love Spanish Water Dogs',
+        body: [
+          'Clinical volunteer coordinators consistently praise Spanish Water Dogs for two reasons: (1) their single, non-shedding coat leaves zero hair on hospital sheets or sterile floors, and (2) their 35–48 lb height allows patients seated in wheelchairs or raised hospital beds to pet them comfortably without straining.',
+        ],
+      },
+      {
+        heading: 'Our Step-by-Step Certification Roadmap (CGC to Pet Partners / ATD)',
+        body: [
+          'At 7–8 weeks of age, we identify puppies in our Dudley × Molly litters that show high social warmth, calm recovery from sudden noises, and gentle tactile manners. We then guide our puppy families through AKC STAR Puppy, AKC Canine Good Citizen (CGC), and formal registration with Pet Partners, Alliance of Therapy Dogs, or NYC hospital therapy programs.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'spanish-water-dog-health-clearances-ofa-chic-pra-nad-chg',
+    category: 'Genetic Health & OFA CHIC Guide',
+    title: 'Spanish Water Dog Health Testing Explained: OFA Hips, Eyes, prcd-PRA, NAD & CHG',
+    metaTitle: 'Spanish Water Dog OFA CHIC Health Clearances (NAD, PRA, CHG, Hips) | Qbits Kennel',
+    metaDescription: 'Learn which OFA and DNA health clearances are mandatory before buying a Spanish Water Dog puppy or booking a stud service: Hips, Elbows, CAER Eyes, prcd-PRA, NAD, and CHG.',
+    targetKeywords: [
+      'Spanish Water Dog health clearances OFA CHIC',
+      'Neuroaxonal Dystrophy NAD Spanish Water Dog',
+      'prcd-PRA CHG Spanish Water Dog DNA test',
+      'health tested Spanish Water Dog breeder',
+    ],
+    heroLead:
+      'Guided by our mentor Lisa Harper—who helped establish the breed’s ethical foundation in America—Qbits Kennel never breeds a dog without full orthopedic, ophthalmic, and DNA health clearances.',
+    ctaText: 'Inspect Dudley & Molly’s Clearances',
+    ctaHref: '/#our-dogs',
+    inquiryTopic: 'General Spanish Water Dog / Kennel Question',
+    sections: [
+      {
+        heading: 'The 6 Mandatory Health Clearances for Every Ethical Pairing',
+        body: [
+          'Before considering any Spanish Water Dog puppy or stud dog, verify that both parents hold passing evaluations for: (1) OFA Hips, (2) OFA Elbows, (3) Annual board-certified ophthalmologist (CAER) Eye Exam, (4) prcd-PRA (Progressive Rod-Cone Degeneration DNA test), (5) NAD (Neuroaxonal Dystrophy DNA test), and (6) CHG (Congenital Hypothyroidism with Goiter DNA test). Both Dudley and Molly are fully health-tested and genetically clear.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'living-with-a-spanish-water-dog-in-manhattan-central-park',
+    category: 'NYC Urban Dog Ownership',
+    title: 'Living With a Spanish Water Dog in New York City: Apartments, Co-ops & Central Park',
+    metaTitle: 'Spanish Water Dogs in NYC Apartments & Central Park | Qbits Kennel Upper East Side',
+    metaDescription: 'Can a Spanish Water Dog thrive in a New York City apartment or co-op? Learn how Qbits Kennel raises calm, urban-confident Spanish Water Dogs on the Upper East Side.',
+    targetKeywords: [
+      'Spanish Water Dog apartment living NYC',
+      'medium non shedding dog for Manhattan co-op',
+      'Upper East Side Spanish Water Dog breeder',
+      'Central Park off leash dog training',
+    ],
+    heroLead:
+      'Raised right on the Upper East Side of Manhattan, our Spanish Water Dogs prove every day that an athletic working breed can be an extraordinarily quiet, clean, and well-mannered New York City apartment partner.',
+    ctaText: 'Apply for a Manhattan-Raised Puppy',
+    ctaHref: '/#puppy-application',
+    inquiryTopic: 'Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)',
+    sections: [
+      {
+        heading: 'The Secret Is Early Manhattan Conditioning & an Indoor "Off-Switch"',
+        body: [
+          'Puppies raised in rural barns often experience sensory overload when brought into New York City at 8 weeks old. Because our puppies are whelped and raised inside our Upper East Side home, they grow up hearing sirens, elevators, delivery carts, and street life from infancy—graduating to their new homes already confident in city environments.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'early-neurological-stimulation-ens-puppy-culture-service-dogs',
+    category: 'Science-Backed Puppy Rearing',
+    title: 'How Early Neurological Stimulation (ENS) & Mobility Conditioning Shape Our Puppies',
+    metaTitle: 'Early Neurological Stimulation (ENS) & Service Puppy Socialization | Qbits Kennel NYC',
+    metaDescription: 'Inside Qbits Kennel’s Day 3–16 Early Neurological Stimulation (ENS), Early Scent Introduction, and wheelchair/mobility conditioning protocol on the Upper East Side of NYC.',
+    targetKeywords: [
+      'Early Neurological Stimulation ENS service dogs',
+      'Puppy Culture Spanish Water Dog breeder',
+      'how service dog puppies are socialized from birth',
+    ],
+    heroLead:
+      'Because at least one puppy from every Qbits litter is destined for medical service work with Gotham Paw, every single puppy in our nursery receives an elite, science-backed neonatal development curriculum.',
+    ctaText: 'View Our 4-Phase Litter Roadmap',
+    ctaHref: '/#upcoming-litters',
+    inquiryTopic: 'Puppy Waitlist Inquiry (Fall 2027 / Spring 2028 — Dudley × Molly)',
+    sections: [
+      {
+        heading: 'Days 3 to 16: Building Stress Resilience & Heart-Rate Recovery',
+        body: [
+          'Between Days 3 and 16 of life, each puppy completes daily five-step Early Neurological Stimulation (ENS) and Early Scent Introduction (ESI) exercises. Combined with Weeks 3–8 exposure to wheelchairs, walkers, crutches, and varied underfoot surfaces, this protocol produces puppies with measurably calmer stress recovery for service, therapy, and family life.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'understanding-nyc-co-op-board-rules-for-service-dogs-and-esas',
+    category: 'NYC Housing & Disability Rights',
+    title: 'NYC Co-op, Condo & Rental Rules for Task-Trained Service Dogs vs. ESAs',
+    metaTitle: 'NYC Co-op & Apartment Rules for Service Dogs vs ESAs (ADA & FHA) | Qbits Kennel',
+    metaDescription: 'Educational guide for New York City co-op shareholders, condo owners, and renters on federal Fair Housing Act (FHA) and ADA protections for task-trained service dogs and ESAs.',
+    targetKeywords: [
+      'NYC co-op rules service dog vs emotional support animal',
+      'Fair Housing Act service dog no pet building NYC',
+      'medical equipment service dog apartment rights',
+    ],
+    heroLead:
+      'Many Upper East Side and Manhattan residents live in co-ops, condos, or rental buildings with strict weight limits or no-pet clauses. Understanding how federal law applies to Task-Trained Service Dogs versus Emotional Support Animals (ESAs) protects both residents and boards.',
+    ctaText: 'Compare Service Dogs vs. ESAs',
+    ctaHref: '/#service-animals',
+    inquiryTopic: 'URGENT: Service Animal Prospect Inquiry (Spinal Cord Injury / Neuromuscular — Gotham Paw)',
+    sections: [
+      {
+        heading: 'How the ADA and Fair Housing Act Apply in New York City Buildings',
+        body: [
+          'A Task-Trained Service Dog—such as a Qbits Spanish Water Dog trained through Gotham Paw to assist a resident with a spinal cord injury, Multiple Sclerosis, or Cerebral Palsy—is legally medical equipment under the ADA and a reasonable accommodation under the federal Fair Housing Act (FHA) and NYC Human Rights Law, exempt from building pet bans and weight caps.',
+          'By contrast, an Emotional Support Animal (ESA) is not task-trained and has no public-access rights in restaurants or stores; its legal function under the Fair Housing Act is strictly housing protection to prevent a renter or resident with a documented disability from being evicted or denied housing by a landlord that does not allow pets.',
         ],
       },
     ],

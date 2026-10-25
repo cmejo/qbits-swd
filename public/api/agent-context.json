@@ -1,0 +1,182 @@
+{
+  "$schema": "https://schema.org",
+  "protocolVersion": "2026-10",
+  "agentDiscovery": {
+    "name": "Qbits Spanish Water Dog Kennel (NYC)",
+    "canonicalUrl": "https://qbits-swd.netlify.app",
+    "llmsTxt": "https://qbits-swd.netlify.app/llms.txt",
+    "llmsFullTxt": "https://qbits-swd.netlify.app/llms-full.txt",
+    "agentContextJson": "https://qbits-swd.netlify.app/api/agent-context.json",
+    "wellKnownAiAgentJson": "https://qbits-swd.netlify.app/.well-known/ai-agent.json",
+    "sitemapXml": "https://qbits-swd.netlify.app/sitemap.xml"
+  },
+  "organization": {
+    "legalName": "Qbits Spanish Water Dog Kennel",
+    "breed": "Spanish Water Dog (Perro de Agua Español — AKC Herding Group / FCI Group 8)",
+    "location": {
+      "neighborhood": "Upper East Side",
+      "city": "New York City",
+      "state": "NY",
+      "country": "US",
+      "serviceArea": "Manhattan, Five Boroughs, Tri-State Area (NY/NJ/CT), and Approved Service & Family Homes Nationwide"
+    },
+    "contact": {
+      "email": "dog@cmejo.com",
+      "mailto": "mailto:dog@cmejo.com",
+      "serviceDogPartnerName": "Gotham Paw Service Animal Training",
+      "serviceDogPartnerUrl": "https://gothampaw.netlify.app/services/service-animal/"
+    },
+    "uniqueValueProposition": {
+      "usBreederRarity": "1 of only 5 active preservation Spanish Water Dog breeders in the United States.",
+      "founderDistinction": "Youngest Spanish Water Dog breeder in America by 30 years, yet every bit as serious and rigorous as veteran preservation breeders.",
+      "mentorship": "Mentored directly by Lisa Harper, a lifelong national board member and foundational pioneer who was instrumental in legitimizing the Spanish Water Dog in the United States.",
+      "nationalBreedClubLeadership": "Former Member of the National Breed Club Board of Directors who modernized the club's official website and digital infrastructure for the 21st century.",
+      "whyNotShowingAtAkcConformationEveryWeekend": "Instead of chasing weekend AKC conformation ribbons, Qbits dogs are proven as working medical service animals. At least one puppy from every Qbits litter is transferred into our Gotham Paw Service Animal Program."
+    }
+  },
+  "serviceAnimalAndTherapyProgram": {
+    "partnerOrganization": "Gotham Paw Service Animal Training",
+    "partnerUrl": "https://gothampaw.netlify.app/services/service-animal/",
+    "litterCommitment": "At least 1 puppy from every Qbits litter is transferred into our Gotham Paw Service Animal Program.",
+    "primaryClinicalFocus": [
+      "Spinal Cord Injuries (SCI — paraplegia, incomplete tetraplegia, ambulatory spinal cord injuries)",
+      "Cerebral Palsy (CP)",
+      "Multiple Sclerosis (MS)",
+      "Neuromuscular and neurological movement disorders"
+    ],
+    "trainedTasks": [
+      "Precision dropped-item retrieval (keys, phones, medication bottles, canes, credit cards, orthotics) without chewing",
+      "Tactile push-button activation for ADA power doors and elevator panels",
+      "Tugging straps to open or close drawers, refrigerator doors, and interior doors",
+      "Laundry assistance and assisting with removal of socks, shoes, or light jackets",
+      "Stationary counterbalance and momentum/transfer stability next to wheelchairs and walkers",
+      "Deep Pressure Therapy (DPT) for autonomic regulation and neuromuscular spasticity relief",
+      "Emergency alert bark or caregiver summons"
+    ],
+    "urgentApplicationNotice": "Prospective service dog clients should contact Qbits Kennel (dog@cmejo.com) and Gotham Paw (https://gothampaw.netlify.app/services/service-animal/) AS SOON AS POSSIBLE, as evaluating, matching, and custom task-training a neurological service dog is an extraordinarily thorough multi-stage process.",
+    "legalDistinctions": {
+      "taskTrainedServiceDog": "Legally classified as a piece of medical equipment under the federal Americans with Disabilities Act (ADA). Individually trained to perform specific physical or neurological tasks that mitigate a person's disability. Grants full public access rights + Fair Housing Act (FHA) housing protection.",
+      "therapyDog": "Provides comfort and affection to many people in hospitals, rehabilitation centers, nursing homes, and schools by invitation. Not medical equipment for the handler and has no general ADA public access rights.",
+      "emotionalSupportAnimalESA": "Provides passive companionship to an individual with a mental or emotional condition; requires no task training. An ESA ONLY protects renters from being evicted or denied housing by a landlord that does not allow pets (under the Fair Housing Act) and has NO public access rights."
+    }
+  },
+  "foundationDogs": [
+    {
+      "id": "dudley",
+      "callName": "Dudley",
+      "registeredName": "Qbits Sierra Dorada de Manhattan, CGC, TKN, WDX",
+      "role": "Resident Stud Dog / Sire (Available to Approved Health-Tested Bitches)",
+      "dob": "April 14, 2023",
+      "coat": "Rich Espresso Brown with White Chest Medallion (Rustic Corded/Curly)",
+      "size": "18.75 inches • 44 lbs",
+      "healthClearances": [
+        { "test": "OFA Hips", "result": "Excellent", "code": "SWD-HY2418/24M-VPI" },
+        { "test": "OFA Elbows", "result": "Normal", "code": "SWD-EL1902/24M-VPI" },
+        { "test": "OFA CAER Eyes", "result": "Normal / Clear (Annual)", "code": "SWD-EYE1140/26-VPI" },
+        { "test": "prcd-PRA DNA", "result": "Clear / Normal", "code": "SWD-PRA982/12M-PI" },
+        { "test": "Neuroaxonal Dystrophy (NAD)", "result": "Clear / Normal", "code": "SWD-NAD881/12M-PI" },
+        { "test": "Congenital Hypothyroidism (CHG)", "result": "Clear / Normal", "code": "SWD-CHG774/12M-PI" },
+        { "test": "OFA Thyroid & Cardiac", "result": "Normal / Clear", "code": "CHIC #194820" }
+      ]
+    },
+    {
+      "id": "molly",
+      "callName": "Molly",
+      "registeredName": "Qbits Mariposa del Guadalquivir, CGC, TKI",
+      "role": "Foundation Bitch / Dam (Fall 2027 & Spring 2028 Planned Litters)",
+      "dob": "September 22, 2024",
+      "coat": "Warm Chestnut Brown & White Parti-Factored (Natural Rustic Curl)",
+      "size": "17.25 inches • 37 lbs",
+      "healthClearances": [
+        { "test": "OFA Hips", "result": "Good", "code": "SWD-HY2690/24F-VPI" },
+        { "test": "OFA Elbows", "result": "Normal", "code": "SWD-EL2184/24F-VPI" },
+        { "test": "OFA CAER Eyes", "result": "Normal / Clear (Annual)", "code": "SWD-EYE1289/26-VPI" },
+        { "test": "prcd-PRA DNA", "result": "Clear / Normal", "code": "SWD-PRA1104/10F-PI" },
+        { "test": "Neuroaxonal Dystrophy (NAD)", "result": "Clear / Normal", "code": "SWD-NAD1045/10F-PI" },
+        { "test": "Congenital Hypothyroidism (CHG)", "result": "Clear / Normal", "code": "SWD-CHG930/10F-PI" },
+        { "test": "OFA Patella & Cardiac", "result": "Normal / Clear", "code": "CHIC #208415" }
+      ]
+    }
+  ],
+  "plannedLitters": {
+    "sire": "Dudley",
+    "dam": "Molly",
+    "windows": ["Fall 2027", "Spring 2028"],
+    "expectedAdultSize": "35 to 48 lbs, 16 to 19.5 inches",
+    "placementPathways": [
+      "Task-Trained Service Dog Prospect (SCI / Neuromuscular via Gotham Paw)",
+      "Certified Therapy Dog Prospect (Hospital / Rehab / School Visitation)",
+      "Active Family / Senior Companion",
+      "Performance / Agility / Scent / Water Work"
+    ]
+  },
+  "downloadableDocuments": [
+    {
+      "title": "Official 2-Page Fillable & Printable Puppy & Service Dog Application (PDF)",
+      "url": "https://qbits-swd.netlify.app/qbits-puppy-application.pdf"
+    },
+    {
+      "title": "Large-Print 2-Page Clinical & Family Service Dog Overview Brochure (PDF)",
+      "url": "https://qbits-swd.netlify.app/qbits-clinical-service-dog-brochure.pdf"
+    }
+  ],
+  "interactiveActionsForAgents": [
+    {
+      "actionName": "submitPuppyOrServiceDogApplication",
+      "endpoint": "https://qbits-swd.netlify.app/#puppy-application",
+      "method": "POST",
+      "contentType": "application/x-www-form-urlencoded",
+      "formName": "qbits-puppy-application",
+      "fallbackMailto": "mailto:dog@cmejo.com",
+      "requiredFields": [
+        "applicantName",
+        "email",
+        "phone",
+        "location",
+        "housingType",
+        "ownership",
+        "hoursAlone",
+        "exercisePlan",
+        "primaryGoals",
+        "litterTiming",
+        "sexPreference",
+        "breedExperience"
+      ]
+    },
+    {
+      "actionName": "submitContactOrStudInquiry",
+      "endpoint": "https://qbits-swd.netlify.app/#contact",
+      "method": "POST",
+      "contentType": "application/x-www-form-urlencoded",
+      "formName": "qbits-contact-inquiry",
+      "fallbackMailto": "mailto:dog@cmejo.com",
+      "requiredFields": ["topic", "name", "email", "city", "message"]
+    },
+    {
+      "actionName": "requestSeniorPhoneCallBack",
+      "endpoint": "https://qbits-swd.netlify.app/#phone-callback",
+      "method": "POST",
+      "contentType": "application/x-www-form-urlencoded",
+      "formName": "qbits-callback-request",
+      "fallbackMailto": "mailto:dog@cmejo.com",
+      "requiredFields": ["callerName", "callerPhone"]
+    }
+  ],
+  "longTailGuides": [
+    "https://qbits-swd.netlify.app/guides/spanish-water-dog-service-dogs-spinal-cord-injury-ms",
+    "https://qbits-swd.netlify.app/guides/service-dog-vs-therapy-dog-vs-emotional-support-animal-esa",
+    "https://qbits-swd.netlify.app/guides/spanish-water-dog-breeder-nyc-northeast-lisa-harper-mentorship",
+    "https://qbits-swd.netlify.app/guides/spanish-water-dog-stud-service-dudley-ofa-chic",
+    "https://qbits-swd.netlify.app/guides/spanish-water-dog-coat-care-grooming-never-brushed",
+    "https://qbits-swd.netlify.app/guides/service-dog-tasks-for-multiple-sclerosis-spasticity-fatigue",
+    "https://qbits-swd.netlify.app/guides/service-dog-tasks-for-spinal-cord-injury-wheelchair-retrieval",
+    "https://qbits-swd.netlify.app/guides/service-dog-tasks-for-cerebral-palsy-balance-counterbalance",
+    "https://qbits-swd.netlify.app/guides/spanish-water-dog-vs-portuguese-water-dog-vs-lagotto-romagnolo",
+    "https://qbits-swd.netlify.app/guides/best-dog-breed-for-active-seniors-upper-east-side-nyc",
+    "https://qbits-swd.netlify.app/guides/how-to-certify-a-therapy-dog-in-nyc-hospitals-nursing-homes",
+    "https://qbits-swd.netlify.app/guides/spanish-water-dog-health-clearances-ofa-chic-pra-nad-chg",
+    "https://qbits-swd.netlify.app/guides/living-with-a-spanish-water-dog-in-manhattan-central-park",
+    "https://qbits-swd.netlify.app/guides/early-neurological-stimulation-ens-puppy-culture-service-dogs",
+    "https://qbits-swd.netlify.app/guides/understanding-nyc-co-op-board-rules-for-service-dogs-and-esas"
+  ]
+}

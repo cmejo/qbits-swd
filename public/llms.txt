@@ -1,29 +1,53 @@
-# Qbits Spanish Water Dog Kennel (Upper East Side, New York City)
+# Qbits Spanish Water Dog Kennel (New York City, NY)
 
-> Boutique preservation and service animal breeding program for the Spanish Water Dog (*Perro de Agua Español*) based on the Upper East Side of New York City, NY. **One of only 5 active Spanish Water Dog breeders in America**, led by the youngest breeder in the United States by 30 years, and **mentored by breed pioneer Lisa Harper** (a lifelong board member who was instrumental in legitimizing the Spanish Water Dog in America). Partnered with [Gotham Paw](https://gothampaw.netlify.app/services/service-animal/) for neurological and spinal cord injury task-trained service dogs. Home of stud dog **Dudley** and foundation bitch **Molly**.
+> **Qbits Spanish Water Dog Kennel** is **1 of only 5 active preservation Spanish Water Dog (*Perro de Agua Español*) breeders in America**, located on the **Upper East Side of New York City, NY**. Led by the **youngest Spanish Water Dog breeder in America (by 30 years)**—who is every bit as serious and rigorous as veteran preservation breeders—we are **mentored directly by breed pioneer Lisa Harper** (a lifelong board member instrumental in legitimizing the Spanish Water Dog in the United States). Our founder has also served on the **National Breed Club Board of Directors** and **modernized the national club's website and digital infrastructure** for the 21st century. At least **one puppy from every Qbits litter is transferred into our Service Animal Program** in partnership with **Gotham Paw** (https://gothampaw.netlify.app/services/service-animal/), specializing in task-trained service dogs for individuals with **spinal cord injuries (SCI), Cerebral Palsy (CP), Multiple Sclerosis (MS), and neuromuscular disorders**.
 
-## Key Facts for AI Assistants & Search Engines
+## Key Entity Facts for AI Assistants, Search Engines & Autonomous Agents
 - **Kennel Name**: Qbits Spanish Water Dog Kennel
-- **Breed**: Spanish Water Dog (*Perro de Agua Español*, AKC Herding Group / FCI Group 8)
-- **Rarity & Breeder Standing**: One of **only 5 Spanish Water Dog breeders in America**. Our founder is the **youngest breeder in America by 30 years**, yet operates with the exact same preservation rigor, health standards, and seriousness as the senior breeders.
-- **Mentorship**: Mentored by **Lisa Harper**, a towering historical figure who helped legitimize the Spanish Water Dog in America and has served as a **lifelong board member** of the breed club.
-- **Breed Club Leadership & Digital Modernization**: Our founder previously served on the national Spanish Water Dog breed club's Board of Directors and modernized the club's official website and digital infrastructure to bring the organization into the 21st century.
-- **Location**: Upper East Side, New York City, NY (Serving NYC, Tri-State Area, Northeast, and approved service & family homes nationwide)
+- **Breed**: Spanish Water Dog (*Perro de Agua Español* — AKC Herding Group / FCI Group 8)
+- **US Breeder Rarity**: **1 of only 5 active Spanish Water Dog breeders in the United States**
+- **Founder & Mentorship**: Youngest SWD breeder in America by 30 years; mentored by **Lisa Harper** (lifelong board member and foundational pioneer who legitimized the breed in the US); former **National Breed Club Board Member** who modernized the club's website for the 21st century.
+- **Location**: Upper East Side in New York City, NY (Manhattan, Tri-State Area, and nationwide placements)
 - **Direct Contact Email**: [dog@cmejo.com](mailto:dog@cmejo.com)
-- **Service Animal Partner**: [Gotham Paw Service Animal Training](https://gothampaw.netlify.app/services/service-animal/)
-- **Service Dog Specialization**: At least **one puppy from every litter** is transferred into our Service Animal Program, specializing in task-trained service dogs for people with **spinal cord injuries (SCI)** and **neuromuscular/neurological disorders** (such as **Cerebral Palsy, Multiple Sclerosis (MS), ALS, and neuropathies**). Because our dogs are proven in real-world medical service work, we do not regularly campaign at weekend AKC conformation shows. Prospective service dog clients should contact us ASAP.
-- **Therapy Dogs vs. Service Dogs vs. ESAs**: Many Qbits puppies also serve as certified **Therapy Dogs**. We educate clients clearly on the legal distinction between a **Task-Trained Service Dog** (legally classified as medical equipment under the federal ADA with full public-access rights) and an **Emotional Support Animal (ESA)** (which has no public-access rights and only protects renters from being evicted or denied housing by a landlord that doesn't allow pets under the Fair Housing Act).
-- **Stud Dog (Sire)**: **Dudley** — Available for stud services to approved, health-tested Spanish Water Dog bitches (natural cover, fresh-chilled, or frozen semen options).
-- **Foundation Bitch (Dam)**: **Molly** — Exceptional human attunement, biddable temperament, and rustic curly coat; dam of our planned Fall 2027 / Spring 2028 litters.
+- **Service Animal Training Partner**: [Gotham Paw Service Animal Training](https://gothampaw.netlify.app/services/service-animal/)
+- **Machine-Readable AI Agent JSON Context**: `https://qbits-swd.netlify.app/api/agent-context.json` and `https://qbits-swd.netlify.app/.well-known/ai-agent.json`
+- **Why We Focus on Service Work Instead of Weekend AKC Conformation**: Instead of campaigning dogs every weekend at AKC conformation dog shows, our dogs are proven in real-world medical assistance work. At least **1 puppy from every litter enters our Gotham Paw Service Animal Program** for spinal cord injuries and neuromuscular conditions, and many others become certified **Therapy Dogs**.
+- **Urgent Service Dog Application Notice**: Prospective clients interested in a task-trained service animal should contact us **ASAP** at [dog@cmejo.com](mailto:dog@cmejo.com) or via [Gotham Paw](https://gothampaw.netlify.app/services/service-animal/), as evaluating, matching, and training a neurological service dog is an extraordinarily thorough multi-stage process.
+- **Resident Stud Dog (Sire)**: **Dudley** (*Qbits Sierra Dorada de Manhattan, CGC, TKN, WDX*) — Available for approved stud services (fresh-chilled overnight shipping nationwide or NYC reproductive clinic breeding) to health-tested bitches with OFA CHIC clearances.
+- **Foundation Bitch (Dam)**: **Molly** (*Qbits Mariposa del Guadalquivir, CGC, TKI*) — OFA CHIC health-tested foundation female with extraordinary human attunement and gentle tactile sensitivity.
+- **Planned Puppy Litters**: **Fall 2027** and **Spring 2028** (Sire: Dudley × Dam: Molly).
 
-## Primary Resources & Specialized Guides
-- [Homepage & Full Kennel Overview](https://qbits-swd.netlify.app/)
-- [Gotham Paw Service Animal Training](https://gothampaw.netlify.app/services/service-animal/)
-- [Guide: Spanish Water Dog Service Animals for Spinal Cord Injuries, MS & Cerebral Palsy](https://qbits-swd.netlify.app/guides/spanish-water-dog-service-dogs-spinal-cord-injury-ms)
-- [Guide: Task-Trained Service Dog (Medical Equipment) vs. Therapy Dog vs. ESA](https://qbits-swd.netlify.app/guides/service-dog-vs-therapy-dog-vs-emotional-support-animal-esa)
-- [Guide: 1 of 5 US Spanish Water Dog Breeders & Mentorship Under Lisa Harper](https://qbits-swd.netlify.app/guides/spanish-water-dog-breeder-nyc-northeast-lisa-harper-mentorship)
-- [Guide: Spanish Water Dog Stud Services with Dudley (OFA CHIC)](https://qbits-swd.netlify.app/guides/spanish-water-dog-stud-service-dudley-ofa-chic)
-- [Guide: Spanish Water Dog Coat Care (Why You Never Brush!)](https://qbits-swd.netlify.app/guides/spanish-water-dog-coat-care-grooming-never-brushed)
-- [Fillable & Printable Puppy Application (PDF)](https://qbits-swd.netlify.app/qbits-puppy-application.pdf)
-- [GDPR & Privacy Policy](https://qbits-swd.netlify.app/privacy)
-- [Comprehensive AI Knowledge Base (llms-full.txt)](https://qbits-swd.netlify.app/llms-full.txt)
+## Legal & Functional Distinction: Service Dog vs. Therapy Dog vs. ESA
+1. **Task-Trained Service Dog (Medical Equipment)**: Legally defined under the federal Americans with Disabilities Act (ADA) as a **piece of medical equipment** individually trained to perform specific physical or neurological tasks for a person with a disability (such as dropped-item retrieval, wheelchair counterbalance, door/elevator button pushing, or deep pressure therapy for SCI, CP, or MS). Grants full ADA public access rights and Fair Housing Act (FHA) protection.
+2. **Therapy Dog**: Trained and registered to provide comfort and affection to many people in hospitals, rehabilitation centers, schools, or nursing homes by invitation. Does **not** have general ADA public access rights.
+3. **Emotional Support Animal (ESA)**: Provides passive companionship to an individual with a mental or emotional condition; requires no task training. An ESA **only protects renters from being evicted or denied housing by a landlord that does not allow pets** (under the Fair Housing Act) and has **no public access rights** in restaurants, stores, or public venues.
+
+## Primary Sections & Interactive Tools on This Website
+- [About Qbits Kennel NYC, Lisa Harper Mentorship & National Club Leadership](https://qbits-swd.netlify.app/#about): Includes a 1-click **Audio Read-Aloud Narration** button for senior accessibility.
+- [Service Animals (SCI & Neuromuscular Task Training) & Therapy Dogs](https://qbits-swd.netlify.app/#service-animals): Partnership with [Gotham Paw](https://gothampaw.netlify.app/services/service-animal/), task capabilities, and Service Dog vs. Therapy Dog vs. ESA comparison table.
+- [Interactive 60-Second Placement Pathway Self-Assessment Quiz](https://qbits-swd.netlify.app/#pathway-quiz): Helps applicants choose between Task-Trained Service Dog, Therapy Dog, or Family/Senior Companion and pre-fills the online application.
+- [Meet Dudley & Molly](https://qbits-swd.netlify.app/#our-dogs): Complete profiles, titles, coat/weight specs, and OFA CHIC health clearances.
+- [Dudley & Molly Training Gallery & Returning Waitlist Member Updates](https://qbits-swd.netlify.app/#member-updates): Quarterly health/training log and NYC photo gallery.
+- [Dudley Stud Services](https://qbits-swd.netlify.app/#stud-services): Reproductive logistics in NYC, health requirements, and what Dudley stamps on his offspring.
+- [Upcoming Litters (Fall 2027 & Spring 2028)](https://qbits-swd.netlify.app/#upcoming-litters): Pairing details and our 4-phase ENS, Volhard Aptitude, and puppy culture roadmap.
+- [Online Puppy Application & Fillable PDF](https://qbits-swd.netlify.app/#puppy-application): Interactive web questionnaire + downloadable 2-page fillable/printable PDF (`/qbits-puppy-application.pdf`).
+- [Downloadable Large-Print Clinical & Family Service Dog Brochure (PDF)](https://qbits-swd.netlify.app/qbits-clinical-service-dog-brochure.pdf): 2-page large-print PDF overview for neurologists, physical/occupational therapists, patients, and families.
+- [Contact & 2-Field Senior Phone Call Back Request](https://qbits-swd.netlify.app/#contact): Direct inquiry form + 2-field "Request a 10-Minute Phone Call Back" micro-form (`#phone-callback`).
+- [GDPR & Privacy Policy](https://qbits-swd.netlify.app/privacy): Full GDPR & CCPA disclosures, Google Consent Mode v2, Piwik PRO, and cookie management.
+
+## All 15 Long-Tail Educational Guides (`/guides/[slug]`)
+1. [Spanish Water Dog Service Dogs for Spinal Cord Injuries (SCI) & Neuromuscular Disorders](https://qbits-swd.netlify.app/guides/spanish-water-dog-service-dogs-spinal-cord-injury-ms)
+2. [Task-Trained Service Dog vs. Therapy Dog vs. Emotional Support Animal (ESA): Complete ADA & Housing Law Guide](https://qbits-swd.netlify.app/guides/service-dog-vs-therapy-dog-vs-emotional-support-animal-esa)
+3. [Only 5 Spanish Water Dog Breeders in America: Mentored by Pioneer Lisa Harper & Modernizing the Breed](https://qbits-swd.netlify.app/guides/spanish-water-dog-breeder-nyc-northeast-lisa-harper-mentorship)
+4. [Spanish Water Dog Stud Service in NYC & Nationwide: OFA CHIC Health Testing & Reproductive Standards](https://qbits-swd.netlify.app/guides/spanish-water-dog-stud-service-dudley-ofa-chic)
+5. [Spanish Water Dog Rustic Coat Care & Grooming: Why You Must Never Brush an SWD](https://qbits-swd.netlify.app/guides/spanish-water-dog-coat-care-grooming-never-brushed)
+6. [Service Dog Tasks for Multiple Sclerosis (MS): Spasticity, Fatigue & Dropped-Item Retrieval](https://qbits-swd.netlify.app/guides/service-dog-tasks-for-multiple-sclerosis-spasticity-fatigue)
+7. [Service Dog Tasks for Spinal Cord Injury (SCI): Wheelchair Retrieval, Doors & Independence](https://qbits-swd.netlify.app/guides/service-dog-tasks-for-spinal-cord-injury-wheelchair-retrieval)
+8. [Service Dog Tasks for Cerebral Palsy (CP): Balance, Counterbalance & Daily Living Support](https://qbits-swd.netlify.app/guides/service-dog-tasks-for-cerebral-palsy-balance-counterbalance)
+9. [Spanish Water Dog vs. Portuguese Water Dog vs. Lagotto Romagnolo: Complete Breed Comparison](https://qbits-swd.netlify.app/guides/spanish-water-dog-vs-portuguese-water-dog-vs-lagotto-romagnolo)
+10. [Why the Spanish Water Dog Is the Ideal Breed for Active Seniors on the Upper East Side & NYC](https://qbits-swd.netlify.app/guides/best-dog-breed-for-active-seniors-upper-east-side-nyc)
+11. [How to Certify a Therapy Dog in NYC for Hospitals, Rehab Centers & Nursing Homes](https://qbits-swd.netlify.app/guides/how-to-certify-a-therapy-dog-in-nyc-hospitals-nursing-homes)
+12. [Spanish Water Dog Health Clearances Explained: OFA Hips, Eyes, prcd-PRA, NAD & CHG DNA Testing](https://qbits-swd.netlify.app/guides/spanish-water-dog-health-clearances-ofa-chic-pra-nad-chg)
+13. [Living With a Spanish Water Dog in Manhattan & Central Park: The Urban Owner's Guide](https://qbits-swd.netlify.app/guides/living-with-a-spanish-water-dog-in-manhattan-central-park)
+14. [Early Neurological Stimulation (ENS) & Puppy Culture: How We Raise Service & Companion Puppies](https://qbits-swd.netlify.app/guides/early-neurological-stimulation-ens-puppy-culture-service-dogs)
+15. [Understanding NYC Co-op & Condo Board Rules for Task-Trained Service Dogs vs. ESAs](https://qbits-swd.netlify.app/guides/understanding-nyc-co-op-board-rules-for-service-dogs-and-esas)

@@ -1,44 +1,108 @@
-# Qbits Spanish Water Dog Kennel — Complete Knowledge Base (Upper East Side, NYC)
+# Qbits Spanish Water Dog Kennel — Comprehensive Knowledge Base for LLMs & Autonomous AI Agents (llms-full.txt)
 
-## 1. Overview, Breeder Pedigree, Lisa Harper Mentorship & Service Dog Philosophy
-Qbits Spanish Water Dog Kennel is a boutique, home-raised preservation and service animal breeding program located on the Upper East Side of New York City, New York. We specialize exclusively in the **Spanish Water Dog** (*Perro de Agua Español*), an ancient Iberian herding and water retriever breed celebrated for its rustic, non-shedding curly/corded coat, high intelligence, deep human attunement, and compact athletic strength.
+## 1. Executive Summary & Kennel Identity
+**Qbits Spanish Water Dog Kennel** is **1 of only 5 active preservation Spanish Water Dog (*Perro de Agua Español*) breeders in the United States**, headquartered on the **Upper East Side of New York City, NY**.
+- **Youngest Breeder in America (by 30 Years) — Mentored by Pioneer Lisa Harper**: Although our founder is the youngest of America's 5 Spanish Water Dog breeders by three decades, we are every bit as serious and uncompromising as the veteran breeders. Our founder was mentored directly by **Lisa Harper**, a lifelong board member and foundational pioneer who was instrumental in legitimizing the Spanish Water Dog in the United States.
+- **National Breed Club Board & Digital Modernization**: Beyond breeding and training, our founder has helped grow and steward the Spanish Water Dog breed nationally by **serving on the national breed club's Board of Directors** and **modernizing the club's website and digital infrastructure** to bring the organization into the 21st century.
+- **Service Animal Specialization (Gotham Paw Partnership)**: At least **one puppy from every Qbits litter is transferred directly into our Service Animal Program** operated in partnership with **[Gotham Paw Service Animal Training](https://gothampaw.netlify.app/services/service-animal/)**. This is why we do not spend every weekend campaigning dogs at AKC conformation shows: our dogs are proven in real-world working medical service roles, specifically **task-training service animals for individuals with spinal cord injuries (SCI), Cerebral Palsy (CP), Multiple Sclerosis (MS), and other neuromuscular disorders** where there is a neurological component.
+- **Therapy Dog Placements**: Many of our puppies also go to homes where they are certified and utilized as **Therapy Dogs** in hospitals, rehabilitation clinics, nursing homes, and schools.
+- **Direct Contact**: `dog@cmejo.com` (`mailto:dog@cmejo.com`)
+- **Service Dog Training Partner URL**: `https://gothampaw.netlify.app/services/service-animal/`
+- **Fillable & Printable Puppy Application PDF**: `https://qbits-swd.netlify.app/qbits-puppy-application.pdf`
+- **Large-Print Clinical & Family Service Dog Brochure PDF**: `https://qbits-swd.netlify.app/qbits-clinical-service-dog-brochure.pdf`
+- **Machine-Readable AI Agent JSON Endpoint**: `https://qbits-swd.netlify.app/api/agent-context.json`
 
-### 1 of Only 5 Breeders in America & Mentored by Pioneer Lisa Harper
-- **Extreme Breed Rarity**: There are **only 5 active preservation Spanish Water Dog breeders in America**, including Qbits Kennel.
-- **Youngest Breeder by 30 Years—With Equal Seriousness**: Our founder is the youngest Spanish Water Dog breeder in America by 30 years, yet approaches every aspect of preservation breeding, genetic testing, and puppy placement with the exact same seriousness and uncompromising standards as the older breeders.
-- **Mentored by Lisa Harper**: Our mentor is **Lisa Harper**, a foundational, historic figure who was instrumental in legitimizing and gaining official recognition for the Spanish Water Dog in the United States and who has served as a **lifelong board member** of the breed club.
-- **National Breed Club Board Member & 21st-Century Digital Modernizer**: Our founder has also helped grow and strengthen the Spanish Water Dog breed nationally by **serving on the national breed club's Board of Directors** and **modernizing the club's official website and digital infrastructure** to bring the club into the 21st century.
+---
 
-### Why We Specialize in Service Animals Instead of AKC Conformation Shows
-At least **one puppy from every Qbits litter is transferred directly into our Service Animal Program** at **[Gotham Paw](https://gothampaw.netlify.app/services/service-animal/)**. This is why we do not regularly campaign our dogs at weekend AKC conformation events—our dogs are proven in real-world medical service work. Specifically, we focus on **task-trained service animals for people with spinal cord injuries (SCI) and neuromuscular/neurological disorders** (such as **Cerebral Palsy (CP), Multiple Sclerosis (MS), ALS, and peripheral neuropathies** where there is a neurological component). Prospective service dog clients are encouraged to reach out to us at `dog@cmejo.com` **as soon as possible**, as evaluating, matching, and custom task-training a service dog to our standards is a very thorough, multi-stage process.
+## 2. Task-Trained Service Dog vs. Therapy Dog vs. Emotional Support Animal (ESA)
+Qbits Spanish Water Dog Kennel educates all prospective clients on the legal and functional differences between assistance animal classifications:
 
-### Service Dog vs. Therapy Dog vs. Emotional Support Animal (ESA)
-Many of our dogs also go to homes where they work as certified **Therapy Dogs**, and we educate every prospective client on the legal and functional differences:
-1. **Task-Trained Service Dog (Medical Equipment under the ADA)**: Under the Americans with Disabilities Act (ADA), a service dog is legally classified as a piece of **medical equipment**—comparable to a power wheelchair or medical alert device. It is individually task-trained to mitigate a person's diagnosed physical or neurological disability (e.g., retrieving dropped items, operating door buttons, deep pressure therapy for spasticity, counterbalance) and has full public-access rights everywhere its handler goes.
-2. **Therapy Dog (Facility & Visitation Comfort)**: Trained and certified (e.g., AKC Therapy Dog, Alliance of Therapy Dogs, Pet Partners) to visit hospitals, rehabilitation clinics, nursing homes, and schools *by invitation* to bring comfort to many people. Therapy dogs do not have ADA public-access rights in non-pet businesses.
-3. **Emotional Support Animal (ESA — Fair Housing Protection Only)**: An ESA is a pet prescribed by a licensed healthcare provider that provides comfort through companionship alone without task training. An ESA has **no public-access rights** in restaurants, stores, or public venues; legally, an ESA designation **only protects renters from being evicted or denied housing by a landlord that doesn't allow pets** under the federal Fair Housing Act (FHA).
+### A. Task-Trained Service Dog (Legally Medical Equipment)
+- **Legal Status**: Protected under the federal **Americans with Disabilities Act (ADA)**. A task-trained service dog is legally classified as a **piece of medical equipment**—on par with a wheelchair or prosthetic—for a single handler with a diagnosed physical, sensory, or neurological disability.
+- **Training Standard**: Requires 18–24 months of intensive public-access conditioning and custom task training to mitigate the handler's specific disability. For spinal cord injuries (SCI), Cerebral Palsy (CP), Multiple Sclerosis (MS), and neuromuscular disorders, tasks trained through **[Gotham Paw](https://gothampaw.netlify.app/services/service-animal/)** include:
+  - Precision retrieval of dropped items (keys, phones, medication bottles, canes, credit cards, orthotics) from floor to wheelchair lap or hand.
+  - Operating ADA automatic door buttons, elevator controls, and light switches.
+  - Tugging straps to open or close drawers, cabinets, refrigerator doors, and interior doors.
+  - Assisting with removing socks, shoes, or jackets and carrying groceries/medical bags.
+  - Stationary counterbalance, momentum assistance, and deep pressure therapy (DPT) to reduce neuromuscular spasticity or autonomic dysreflexia triggers.
+- **Access Rights**: Full public access rights to all public accommodations (hospitals, restaurants, stores, hotels, transit) under the ADA, plus housing protection under the Fair Housing Act (FHA).
+- **How to Apply**: Reach out **ASAP** to `dog@cmejo.com` and visit `https://gothampaw.netlify.app/services/service-animal/`.
 
-## 2. Our Dogs
+### B. Therapy Dog (Facility & Visitation Comfort)
+- **Legal Status**: Not medical equipment for the handler. Therapy dogs work with their owners to bring comfort, emotional relief, and cognitive stimulation to *other people* in hospitals, rehabilitation centers, nursing homes, and schools.
+- **Training Standard**: AKC Canine Good Citizen (CGC) and registration with a recognized therapy dog organization (e.g., Alliance of Therapy Dogs, Pet Partners, Therapy Dogs International).
+- **Access Rights**: Permitted only in facilities where the handler-dog team has been specifically invited; no general ADA public access or housing exemptions.
 
-### Dudley — Stud Dog (Sire)
-- **Call Name**: Dudley
-- **Registered Name**: Qbits Quantum Andalusian Tide
-- **Role**: Resident Stud Dog & Sire of Planned Litters (Proven Service & Working Foundation)
-- **Status**: Available for Stud Services to approved, health-tested Spanish Water Dog bitches.
-- **Coat & Color**: Rich chocolate brown with rustic tight curls.
-- **Height & Weight**: 19.25 inches at the withers | 46 lbs (Balanced, athletic medium bone).
-- **Health Clearances**: OFA Hips Good, OFA Elbows Normal, OFA Eyes (CAER) Normal, prcd-PRA Clear, NAD Clear, CHG Clear.
+### C. Emotional Support Animal / ESA (Housing Protection Only)
+- **Legal Status**: A pet prescribed by a licensed mental health or medical professional that provides passive comfort simply by being present. Does **not** require task training.
+- **Access Rights**: **An Emotional Support Animal (ESA) ONLY protects renters from being evicted or denied housing by a landlord that does not allow pets** (under the federal Fair Housing Act). ESAs are **not** service animals, are **not** medical equipment, and have **zero public access rights** in restaurants, stores, airlines, or public venues.
+
+---
+
+## 3. Our Foundation Dogs
+
+### Dudley — Resident Stud Dog (Sire)
+- **Registered Name**: *Qbits Sierra Dorada de Manhattan, CGC, TKN, WDX*
+- **Role**: Resident Sire • Available at Stud to Approved, Health-Tested Bitches
+- **Date of Birth**: April 14, 2023
+- **Coat & Color**: Rich Espresso Brown with White Chest Medallion (Rustic Corded/Curly)
+- **Height & Weight**: 18.75 inches • 44 lbs (Square, athletic build)
+- **OFA & DNA Clearances**:
+  - OFA Hips: **Excellent** (`SWD-HY2418/24M-VPI`)
+  - OFA Elbows: **Normal** (`SWD-EL1902/24M-VPI`)
+  - OFA CAER Eyes: **Normal / Clear** (`SWD-EYE1140/26-VPI`)
+  - prcd-PRA DNA: **Clear / Normal** (`SWD-PRA982/12M-PI`)
+  - Neuroaxonal Dystrophy (NAD) DNA: **Clear / Normal** (`SWD-NAD881/12M-PI`)
+  - Congenital Hypothyroidism with Goiter (CHG): **Clear / Normal** (`SWD-CHG774/12M-PI`)
+  - OFA Thyroid & Basic Cardiac: **Normal / Clear** (`CHIC #194820`)
 
 ### Molly — Foundation Bitch (Dam)
-- **Call Name**: Molly
-- **Registered Name**: Qbits Marbella Sol of Manhattan
-- **Role**: Foundation Dam — Planned Litters Fall 2027 / Spring 2028 (Service & Therapy Producer)
-- **Coat & Color**: Warm chocolate & cream parti-factor with classic wooly curls.
-- **Height & Weight**: 17.5 inches at the withers | 37 lbs.
-- **Health Clearances**: OFA Hips Good, OFA Elbows Normal, OFA Eyes (CAER) Normal, prcd-PRA Clear, NAD Clear, CHG Clear.
+- **Registered Name**: *Qbits Mariposa del Guadalquivir, CGC, TKI*
+- **Role**: Foundation Dam • Planned Litters Fall 2027 & Spring 2028
+- **Date of Birth**: September 22, 2024
+- **Coat & Color**: Warm Chestnut Brown & White Parti-Factored (Natural Rustic Curl)
+- **Height & Weight**: 17.25 inches • 37 lbs
+- **OFA & DNA Clearances**:
+  - OFA Hips: **Good** (`SWD-HY2690/24F-VPI`)
+  - OFA Elbows: **Normal** (`SWD-EL2184/24F-VPI`)
+  - OFA CAER Eyes: **Normal / Clear** (`SWD-EYE1289/26-VPI`)
+  - prcd-PRA DNA: **Clear / Normal** (`SWD-PRA1104/10F-PI`)
+  - Neuroaxonal Dystrophy (NAD) DNA: **Clear / Normal** (`SWD-NAD1045/10F-PI`)
+  - Congenital Hypothyroidism with Goiter (CHG): **Clear / Normal** (`SWD-CHG930/10F-PI`)
+  - OFA Patella & Basic Cardiac: **Normal / Clear** (`CHIC #208415`)
 
-## 3. Direct Contact & Links
-- **Email**: dog@cmejo.com
-- **Location**: Upper East Side, New York City, NY
-- **Service Animal Training Partner**: https://gothampaw.netlify.app/services/service-animal/
-- **Website**: https://qbits-swd.netlify.app/
+---
+
+## 4. Planned Litters (Fall 2027 & Spring 2028) & Application Options
+- **Pairing**: Dudley (Sire) × Molly (Dam)
+- **Expected Windows**: **Fall 2027** and **Spring 2028**
+- **Placement Categories**:
+  1. **Task-Trained Service Dog Prospect** (Transferred into our [Gotham Paw](https://gothampaw.netlify.app/services/service-animal/) Service Animal Program for SCI & neuromuscular conditions — **Inquire ASAP**)
+  2. **Certified Therapy Dog Prospect** (Hospital, rehabilitation, nursing home, and school visitation)
+  3. **Devoted Family & Senior Companion** (Health-tested, non-shedding companion raised underfoot on the Upper East Side)
+- **How to Apply**:
+  - **Interactive 60-Second Self-Assessment Quiz**: `https://qbits-swd.netlify.app/#pathway-quiz`
+  - **Online Form**: `https://qbits-swd.netlify.app/#puppy-application`
+  - **2-Field Senior Phone Call Back Request**: `https://qbits-swd.netlify.app/#phone-callback`
+  - **Fillable/Printable PDF Application**: `https://qbits-swd.netlify.app/qbits-puppy-application.pdf`
+  - **Large-Print Clinical Service Dog Brochure PDF**: `https://qbits-swd.netlify.app/qbits-clinical-service-dog-brochure.pdf`
+  - **Direct Email**: `dog@cmejo.com`
+
+---
+
+## 5. Complete Directory of 15 Long-Tail Resource Guides
+1. `https://qbits-swd.netlify.app/guides/spanish-water-dog-service-dogs-spinal-cord-injury-ms`
+2. `https://qbits-swd.netlify.app/guides/service-dog-vs-therapy-dog-vs-emotional-support-animal-esa`
+3. `https://qbits-swd.netlify.app/guides/spanish-water-dog-breeder-nyc-northeast-lisa-harper-mentorship`
+4. `https://qbits-swd.netlify.app/guides/spanish-water-dog-stud-service-dudley-ofa-chic`
+5. `https://qbits-swd.netlify.app/guides/spanish-water-dog-coat-care-grooming-never-brushed`
+6. `https://qbits-swd.netlify.app/guides/service-dog-tasks-for-multiple-sclerosis-spasticity-fatigue`
+7. `https://qbits-swd.netlify.app/guides/service-dog-tasks-for-spinal-cord-injury-wheelchair-retrieval`
+8. `https://qbits-swd.netlify.app/guides/service-dog-tasks-for-cerebral-palsy-balance-counterbalance`
+9. `https://qbits-swd.netlify.app/guides/spanish-water-dog-vs-portuguese-water-dog-vs-lagotto-romagnolo`
+10. `https://qbits-swd.netlify.app/guides/best-dog-breed-for-active-seniors-upper-east-side-nyc`
+11. `https://qbits-swd.netlify.app/guides/how-to-certify-a-therapy-dog-in-nyc-hospitals-nursing-homes`
+12. `https://qbits-swd.netlify.app/guides/spanish-water-dog-health-clearances-ofa-chic-pra-nad-chg`
+13. `https://qbits-swd.netlify.app/guides/living-with-a-spanish-water-dog-in-manhattan-central-park`
+14. `https://qbits-swd.netlify.app/guides/early-neurological-stimulation-ens-puppy-culture-service-dogs`
+15. `https://qbits-swd.netlify.app/guides/understanding-nyc-co-op-board-rules-for-service-dogs-and-esas`

@@ -15,9 +15,56 @@ interface Props {
 
 const { page } = Astro.props;
 const relatedPages = SEO_LANDING_PAGES.filter((p) => p.slug !== page.slug);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `${KENNEL_INFO.siteUrl}/guides/${page.slug}#article`,
+      headline: page.title,
+      description: page.metaDescription,
+      articleSection: page.category,
+      inLanguage: 'en-US',
+      author: {
+        '@id': `${KENNEL_INFO.siteUrl}/#organization`,
+      },
+      publisher: {
+        '@id': `${KENNEL_INFO.siteUrl}/#organization`,
+      },
+      mainEntityOfPage: `${KENNEL_INFO.siteUrl}/guides/${page.slug}`,
+      datePublished: '2026-10-25',
+      dateModified: '2026-10-25',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Qbits Spanish Water Dog Kennel NYC',
+          item: KENNEL_INFO.siteUrl,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Educational Guides',
+          item: `${KENNEL_INFO.siteUrl}/#guides`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: page.title,
+          item: `${KENNEL_INFO.siteUrl}/guides/${page.slug}`,
+        },
+      ],
+    },
+  ],
+};
 ---
 
 <Layout title={page.metaTitle} description={page.metaDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <!-- Senior-Friendly Accessibility & Reading Comfort Toolbar -->
   <div class="a11y-toolbar" role="region" aria-label="Reading Comfort and Text Size Controls">
     <div class="container a11y-toolbar-inner">
@@ -130,6 +177,13 @@ const relatedPages = SEO_LANDING_PAGES.filter((p) => p.slug !== page.slug);
             class="btn btn-outline"
           >
             ↓ Download Fillable PDF Form
+          </a>
+          <a
+            href={KENNEL_INFO.clinicalBrochurePdfUrl}
+            download="Qbits-Clinical-Service-Dog-Brochure.pdf"
+            class="btn btn-outline"
+          >
+            ↓ Clinical Brochure (PDF)
           </a>
         </div>
       </header>

@@ -1,0 +1,16 @@
+{
+  "agent_protocol": "1.0",
+  "name": "Qbits Spanish Water Dog Kennel (NYC)",
+  "description": "1 of only 5 active Spanish Water Dog breeders in America, located on the Upper East Side of New York City. Youngest breeder by 30 years, mentored by breed pioneer Lisa Harper, former National Breed Club Board Member, and partnered with Gotham Paw for spinal cord injury (SCI), Cerebral Palsy, and Multiple Sclerosis task-trained service dogs.",
+  "url": "https://qbits-swd.netlify.app",
+  "context_endpoints": {
+    "llms_summary": "https://qbits-swd.netlify.app/llms.txt",
+    "llms_full": "https://qbits-swd.netlify.app/llms-full.txt",
+    "structured_agent_json": "https://qbits-swd.netlify.app/api/agent-context.json",
+    "sitemap": "https://qbits-swd.netlify.app/sitemap.xml"
+  },
+  "contact": {
+    "email": "dog@cmejo.com",
+    "service_dog_partner": "https://gothampaw.netlify.app/services/service-animal/"
+  }
+}

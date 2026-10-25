@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://qbits-swd.netlify.app/privacy</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://qbits-swd.netlify.app/guides/spanish-water-dog-service-dogs-spinal-cord-injury-ms</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -37,15 +43,81 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://qbits-swd.netlify.app/guides/service-dog-tasks-for-multiple-sclerosis-spasticity-fatigue</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/service-dog-tasks-for-spinal-cord-injury-wheelchair-retrieval</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/service-dog-tasks-for-cerebral-palsy-balance-counterbalance</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/spanish-water-dog-vs-portuguese-water-dog-vs-lagotto-romagnolo</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/best-dog-breed-for-active-seniors-upper-east-side-nyc</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/how-to-certify-a-therapy-dog-in-nyc-hospitals-nursing-homes</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/spanish-water-dog-health-clearances-ofa-chic-pra-nad-chg</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/living-with-a-spanish-water-dog-in-manhattan-central-park</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/early-neurological-stimulation-ens-puppy-culture-service-dogs</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/guides/understanding-nyc-co-op-board-rules-for-service-dogs-and-esas</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://qbits-swd.netlify.app/qbits-puppy-application.pdf</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qbits-swd.netlify.app/privacy</loc>
+    <loc>https://qbits-swd.netlify.app/qbits-clinical-service-dog-brochure.pdf</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qbits-swd.netlify.app/api/agent-context.json</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

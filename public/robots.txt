@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Explicitly welcome AI & LLM Search Crawlers
+# Explicitly welcome AI & LLM Answer Engine Crawlers and Autonomous Agents
 User-agent: GPTBot
 Allow: /
 
@@ -14,13 +14,21 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://qbits-swd.netlify.app/sitemap.xml
-# LLM Knowledge Files:
+# LLM & AI Agent Knowledge Files:
 # https://qbits-swd.netlify.app/llms.txt
 # https://qbits-swd.netlify.app/llms-full.txt
+# https://qbits-swd.netlify.app/api/agent-context.json
+# https://qbits-swd.netlify.app/.well-known/ai-agent.json
